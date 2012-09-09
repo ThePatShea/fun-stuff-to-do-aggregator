@@ -1,0 +1,1 @@
+if(navigator.userAgent.indexOf('MSIE')!=-1){location.replace('explorer.html')} 

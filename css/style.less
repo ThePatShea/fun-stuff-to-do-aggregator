@@ -1,0 +1,1715 @@
+// Imports supporting files
+	@import "plugins.less";
+	@import "reset.less";
+	
+
+
+// Imports fonts
+	@font-face 
+	{
+	    font-family: 'nevisBold';
+	    src: url('fonts/nevis/nevis-webfont.eot');
+	    src: url('fonts/nevis/nevis-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('fonts/nevis/nevis-webfont.woff') format('woff'),
+	         url('fonts/nevis/nevis-webfont.ttf') format('truetype'),
+	         url('fonts/nevis/nevis-webfont.svg#nevisBold') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+	}
+	
+	@font-face
+	{
+	    font-family: 'museoSans100';
+	    src: url('fonts/museoSans100/museosans_100-webfont.eot');
+	    src: url('fonts/museoSans100/museosans_100-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('fonts/museoSans100/museosans_100-webfont.woff') format('woff'),
+	         url('fonts/museoSans100/museosans_100-webfont.ttf') format('truetype');
+	    font-weight: normal;
+	    font-style: normal;
+	}
+	
+	@font-face
+	{
+	    font-family: 'museoSans300';
+	    src: url('fonts/museoSans300/museosans_300-webfont.eot');
+	    src: url('fonts/museoSans300/museosans_300-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('fonts/museoSans300/museosans_300-webfont.woff') format('woff'),
+	         url('fonts/museoSans300/museosans_300-webfont.ttf') format('truetype');
+	    font-weight: normal;
+	    font-style: normal;
+	}
+	
+	@font-face
+	{
+	    font-family: 'museoSans500';
+	    src: url('fonts/museoSans500/museosans_500-webfont.eot');
+	    src: url('fonts/museoSans500/museosans_500-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('fonts/museoSans500/museosans_500-webfont.woff') format('woff'),
+	         url('fonts/museoSans500/museosans_500-webfont.ttf') format('truetype'),
+	         url('fonts/museoSans500/museosans_500-webfont.svg#MuseoSans500') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+	}
+
+
+// Modal Window
+	.tbox {position:absolute; display:none; padding:14px 17px; z-index:900;}
+	.tinner {padding:15px; -moz-border-radius:5px; border-radius:5px; background:#fff url(../img/modal/preload.gif) no-repeat 50% 50%; border-right:0px solid #333; border-bottom:0px solid #333}
+	.tmask {position:fixed; display:none; top:0px; left:0px; height:100%; width:100%; background:#000; z-index:800}
+	.tclose {.unselectableWithPointer; position:absolute; top:-20px; left:15px; width:110px; height:37px; background:url(../img/modal/close_button.png) no-repeat}
+	.tclose:hover {background-position:0 -39px}
+	
+	#bubblebox
+	{
+		background: none;
+		padding:0px;		
+	}
+	
+	#texturemask
+	{
+		background-image:url('../img/modal/maskBG.gif');
+	}
+	
+	#loadModal
+	{
+		margin-left:	-46px;
+		position:		fixed;
+		left:			50%;
+		bottom:			50%;
+		z-index:		2000;		
+				
+		.modalLoader
+		{
+			.drop-shadow(0, 5px, 5px, 0.75);
+			.bubbleRounded;
+			
+			background:		white;
+			border:			2px solid #ECECEC;
+			padding:		10px 20px;
+			
+			height:			36px;
+			width:			46px;
+		}
+	}
+
+
+.slimScrollDiv { border: 0px solid #ccc; margin:0px; }
+
+
+// Custom elements
+
+	::selection
+	{
+	    background: #9FACBB;
+	}
+	
+	::-moz-selection
+	{
+		background: #9FACBB;
+	}
+	
+	::-webkit-selection
+	{
+		background: #9FACBB;
+	}	
+	
+	.unselectable
+	{
+		-webkit-touch-callout:	none;
+	    -webkit-user-select:	none;
+	    -khtml-user-select:		none;
+	    -moz-user-select:		none;
+	    -ms-user-select:		none;
+	    user-select:			none;
+	    
+	    cursor:					default;
+	}
+	
+	.unselectableWithPointer
+	{
+	    .unselectable;
+    	cursor:					pointer;
+	}
+	
+	.bubbleRounded
+	{
+		.rounded(5px);
+	}
+	
+	.roundedShadow
+	{
+		.drop-shadow(0px, 2px, 2px, 0.25);
+		.bubbleRounded;
+	}
+	
+	.grey1
+	{
+		background:		url("../img/phase1/grey1.png");
+		width:			100%;
+	}
+	
+	.verticalAlign_wrapper
+	{
+		display:		table;		
+		
+		.verticalAlign_container
+		{
+			display:		table-cell;
+			vertical-align:	middle;
+		}
+	}
+
+
+// Main CSS
+	body 
+	{
+		.grey1;
+		
+		width:			100%;
+	}
+	
+	.internet_explorer
+	{
+		margin:			50px auto;
+		width:			600px;
+		height:			400px;
+		
+		text-align:		center;
+		
+		
+		h3, h4
+		{
+		    font-family:	nevisBold;
+		    text-align:		center;
+		}
+		
+		h3
+		{
+		    text-shadow:0px 0px 0 rgb(195,190,195),0px 1px 0 rgb(148,143,148), 0px 2px 0 rgb(102,97,102),0px 3px 2px rgba(0,0,0,0.15),0px 3px 1px rgba(0,0,0,0.5),0px 0px 2px rgba(0,0,0,.2);
+		    margin:			0 0 10px 0;
+		    color:			#DBDBDB;
+		    font-size:		35px;
+		}
+		
+		h4
+		{
+		    text-shadow:0px 0px 0 rgb(60,83,105),0px 1px 0 rgb(20,43,65), 0px 2px 0 rgb(-19,4,26),0px 3px 2px rgba(0,0,0,0.15),0px 3px 1px rgba(0,0,0,0.5),0px 0px 2px rgba(0,0,0,.2);
+
+		    color:			#6C8399;
+		    padding:		5px 0;
+		    font-size:		15px;
+		}
+		
+		.browserIcons
+		{
+			margin:			20px auto;
+			width:			280px;
+			
+			h3
+			{
+				line-height:	20px;
+				font-size:		15px;
+			}
+			
+			img
+			{
+				margin:		0 20px;
+				height:		50px;
+				width:		50px;
+			}
+			
+			a,
+			a:hover,
+			a:visited
+			{
+				text-decoration: none;
+				float:			 left;
+			}
+		}
+
+	}
+	
+	.pic_circle
+    {
+        .drop-shadow(1px, 1px, 2px, 0.8);
+        .rounded(25px);
+        
+        margin:				0 10px 0 0;
+        background:			white;
+        float:				left;
+        height:				42px;
+        width:				42px;
+        
+        img
+        {
+        	.rounded(18px);
+        	
+        	height:				36px;
+        	width:				36px;
+        	
+        	position:			relative;
+        	left:				3px;
+        	top:				3px;
+        }
+    }
+	
+	#pageContainer
+	{
+		background: 	url("../img/phase1/phase1Bg.gif");
+	}
+	
+	.disable_scroll
+	{
+		position:		fixed; 
+   		//overflow-y:		scroll;
+    	//width:			100%;
+	}
+	
+	.no_scroll
+	{
+		overflow:		hidden;
+	}
+	
+	.relatedBubbles
+	{
+		li
+		{
+			background:		yellow;
+			color:			black;
+			width:			100px;
+			height:			60px;
+			display:		inline;
+			float:			right;
+			margin:			5px;
+		}
+		
+		.selected
+		{
+		    background:		blue;
+		    color:			white;
+		}
+	}
+	
+	
+	#load
+	{
+		margin-left:	-28px;
+		position:		fixed;
+		left:			50%;
+		bottom:			5%;
+		z-index:		11;
+				
+		.ajaxLoader
+		{
+			.roundedShadow;
+			
+			background: 	#ECECEC;
+			border:			2px solid white;
+			padding:		10px 20px;
+		}
+	}
+	
+	footer
+	{
+		width:			100%;
+		height:			20px;
+		//background:		#A3A2AA;
+	}
+	
+	
+	.followBarHeight
+	{
+		height:			80px;
+	}
+	
+	
+	#followBarWrapper
+	{
+		.followBarHeight;
+		
+		margin:			0 0 20px 0;
+		position:		relative;
+		
+		#followBar
+		{
+			.followBarHeight;
+			.drop-shadow(0px, 3px, 3px, 0.5);
+			
+			background:		url("../img/phase1/grey1.png");
+			border-bottom:	1px solid rgba(255,255,255,.7);
+			position: 		absolute;
+			width:			100%;
+			z-index:		10;
+		}
+		
+		#followBar.fixed
+		{
+		  position: fixed;
+		  top: 		0;
+		}
+	}
+	
+	
+	#phase1
+	{
+		.unselectable;
+		.opacity(0);
+		
+		background: 		url("../img/phase1/phase1Bg.gif");
+		position:			relative;
+		width:				100%;
+		//overflow-x:			hidden;
+		
+		.verticalAlign_wrapper_phase1
+    	{
+    	    height:			100%;
+    	    margin:			0 auto;
+    	    position:		absolute;
+    	    left:			50%;
+    	    margin-left:	-375px;   	    
+    	}
+		
+	}
+	
+	#phase2
+	{
+		.unselectable;
+		.opacity(0);
+		
+		.timeLabel
+		{
+			text-shadow:		1px 1px 0 white;
+			text-transform:		uppercase;
+			font-family:		nevisBold;
+			color:				#666666;
+			text-align:			center;
+			font-size:			18px;
+			width:				94%;
+			
+			position:			absolute;
+			left:				3%;
+			
+			.headingLine_tile
+    		{
+    			border-bottom:	1px solid white;
+    			background:		#BBBBBB;
+    			height:			1px;
+    		}	
+    		
+    		h2
+    		{
+    			padding:		5px 0;
+    		}
+		}
+		
+		.section_tomorrow
+		{
+			//margin-top:				600px !important;
+		}
+		
+		.section_this_week
+		{
+			//margin-top:				1200px !important;
+		}
+		
+		.section_this_weekend
+		{
+			//margin-top:				1800px !important;
+		}
+	}
+	
+	
+	#featured_mobile
+	{
+		width:				220px;
+		
+		position:			absolute;
+		top:				-90px;
+		left:				50%;
+		
+		margin-left:		-110px;
+		z-index:			1;
+		
+		
+		h3
+		{
+		    text-shadow:0px 0px 0 rgb(195,190,195),0px 1px 0 rgb(148,143,148), 0px 2px 0 rgb(102,97,102),0px 3px 2px rgba(0,0,0,0.15),0px 3px 1px rgba(0,0,0,0.5),0px 0px 2px rgba(0,0,0,.2);
+		    
+		    color:			#DBDBDB;
+		    font-family:	nevisBold;
+		    text-align:		center;
+		    font-size:		21px;
+		    line-height:	23px;
+		}
+	}
+	
+/* Orbit Slider */
+
+	/* Orbit Main */
+		#featured
+		{ 
+			.unselectableWithPointer;
+			
+			position:	relative;
+			overflow:	hidden;
+			top:		-180px;
+			z-index:	1;
+						
+			.content
+			{
+				height:				180px;
+				width: 				750px;
+				
+				
+				h3, h4
+				{
+					font-family:	nevisBold;
+					text-align:		center;
+				}
+				
+				h3
+				{
+					text-shadow:0px 0px 0 rgb(195,190,195),0px 1px 0 rgb(148,143,148), 0px 2px 0 rgb(102,97,102),0px 3px 2px rgba(0,0,0,0.15),0px 3px 1px rgba(0,0,0,0.5),0px 0px 2px rgba(0,0,0,.2);
+					color:			#DBDBDB;
+					font-size:		35px;
+				}
+				
+				h4
+				{
+					text-shadow:0px 0px 0 rgb(60,83,105),0px 1px 0 rgb(20,43,65), 0px 2px 0 rgb(-19,4,26),0px 3px 2px rgba(0,0,0,0.15),0px 3px 1px rgba(0,0,0,0.5),0px 0px 2px rgba(0,0,0,.2);
+
+					color:			#6C8399;
+					padding:		5px 0;
+					font-size:		15px;
+				}
+				
+				.bubble
+				{
+					margin:			2px auto;
+				}
+			}
+		}		    
+		
+	
+	/* Orbit Container */
+		div.orbit-wrapper
+		{
+		    width:		1px;
+		    height:		1px;
+		    position:	relative;
+		    
+		    margin:		0 auto;
+		    height:		200px;
+			width:		500px;
+		}
+		
+		div.orbit
+		{
+		    width: 		1px;
+		    height: 	1px;
+		    position: 	relative;
+		    overflow: 	hidden;
+		}
+		
+		div.orbit>img
+		{
+		    position: 	absolute;
+		    top: 		0;
+		    left: 		0;
+		    display:	none; 
+		}
+		
+		div.orbit>a
+		{
+		    border: 	none;
+		    position: 	absolute;
+		    top: 		0;
+		    left: 		0;
+		    line-height:0; 
+		    display:	none;
+		}
+		
+		.orbit>div
+		{
+		    position: 	absolute;
+		    top: 		0;
+		    left: 		0;
+		    width: 		100%;
+		    height: 	100%;
+		}
+		
+	/* Note: If your slider only uses content or anchors, you're going to want to put the width and height declarations on the ".orbit>div" and "div.orbit>a" tags in addition to just the .orbit-wrapper */
+	
+	/* Orbit Slider Bullets */
+		.orbit-bullets
+		{
+		    position:		absolute;
+		    z-index:		10;
+		    list-style:		none;
+		    bottom:			170px;
+		    left:			50%;
+			margin-left:	-33px;
+		    padding:		0;
+		    z-index:		1;
+		}
+		
+		.orbit-bullets li
+		{
+		    float:			left;
+		    margin-left:	5px;
+		    cursor:			pointer;
+		    color:			#999;
+		    text-indent:	-9999px;
+		    background:		url(../img/orbit/bullets.png) no-repeat 4px 0;
+		    width:			13px;
+		    height:			12px;
+		    overflow:		hidden;
+		 }
+		
+		.orbit-bullets li.active
+		{
+		    color:			#222;
+		    background-position: -12px 0;
+		}
+		    
+		.orbit-bullets li.has-thumb
+		{
+		    background:		none;
+		    width:			100px;
+		    height:			75px;
+		}
+		
+		.orbit-bullets li.active.has-thumb
+		{
+		    background-position: 0 0;
+		    border-top: 	2px solid #000;
+		}
+		
+	
+	#cover
+	{
+		position:		relative;
+		overflow:		hidden;
+		height:			178px;
+		
+		.coverOverlay
+		{
+			background:		url("../img/phase2/coverOverlay.png") repeat;
+			position:		relative;
+			height:			178px;
+			top:			-160px;
+		}
+		
+		.coverBG
+		{
+			background-position:	center;
+			background-size:		100%;
+			height:					160px;
+		}
+		
+		#buttonOverlay
+		{
+			background-position:	center;
+			background-size:		100%;
+			height:					160px;
+									
+			position:				absolute;
+			width:					100%;
+			left:					0;
+			top:					0;
+			
+			display:				none;
+			
+			.changeBubble
+    		{    			
+    			position:		absolute;
+    			top:			20px;
+    			width:			201px;
+				height:			117px;
+    		}
+    		
+    		
+    		.prevMain
+    		{
+    			background:		url(../img/phase2/prev_main3.png) no-repeat;
+    			left:			-57px;
+    		}
+			
+			.prevMain:hover .smallestBubble
+    		{
+    		    background-position: -112px 0px;
+    		}
+    		
+			
+			.nextMain
+			{
+				background:		url(../img/phase2/next_main3.png) no-repeat;
+				right:			-57px;
+			}
+			
+			.nextMain:hover .smallestBubble
+    		{
+    		    background-position: -112px 0px;
+    		}
+    		
+    		.nextMain:hover .smallestBubble h2,
+    		.prevMain:hover .smallestBubble h2
+    		{
+    			text-shadow:		1px 1px 0 rgba(255,255,255,.75);
+    			color:				#8A8A8A;
+    		}
+    		
+			.active:hover
+			{
+				background-position:	0 -119px;
+			}
+    		
+   		}
+
+	}
+	
+	.conveyorSize
+	{
+		height:			178px;
+		width:			100%;
+	}
+	
+	
+	
+	#shiftUpContainer
+	{		
+	    position:		relative;
+	    top:			-119px;
+	    
+	    
+	    #shiftUp:hover
+	    {
+	    	cursor:			pointer;
+	    }
+	    
+	    #shiftUp
+	    {
+	    	position:		absolute;
+	    	margin-left:	-30px;
+	    	left:			50%;
+	    }
+	    
+	    #shiftUp_bubbleName
+	    {        	
+        	line-height: 	1.6em;	
+        	
+        	text-shadow:	1px 1px 0 rgba(0,0,0,.75);
+        	text-transform:	uppercase;
+        	font-family:	nevisBold;
+        	text-align:		center;
+        	color:			white;
+        	width:			100px;
+        	
+        	position:		absolute;
+        	margin-left:	-50px;
+	    	left:			50%;
+	    	top:			43px;
+	    }
+	}
+	
+	
+	
+	#bs
+	{
+		.smallBubbleContainer
+		{
+			.conveyorSize;
+			
+			position:		relative;
+			
+			#conveyorShift_prev,
+			#conveyorShift_next
+			{
+				.unselectableWithPointer;
+				
+				background:				url("../img/phase1/conveyorShift.png") no-repeat;
+				height:					55px;
+				width:					45px;
+										
+				position:				absolute;
+				top:					75px;
+				z-index:				50;
+			}
+			
+			#conveyorShift_prev
+			{
+				background-position:	-20px 0;
+				left:					0;
+			}
+			
+			#conveyorShift_prev:hover
+			{
+				background-position:	-100px 0;
+			}
+			
+			#conveyorShift_next
+			{
+				background-position:	-72px -62px;
+				right:					0;
+			}
+			
+			#conveyorShift_next:hover
+			{
+				background-position:	5px -62px;
+			}
+			
+			
+			
+			.noClick
+			{
+				cursor:					default !important;
+			}
+			
+			.noClick_next
+			{
+				.noClick;
+				
+				background-position:	-152px -62px !important;
+			}
+			
+			.noClick_prev
+			{
+				.noClick;
+				
+				background-position:	-180px 0  !important;
+			}
+		}		
+	}
+	
+	.bubble
+	{
+        .unselectableWithPointer;
+        
+        list-style:		none;
+        width:			143px;
+        height:			143px;
+        margin:			30px 0;
+        
+        position:		absolute;
+        
+        .smallBubbleBG
+        {
+        	.rounded(67px);
+        	
+        	position:		absolute;
+        	
+        	left:			0;
+        	top:			0;
+        	
+        	height:			134px;
+        	width:			134px;
+        	z-index:		-5;
+        }
+        
+        .bubbleInfo
+        {
+        	background:		url("../img/phase1/smallBubble.png") no-repeat;
+        	height:			143px;
+        	width:			143px;
+        }
+        
+        .smallestBubble
+        {
+        	position:		absolute;
+        	height:			98px;
+        	width:			98px;
+        	top:			-78px;
+        	background:		url("../img/phase1/smallestBubble.png") no-repeat;
+        	background-size:212px 100px;
+        	overflow:		hidden;
+        	z-index:		8;
+        	
+        	.verticalAlign_wrapper
+    		{
+    	  		height:			97px;
+    		}
+    		
+    		h2
+    		{
+    			left:			0;
+    			width:			97px;
+    			text-align:		center;
+    			text-shadow:	1px 1px 0 black;
+    		}
+        }        
+        
+        .prevBubble
+        {
+            left: 			90px;
+        }
+        
+        .nextBubble
+        {
+            right: 			41px;
+        }
+        
+        
+        .smallestBubbleBG
+        {
+        	.rounded(67px);
+        	
+        	position:		absolute;
+        	top:			-78px;
+        	
+        	height:			92px;
+        	width:			92px;
+        	z-index:		5;
+        }
+        
+        .smallestBubbleBG_prev
+        {
+        	left:			90px;
+        }
+        
+        .smallestBubbleBG_next
+        {
+        	right:			46px;
+        }
+        
+        h2
+    	{
+    		text-shadow:	1px 1px 0 rgba(0,0,0,.75);
+    		text-transform:	uppercase;
+    		text-align:		center;
+    		color:			white;
+    		font-size:		24px;
+    		width:			135px;
+    		line-height:	1em;
+    		
+    		position:		relative;
+    	}
+    	
+    	.verticalAlign_wrapper
+    	{
+    	    height:			143px;
+    	}
+    }
+    
+    .bubbleHover
+    {
+    	z-index:		35 !important;
+    	
+    	.bubbleInfo
+    	{
+    		background-position:-160px 0px; 
+    	}
+    	
+    	h2
+    	{
+    		text-shadow:		1px 1px 0 rgba(255,255,255,.75);
+    		color:				#8A8A8A;
+    	}
+    }
+
+	.bubbleActive
+    {
+    	.bubbleHover
+    }
+
+	
+    #s1
+    {
+    	.grey1;
+    	
+    	position:		relative;
+    	height:			6px;
+    	z-index:		5;
+    }    
+    
+    .tb_web
+    {
+    	ul
+    	{
+    		width:			545px;
+    		top:			50px;
+    		
+    		li
+    		{
+    			padding:		35px 0 0 0;
+			    margin:			7px 40px;
+    		}
+    		
+    		//li:nth-child(1) { background: url("../img/phase1/arrow_keys.png") no-repeat;  background-position:  center top;       }
+			li:nth-child(2) { background: url("../img/phase1/bubble_logo.png") no-repeat; top:-18px; width: 179px; height: 106px; }
+			//li:nth-child(3) { background: url("../img/phase1/spyglass.png") no-repeat;  background-position:  center top;         }
+    	}
+    }
+    
+    #tb
+    {
+    	background:		url("../img/phase1/menuBar.gif");
+    	height:			127px;
+    	
+    	position:		relative;
+    	z-index:		2;
+    	
+    	ul
+    	{
+    		position:		relative;
+    		margin:			0 auto;
+    		width:			179px;
+    		top:			50px;
+    		
+    		li
+			{
+			    text-shadow: 	1px 1px 0 black;
+			    text-transform: uppercase;
+			    font-family:	nevisBold;
+			    color:			#B0B0B0;
+			    text-align:		center;
+	    		font-size:		12px;
+			    
+			    		    
+			    position:		relative;
+			    display:		inline;
+			    float:			left;
+			    z-index:		10;
+			    
+			}
+			
+    		
+    		li:nth-child(1) { background: url("../img/phase1/bubble_logo.png") no-repeat; top:-10px; width: 179px; height: 106px; }
+    		
+    	}
+    }
+
+	
+	#tiles
+	{
+		position: 			relative; /** Needed to ensure items are laid out relative to this container **/
+		top:				-30px;
+		
+		list-style-type:	none;
+		margin:				0;		
+	}
+
+
+
+	.postBox, #modalCommentDetailBox
+	{
+		h1, h2, h3, h4, h5
+    	{
+    		font-family:	nevisBold;
+    	}
+    	
+    	    	
+    	.headingLine
+    	{
+    		border-bottom:	1px solid white;
+    		background:		#CFCFCF;
+    		height:			1px;
+    	}	
+    	
+	}
+	
+	.mainPostBox:hover .postButtonsContainer,
+	.mainPostBox:hover .postImageContainer,
+	.mainPostBox:hover .postInfoContainer
+	{
+		 .drop-shadow(0, 1px, 12px, 0.3) !important;
+	}
+	
+	.mainPostBox
+	{
+		cursor:				pointer;
+	}
+
+	.postBox 
+	{
+    	display:			none; /** Hide items initially to avoid a flicker effect **/
+    	position:			relative;
+    	width:				275px;   	
+    	
+    	h3
+    	{
+    		cursor:			pointer !important;
+    		text-shadow:	1px 1px 0 black;
+    		text-transform:	capitalize;
+    		color:			white;
+    		font-size:		18px;    		
+    	}
+    	
+    	h4
+    	{
+    		font-size:		15px;
+    		text-shadow:	1px 1px 1px rgba(0,0,0,.75);
+    		color:			rgba(255,255,255,.75);
+    		text-transform:	uppercase;
+    	}
+    	
+    	h5
+    	{
+    		text-shadow:	1px 1px 1px rgba(255,255,255,.75);
+    		padding:		0 12px 0 0;
+    		text-transform:	uppercase;
+    		color:			#A5A5A5;
+    		font-size:		11px;
+    	}
+    	
+    	p
+    	{
+    		text-shadow:	1px 1px 0 white;
+    		font-family:	museoSans500;
+    		color:			#727272;
+    		font-size:		14px;
+    	}
+    	
+    	.postInfoSection
+    	{
+    		margin:				0 0 28px 24px;
+    	
+    		.postInfoHeading
+    		{
+    			margin:			0 0 12px 0;
+    			height:			16px;
+    			
+    			.headingLine
+    			{
+    				margin:			6px 0 0 0;
+    				width:			185px;
+    				float:			left;
+    			}
+    			
+    			h5
+    			{
+    				float:			left;
+    			}
+    		}
+    		
+    		.action
+    		{
+    		    position:			absolute;
+    		    right:				-3px;
+    		    top:				52px;
+    		}
+    		
+    		.accountName
+    		{
+    			width:				180px;
+    		}
+    		
+    		.moreWidth
+    		{
+    			width:				230px !important;
+    			
+    			position:			relative;
+    			left:				10px;
+    		}
+    	}
+    	
+    	.postImageContainer
+    	{
+    	    .roundedShadow;
+    	    
+    	    overflow:			hidden;
+    	    height:				125px;
+    	    width:				275px;
+    	    
+    	    .verticalAlign_wrapper
+    		{
+    		    height:			125px;
+    		}
+    	    
+    	    .postName
+    	    {
+    	    	.unselectable;
+    	    	
+    	    	overflow:				hidden;
+    	    	width:					190px;
+    	    	max-height:				45px;
+    	    }
+    	    
+    	    .postImage
+    	    {		    	
+    	    	min-height:				125px;
+    	    	min-width:				275px;
+    	    }
+    	    
+    	    .postIcon
+    	    {
+    	    	padding:				0 10px 230px 20px;
+    	    	float:					left;
+    	    	
+    	    	position:				relative;
+    	    	top:					-3px;
+    	    	
+    	    }
+    	    
+    	    .postInfoOverlay
+    	    {
+    	    	position:				absolute;
+    	    	height:					125px;
+    	    	width:					275px;
+    	    	z-index:				15;
+    	    	left:					0;
+    	    	top:					0;
+    	    	
+    	    	h4
+    	    	{
+    	    		overflow:				hidden;
+    	    		width:					185px;
+    	    		height:					16px;
+    	    	}
+    	    	
+    	    	.subtitle_event
+    	    	{
+    	    		color:					#DE8072;
+    	    	}
+    	    	
+    	    	.subtitle_venue
+    	    	{
+    	    		color:					#F5E4B8;
+    	    	}
+    	    	
+    	    	.subtitle_deal
+    	    	{
+    	    		color:					#C5E6B9;
+    	    	}
+    	    }
+    	    
+    	    .imageOverlay
+    	    {
+    	    	.bubbleRounded;
+    	    	
+    	    	background:				url("../img/other/imageOverlay.png");
+    	    	position:				absolute;
+    	    	height:					125px;
+    	    	width:					275px;
+    	    	z-index:				8;
+    	    	left:					0;
+    	    	top:					0;
+    	    }
+    	    
+    	    .innerBorder
+    	    {
+    	    	.bubbleRounded;
+    	    	
+    	    	border:					1px solid rgba(255,255,255,.6);
+    	    	position:				absolute;
+    	    	height:					121px;
+    	    	width:					271px;
+    	    	left:					1px;
+    	    	top:					1px;
+    	    	z-index:				9;
+    	    }
+    	}
+    	    	
+    	
+    	.postInfoAndButtonsContainer
+    	{
+    		.postInfoAndButtonsShadow
+    		{
+    			.drop-shadow(1px, 1px, 2px, 0.25);
+    		}
+    		
+    		position:			relative;
+    		left:				2px;
+    		z-index:			-10;
+    		    		
+    		.postInfoContainer
+    		{    			
+    			.postInfoAndButtonsShadow;
+    			
+    			padding:			22px 0 0 0;
+    			position:			relative;
+    			background:			url('../img/modal/widgetBG.gif');
+    			width:				270px;
+    			z-index:			-9;
+    			margin:				0;
+    			
+    			.action
+    			{
+    				background:			url("../img/other/action.png");
+    				padding:			12px 0 0 0;
+    				height:				25px;
+    				width:				72px;					
+    				
+    				text-shadow:		1px 1px 0 rgba(255,255,255,.75);
+    				font-family:		nevisBold;
+    				text-transform:		uppercase;
+    				color:				#747474;
+    				text-align:			center;
+    				font-size:			12px;
+    				
+    			}
+    			
+    			.postPeople
+    			{
+    				position:			relative;
+    				height:				80px;
+    				
+    				p
+    				{
+    					position:			absolute;
+    					top:				70px;
+    					left:				5px;
+    					
+    					text-transform:		uppercase;
+    					font-size:			12px;
+    					clear:				both;
+    				}
+    				
+    				.action
+    				{
+    					position:			absolute;
+    					right:				-3px;
+    					top:				23px;
+    				}
+    				
+    				.peoplePics
+    				{
+    					position:			absolute;
+    					top:				20px;
+    					left:				0;
+    					
+    					.pic_circle
+    					{
+    						position:			absolute;
+    						margin-right:		0; 
+    					}
+    				}
+    			}
+    			
+    			.verticalAlign_wrapper
+    			{
+    			    overflow:		hidden;
+    			    height:			42px;
+    			}
+    			
+    		}
+    		
+    		.postButtonsContainer
+    		{
+    			.border-radius(0, 5px, 5px, 0);
+    			.postInfoAndButtonsShadow;
+    			
+    			position:			relative;
+    			width:				270px;
+    			height:				32px;
+    			z-index:			-8;
+    			
+    			.postButton
+    			{
+    				text-shadow:		1px 1px 1px rgba(255,255,255,.75);
+    				font-family:		nevisBold;
+    				color:				#B4B4B4;
+    				font-size:			15px;
+    				
+    				background:			#F1F1F1;
+    				width:				135px;
+    				height:				100%;
+    				
+    				img
+    				{
+    					margin-right:		10px;
+    				}
+    			}
+    			
+    			.commentsButton
+    			{
+    				.border-radius(0, 0, 5px, 0);
+    				
+    				border-right:		1px solid #C3C3C3;
+    			}
+    			
+    			.joinsButton
+    			{
+    				.border-radius(0, 5px, 0, 0);
+    				
+    				border-left:		1px solid white;
+    				
+    				img
+    				{
+    					position:			relative;
+    					top:				-1.5px;
+    				}
+    			}
+    		}
+    	}
+    }
+    
+    #modalCommentDetailBox
+    {
+        position: 			absolute;
+        top:				180px;
+        left:				19px;
+    }
+    
+    .nonModalCommentDetailBox
+    {
+    	position: 			absolute;
+    }
+    
+    .commentDetailBox
+   	{    		
+   		.border-radius(0, 5px, 5px, 0);
+   		
+   		background: 		url('../img/modal/commentBG.gif');
+		
+   		border-bottom:		1px solid #687375;
+   	    border-top:			1px solid #C4BBBF;
+   	   	padding:			5px 0 0 0;
+   		height:				400px;
+   		width:				270px;
+   		
+   	   	top:				-5px;
+   	   	z-index:			10;
+   	   	
+   	   	overflow-x:			hidden;
+   	   	overflow-y:			hidden;
+   	   	
+   	   	.headingLine
+    	{
+    		border-bottom:	1px solid white;
+    		background:		#CFCFCF;
+    		height:			1px;
+    	}
+   	   	
+   	   	.postComment
+   	   	{
+   	   		padding:			18px 15px 15px 15px;
+   	   		
+   	   		.nameAndDescriptionContainer
+   	   		{
+   	   			overflow-x:			hidden;
+   	   			width:				100% - 24px;
+   	   			
+   	   			.comment_accountName
+   	   			{
+   	   				font-size:			14px;
+   	   				color:				#666666;
+   	   				text-shadow:		1px 1px 0px #FFFEFF;
+   	   				text-transform:		uppercase;
+   	   				margin:				0 0 3px 0;
+   	   			}
+   	   			
+   	   			.comment_description
+   	   			{
+   	   				font-family:		museoSans500;
+   	   				font-size:			12px;
+   	   				color:				#999999;
+   	   				text-shadow:		1px 1px 0px #FFFEFF;
+   	   				
+   	   				a:link,
+					a:visited
+					{
+						color:				#666666;
+					}
+					
+					a:hover
+					{
+						color:				#999999;
+					}
+   	   			}
+   	   		}   	   		
+   	   	}
+   	}
+        
+    
+    .modalContainer
+    {
+    	margin:		15px 0 0 0;
+    	
+    	.modalVenueHours
+    	{
+    		text-transform:	uppercase;
+    	}
+    	
+    	.changePost
+    	{
+    		position:		fixed;
+    		top:			50% - 5px;
+    		width:			100px;
+			height:			70px;
+			z-index:		200;
+    	}
+    	
+    	
+    	.prev
+    	{
+    		background:		url(../img/modal/prev_buttons.png) no-repeat;
+    		left:			-20px;
+    	}
+		
+		.next
+		{
+			background:		url(../img/modal/next_buttons.png) no-repeat;
+			right:			-20px;
+		}
+		
+		.active:hover
+		{
+			background-position:	0 -73px;
+		}
+    	
+    	.inactive
+    	{
+    		background-position:	0 -146px;
+    		cursor:					default;
+    	}
+    	
+		.modalPostBox
+		{
+			margin:			0 25px 0 0;
+			float:			left;
+			z-index:		20 !important;
+			
+			.postInfoContainer
+			{
+				.border-radius(5px, 0, 0, 5px);
+			}
+		}
+		
+		.infoContainer
+		{
+			float:				left;
+			
+			h1
+    		{
+    			text-transform:	capitalize;
+    			font-family:	nevisBold;
+    			color:			white;
+    			font-size:		25px;
+    		}
+    		
+    		h2, p, pre
+			{
+				font-family:		museoSans300;
+				color:				#CCCCCC;
+			}
+			
+			h2
+			{
+				text-transform:		uppercase;
+				font-size:			15px;
+			}
+			
+			p, pre
+			{
+				font-size:			14px;
+			}
+			
+			.nameAndTimeContainer
+			{
+				border-bottom:		1px solid #999999;
+				float:				left;
+				max-width:			650px;
+				width:				100%;
+			}
+			
+			.descriptionContainer
+			{
+				float:				left;
+				margin:				2px 0 0 20px;
+				width:				450px;
+				
+				height:				450px;
+				overflow-x:			hidden;
+				overflow-y:			hidden;
+				
+				a:visited,			
+				a:link
+    	   		{
+    	   		    color:				#A7A7A7;
+    	   		}
+				
+				a:hover
+				{
+					color:				#DDDDDD;
+				}
+				
+				pre
+				{
+					text-shadow:		2px 2px 0 black;
+					color:				#DDDDDD;
+				}
+			}
+			
+			.sideContainer
+			{
+				width:				180px;
+				float:				left;
+				clear:				both;
+				
+				height:				450px;
+				overflow:			hidden;
+				
+				.going
+				{
+					border-bottom:		1px solid #999999;
+					font-family:		nevisBold;
+					text-transform:		uppercase;
+					color:				white;
+					background:			none;
+					font-size:			12px;
+					height:				50px;
+					width:				100%;
+					
+					.objectContainer
+					{
+						margin:			0 auto;
+						width:			100px;
+						
+						.plus
+						{
+							margin:				0 10px 0 0;
+							float:				left;
+						}
+						
+						.imGoing
+						{
+							padding:			3px 0 0 0;
+							float:				left;
+						}
+					}
+				}
+				
+				.postImage
+				{
+					max-height:		240px;
+					width:			180px;
+				}
+				
+				.additionalInfo
+				{
+					border-bottom:		1px solid #999999;
+					border-top:			1px solid #999999;
+					padding:			18px 2px 18px 6px;
+					margin:				5px 0 0 0;
+					
+					.postInfoHeading
+    				{
+    				    margin:			0 0 12px 0;
+    				    height:			12px;
+    				    
+    				    .headingLine
+    				    {
+    				    	margin:			6px 0 0 0;
+    				    	background:		#999999;
+    				    	width:			115px;
+    				    	height:			1px;
+    				    	float:			right;
+    				    }
+    				    
+    				    h5
+    				    {
+    				    	font-family:	nevisBold;
+    				    	text-transform:	uppercase;
+    				    	color:			white;
+    				    	float:			left;
+    				    	font-size:		11px;
+    				    }
+    				}
+				}
+			}
+		}
+    }
+    
+    #selContainer
+    {
+    	position:		absolute;
+    	width:			100%;
+    	bottom:			175px;
+    	z-index:		35;
+    	
+    	
+    	#shiftDown:hover
+		{
+			cursor:			pointer;
+		}
+		
+		#shiftDown
+		{
+			position:		absolute;
+			
+			margin-left:	-25px;
+			left:			50%;
+			bottom:			-58px;
+		}
+		
+		#selector
+		{
+			.unselectableWithPointer;
+			
+			position:		absolute;
+			height:			420px;
+			width:			403px;
+			display:		none;
+			
+			left:			50%;
+			margin-left:	-201.5px;
+			bottom:			-391px;
+			z-index:		40;
+			
+			.selectedBubbleImage
+			{
+				.rounded(155px);
+				
+				position:		absolute;
+				height:			310px;
+				width:			310px;
+				z-index:		13;
+				left:			60px;
+				top:			40px;
+				
+			}
+			
+			.selectorImage
+			{
+				position:		absolute;
+				z-index:		14;
+			}
+			
+			h1
+    		{
+    			text-shadow:	1px 1px 0 rgba(0,0,0,.75);
+    			text-transform:	uppercase;
+    			font-family:	nevisBold;
+    			text-align:		center;
+    			color:			white;
+    			width:			100% + 2px;
+    			line-height: 	1em;
+    			
+    			position:		absolute;
+    			z-index:		20;
+    		}
+    		
+    		#selectorText_top
+    		{
+    			top:			92px;
+    		}
+    		
+    		#selectorText_bottom
+    		{
+    			top:			260px;
+    		}
+		}
+		
+    }
+    
+    
+    // Conveyor with mobile dragging
+    	#conveyorWrapper 
+		{
+		    .conveyorSize;
+		
+			background:		url("../img/phase1/conveyorBG.gif");				
+			position:		absolute;
+			z-index:		3;
+			margin:			0;
+			bottom:			0;
+			left:			0;
+		}
+		
+		#scroller 
+		{
+		    float:			left;
+		}
+		
+		
+		
