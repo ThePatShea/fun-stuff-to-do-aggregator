@@ -8,7 +8,6 @@
   @copyright (c) 2009-2012 Christoph Ono (www.wookmark.com)
   @license Licensed under the MIT (http://www.opensource.org/licenses/mit-license.php) license.
 */
-
 $.fn.wookmark = function(options) {
   
   if(!this.wookmarkOptions) {
@@ -17,7 +16,7 @@ $.fn.wookmark = function(options) {
         offset: 2,
         autoResize: false,
         itemWidth: $(this[0]).outerWidth(),
-        resizeDelay: 0
+        resizeDelay: 50
       }, options);
   } else if(options) {
     this.wookmarkOptions = $.extend(this.wookmarkOptions, options);
@@ -31,7 +30,6 @@ $.fn.wookmark = function(options) {
   
   // Main layout function.
   this.wookmarkLayout = function() {
-  
     // Calculate basic layout parameters.
     var columnWidth = this.wookmarkOptions.itemWidth + this.wookmarkOptions.offset;
     var containerWidth = this.wookmarkOptions.container.width();
@@ -73,322 +71,28 @@ $.fn.wookmark = function(options) {
       
       // Find the shortest column.
       shortest = null;
-      longest  = null;
       shortestIndex = 0;
       for(k=0; k<columns; k++) {
         if(shortest == null || heights[k] < shortest) {
           shortest = heights[k];
           shortestIndex = k;
         }
-      
-      //CAMPUS BUBBLE CUSTOM
-        if(longest == null || heights[k] > longest) {
-          longest = heights[k];
-          longestIndex = k;
-        }
-      //CAMPUS BUBBLE CUSTOM
       }
-      
-    // START CAMPUS BUBBLE CUSTOM ADDITIONS
-      var moreWidgetSpace              =  150;
-      var topAddition                  =  0;
-      
-      
-    
-      var section_now_times           =  0;
-      var section_today_times         =  0;
-      var section_tonight_times       =  0;
-      var section_tomorrow_times      =  0;
-      var section_this_week_times     =  0;
-      var section_this_weekend_times  =  0;
-      var section_next_week_times     =  0;
-      var section_next_weekend_times  =  0;
-      var section_upcoming_times      =  0;
-    
-      
-      
-      
-      if (item.hasClass("section_now") && section_now_exists ==  1)
-      {
-          topAddition += moreWidgetSpace;
-      }
-      
-      if (item.hasClass("section_today") && section_today_exists ==  1)
-      {
-          topAddition += moreWidgetSpace;
-      }
-      
-      if (item.hasClass("section_tonight") && section_tonight_exists ==  1)
-      {
-          topAddition += moreWidgetSpace;
-      }
-      
-      if (item.hasClass("section_tomorrow") && section_tomorrow_exists ==  1)
-      {
-          topAddition += moreWidgetSpace;
-      }
-      
-      if (item.hasClass("section_this_week") && section_this_week_exists ==  1)
-      {          
-          topAddition += moreWidgetSpace;
-      }
-      
-      if (item.hasClass("section_this_weekend") && section_this_weekend_exists ==  1)
-      {          
-          topAddition += moreWidgetSpace;
-      }
-     
-      if (item.hasClass("section_next_week") && section_next_week_exists ==  1)
-      {          
-          topAddition += moreWidgetSpace;
-      }
-      
-      if (item.hasClass("section_next_weekend") && section_next_weekend_exists ==  1)
-      {          
-          topAddition += moreWidgetSpace;
-      }
-      
-      if (item.hasClass("section_upcoming") && section_upcoming_exists ==  1)
-      {          
-          topAddition += moreWidgetSpace;
-      }
-            
-    
-      
-      
-      
-      if (item.hasClass("section_today_first"))
-      {
-          section_today_times++;
-          
-          if (section_today_times == 1)
-          {
-              for(k=0; k<columns; k++)
-              {
-                  heights[k] = longest;
-                  
-              }
-              
-              shortest      = longest;
-              shortestIndex = 0;
-          }        
-      }
-      
-      if (item.hasClass("section_tonight_first"))
-      {
-          section_tonight_times++;
-          
-          if (section_tonight_times == 1)
-          {
-              for(k=0; k<columns; k++)
-              {
-                  heights[k] = longest;
-                  
-              }
-              
-              shortest      = longest;
-              shortestIndex = 0;
-          }        
-      }
-      
-      if (item.hasClass("section_tomorrow_first"))
-      {
-          section_tomorrow_times++;
-          
-          if (section_tomorrow_times == 1)
-          {
-              for(k=0; k<columns; k++)
-              {
-                  heights[k] = longest;
-                  
-              }
-              
-              shortest      = longest;
-              shortestIndex = 0;
-          }        
-      }
-     
-      if (item.hasClass("section_this_week_first"))
-      {
-          section_this_week_times++;
-          
-          if (section_this_week_times == 1)
-          {
-              for(k=0; k<columns; k++)
-              {
-                  heights[k] = longest;
-                  
-              }
-              
-              shortest      = longest;
-              shortestIndex = 0;
-          }        
-      }
-     
-      if (item.hasClass("section_this_weekend_first"))
-      {
-          section_this_weekend_times++;
-          
-          if (section_this_weekend_times == 1)
-          {
-              for(k=0; k<columns; k++)
-              {
-                  heights[k] = longest;
-                  
-              }
-              
-              shortest      = longest;
-              shortestIndex = 0;
-          }        
-      }
-     
-      if (item.hasClass("section_next_week_first"))
-      {
-          section_next_week_times++;
-          
-          if (section_next_week_times == 1)
-          {
-              for(k=0; k<columns; k++)
-              {
-                  heights[k] = longest;
-                  
-              }
-              
-              shortest      = longest;
-              shortestIndex = 0;
-          }        
-      }
-     
-      if (item.hasClass("section_next_weekend_first"))
-      {
-          section_next_weekend_times++;
-          
-          if (section_next_weekend_times == 1)
-          {
-              for(k=0; k<columns; k++)
-              {
-                  heights[k] = longest;
-                  
-              }
-              
-              shortest      = longest;
-              shortestIndex = 0;
-          }        
-      }
-     
-      if (item.hasClass("section_upcoming_first"))
-      {
-          section_upcoming_times++;
-          
-          if (section_upcoming_times == 1)
-          {
-              for(k=0; k<columns; k++)
-              {
-                  heights[k] = longest;
-                  
-              }
-              
-              shortest      = longest;
-              shortestIndex = 0;
-          }
-      }
-      
-      
-      
-      
-      
-      
-    // END CAMPUS BUBBLE CUSTOM ADDITIONS 
       
       // Postion the item.
       item.css({
         position: 'absolute',
-        top: (shortest+topAddition)+'px',
+        top: shortest+'px',
         left: (shortestIndex*columnWidth + offset)+'px'
       });
-      
-      
-      
-     // START CAMPUS BUBBLE CUSTOM ADDITIONS
-      
-      var labelOffset = 70;
-      
-      if (item.hasClass("section_now_first"))
-      {
-          var newTop  =  $(".section_now_first").position().top ;
-              
-          $("#timeLabel_now").css({ top: (newTop - labelOffset)+"px", });
-      }
-      
-      if (item.hasClass("section_today_first"))
-      {
-          var newTop  =  $(".section_today_first").position().top ;
-              
-          $("#timeLabel_today").css({ top: (newTop - labelOffset)+"px", });
-      }
-      
-      if (item.hasClass("section_tonight_first"))
-      {
-          var newTop  =  $(".section_tonight_first").position().top ;
-              
-          $("#timeLabel_tonight").css({ top: (newTop - labelOffset)+"px", });
-      }
-      
-      if (item.hasClass("section_tomorrow_first"))
-      {
-          var newTop  =  $(".section_tomorrow_first").position().top ;
-              
-          $("#timeLabel_tomorrow").css({ top: (newTop - labelOffset)+"px", });   
-      }
-      
-      if (item.hasClass("section_this_week_first"))
-      {
-          var newTop  =  $(".section_this_week_first").position().top ;
-              
-          $("#timeLabel_this_week").css({ top: (newTop - labelOffset)+"px", });
-      }
-      
-      if (item.hasClass("section_this_weekend_first"))
-      {
-          var newTop  =  $(".section_this_weekend_first").position().top ;
-              
-          $("#timeLabel_this_weekend").css({ top: (newTop - labelOffset)+"px", });
-      }
-      
-      if (item.hasClass("section_next_week_first"))
-      {
-          var newTop  =  $(".section_next_week_first").position().top ;
-              
-          $("#timeLabel_next_week").css({ top: (newTop - labelOffset)+"px", });
-      }
-      
-      if (item.hasClass("section_next_weekend_first"))
-      {
-          var newTop  =  $(".section_next_weekend_first").position().top ;
-              
-          $("#timeLabel_next_weekend").css({ top: (newTop - labelOffset)+"px", });
-      }
-      
-      if (item.hasClass("section_upcoming_first"))
-      {
-          var newTop  =  $(".section_upcoming_first").position().top ;
-              
-          $("#timeLabel_upcoming").css({ top: (newTop - labelOffset)+"px", });
-      }
-      
-      
-     // END CAMPUS BUBBLE CUSTOM ADDITIONS
       
       // Update column height.
       heights[shortestIndex] = shortest + item.outerHeight() + this.wookmarkOptions.offset;
       bottom = Math.max(bottom, heights[shortestIndex]);
       
-      
-      this.wookmarkColumns[shortestIndex].push(item);  
+      this.wookmarkColumns[shortestIndex].push(item);
     }
     
-    //longestHeight[heightCount++] = heights[longestIndex]; //CAMPUS BUBBLE CUSTOM
-        
     return bottom;
   };
   
@@ -462,6 +166,4 @@ $.fn.wookmark = function(options) {
   
   // Display items (if hidden).
   this.show();
-  
-  
 };

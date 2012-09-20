@@ -23,29 +23,12 @@
     	
     	$bubbleInfo = generateQueryArray
     	("
-    		SELECT 		bubbles_connections.bubbleID_bubble, bubbleID_tag, accounts.name, tags_list.tag, nicknames.nickname, places_current.type, bubbles_list.background_url
-    		FROM		bubbles_connections
-    		
-    		LEFT JOIN	accounts
-		    ON			bubbles_connections.bubbleID_tag  =  accounts.accountFacebookID
+    		SELECT 		*
+    		FROM		bubbles_list
 		    
-		    LEFT JOIN	tags_list
-		    ON			bubbles_connections.bubbleID_tag  =  tags_list.bubbleID
-		    
-		    LEFT JOIN	nicknames
-		    ON			bubbles_connections.bubbleID_tag  =  nicknames.bubbleID
-		    
-		    LEFT JOIN	places_current
-		    ON			bubbles_connections.bubbleID_tag  =  places_current.bubbleID
-		    
-		    LEFT JOIN bubbles_list
-		    ON			bubbles_connections.bubbleID_bubble = bubbles_list.bubbleID_bubble
-		    
-		    WHERE		bubbles_list.orderID > -1
-		    
-    		ORDER BY	bubbles_list.orderID
+    		ORDER BY	orderID
     	");
-    	
+	//print_r($bubbleInfo);    	
     	return $bubbleInfo;
     }
     
@@ -84,7 +67,7 @@
 		
 			$currentBubble = 0;
 			
-			$count__bubbleInfo  =   count($bubbleInfo);
+			$count__bubbleInfo  =   count($bubbleInfo) + 1;
 			for ($i = 0;    $i  <  $count__bubbleInfo ;    $i++)
 			{
 				$displayInfo[$currentBubble]["bubbleID"] = $bubbleInfo[$i-1]["bubbleID_bubble"];
