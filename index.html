@@ -27,6 +27,14 @@
 	
 	
 	<body>
+		<div id="bannerContainer"><a href="http://www.facebook.com/EmoryBubble">We've announced the raffle winners for the Counterpoint tickets. Click here to see if you've won!</a></div>
+		<script>
+		var currentTime = Math.round((new Date()).getTime() / 1000);
+
+		if (currentTime >= 1348192800 && currentTime <= 1348333200) {
+		  $("#bannerContainer").css("display","block");
+		}
+		</script>
 		<section id="pageContainer">
 		
 			<section id="phase1">
