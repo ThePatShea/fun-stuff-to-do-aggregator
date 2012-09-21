@@ -2,6 +2,7 @@
 
 <?php
 
+echo "testing 1"; 
 
 	function sortBubbles_deals_single($bubbleID)
 	{
@@ -434,7 +435,7 @@
 		    ORDER BY start_time ASC
 		");
 		
-		
+
 	
 		if ($postInfo == "") return;		
 	
@@ -446,6 +447,7 @@
 			GROUP BY	bubbleID_parent
 		");
 		
+
 		$today_start                   =  strtotime("today 00:00");
 	    $tonight_start                 =  strtotime("today 18:00");
 	    $tomorrow_start                =  strtotime("tomorrow");
@@ -475,7 +477,6 @@
 		    AND			accounts.pic_square != ''
 		    LIMIT		$numMorePeople
 		");
-		
 		
 		foreach ($postInfo as $post)
 	    {
@@ -559,6 +560,9 @@
 		    ");
 		    
 		    echo "<br>"."<img src='".$post["pic_big"]."'/>"."<b>".$post["bubbleID"]."</b>"." (score: ".$post["score"].", emory attendees: ".$emoryAttendees.", comments: ".$commentsCount.")".": ".$post["timeframe"]." -- ".date("l, F jS, g:iA - ",$post["start_time"]).date("g:iA",$post["end_time"])." | ".$post["post_name"]."<br>";
+	
+			
+		
 		 }
 					
 	    }
@@ -727,23 +731,34 @@
 	function sortBubbles()
 	{
 		mysql_query("DELETE FROM bubbles_front_temp WHERE 1");
-		
+	
 		$topBubbleArray  =  generateQueryArray_flat
 		("
 			SELECT		bubbleID_bubble
 			FROM		bubbles_list
 			WHERE		orderID > -1
 		");
-		
+	
+		//$topBubbleArray = "";
+		echo "<br>testing 2<br>";
+		print_r($topBubbleArray);
+			
 		$count_topBubbleArray = count($topBubbleArray);
+	
 		
+	
 		for($i = 0; $i < $count_topBubbleArray; $i++)
 		{
+
 			echo "<br><u><b>Bubble ".($i + 1)." of ".($count_topBubbleArray)."</b></u><br>";
-			
+						
+	
 			sortBubbles_single($topBubbleArray[$i]);
 			
+						
+
 			echo "<br><u><b>Finished with Bubble ".($i + 1)." of ".($count_topBubbleArray)."</b></u><br><br>";
+			
 		}
 		
 		

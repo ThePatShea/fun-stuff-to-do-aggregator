@@ -5,8 +5,8 @@
 			session_start();
 		
 		// Connects to the database
-			mysql_connect("localhost", "campus_bubbAdmin", "F484LaVista");
-			mysql_select_db("campus_bubbleDataSandbox5");
+			mysql_connect("bubbledata.cuhe5ywnmpir.us-east-1.rds.amazonaws.com", "campus", "F302pinpulse");
+			mysql_select_db("bubbleDataSandbox5");
 		
 		// Sets the top bubbles(no longer needed)
 			$topBubbleArray  =  generateQueryArray_flat

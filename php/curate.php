@@ -1,4 +1,6 @@
-<?php include_once("background.php") ?>
+<?php
+
+ include_once("background.php") ?>
 
 <?php
 		
@@ -865,5 +867,5 @@
 	
 	
 	curate_all();	
-	
+
 ?>
