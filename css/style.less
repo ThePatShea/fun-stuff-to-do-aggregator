@@ -58,7 +58,20 @@
 	.tmask {position:fixed; display:none; top:0px; left:0px; height:100%; width:100%; background:#000; z-index:800}
 	.tclose {.unselectableWithPointer; position:absolute; top:-20px; left:15px; width:110px; height:37px; background:url(../img/modal/close_button.png) no-repeat}
 	.tclose:hover {background-position:0 -39px}
+
+	.newModalClose
+	{
+		height:		37px;
+		width:		110px;
+		background:	url(../img/modal/close_button.png) no-repeat;
+	}
 	
+	.newModalClose:hover
+	{
+		background-position:	0 -39px;
+		cursor:			pointer;
+	}
+
 	#bubblebox
 	{
 		background: none;
@@ -76,7 +89,7 @@
 		position:		fixed;
 		left:			50%;
 		bottom:			50%;
-		z-index:		2000;		
+		z-index:	99999;		
 				
 		.modalLoader
 		{
@@ -161,6 +174,35 @@
 
 
 // Main CSS
+	#mask
+	{
+	  position:             absolute;
+	  left:                 0;
+	  top:                  0;
+	  z-index:              9000;
+	  background:     	url("../img/modal/maskBG.gif");
+	  display:              none;
+	}
+	
+	.window 
+	{
+	  position:             fixed;
+	  left:                 0;
+	  top:                  0;
+	  display:              none;
+	  z-index:              9990;
+	}
+	
+	#dialog 
+	{
+	  width:                100%;
+	  height:               100%;
+	  //background:           red;
+	}
+
+
+
+
 	body 
 	{
 		.grey1;
@@ -997,17 +1039,17 @@
 	.postBox, #modalCommentDetailBox
 	{
 		h1, h2, h3, h4, h5
-    	{
-    		font-family:	nevisBold;
-    	}
+    		{
+    			font-family:	nevisBold;
+	    	}
     	
     	    	
-    	.headingLine
-    	{
-    		border-bottom:	1px solid white;
-    		background:		#CFCFCF;
-    		height:			1px;
-    	}	
+   	 	.headingLine
+    		{
+    			border-bottom:	1px solid white;
+    			background:		#CFCFCF;
+    			height:			1px;
+    		}	
     	
 	}
 	
@@ -1341,7 +1383,7 @@
     {
         position: 			absolute;
         top:				180px;
-        left:				19px;
+        left:				2px;
     }
     
     .nonModalCommentDetailBox
@@ -1472,14 +1514,16 @@
 		.infoContainer
 		{
 			float:				left;
-			
+			width:				100%;	
+			margin:				0 10%;			
+
 			h1
-    		{
-    			text-transform:	capitalize;
-    			font-family:	nevisBold;
-    			color:			white;
-    			font-size:		25px;
-    		}
+    			{
+    				text-transform:	capitalize;
+    				font-family:	nevisBold;
+   	 			color:			white;
+    				font-size:		25px;
+    			}
     		
     		h2, p, pre
 			{
@@ -1502,17 +1546,16 @@
 			{
 				border-bottom:		1px solid #999999;
 				float:				left;
-				max-width:			650px;
-				width:				100%;
+				//max-width:			650px;
+				width:				80%;
 			}
 			
 			.descriptionContainer
 			{
 				float:				left;
-				margin:				2px 0 0 20px;
-				width:				450px;
-				
-				height:				450px;
+				margin:				2px 0 0 0;
+				width:				60%;	
+				height:				100%;
 				overflow-x:			hidden;
 				overflow-y:			hidden;
 				
@@ -1536,11 +1579,12 @@
 			
 			.sideContainer
 			{
+				margin:				0 20px 0 0;
 				width:				180px;
 				float:				left;
 				clear:				both;
 				
-				height:				450px;
+				//height:				450px;
 				overflow:			hidden;
 				
 				.going

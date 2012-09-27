@@ -355,8 +355,8 @@
 	    		    echo "<div class='headingLine_tile'></div>";
 	    		echo "</div>";
 	    	}
-	    	
-	    	echo "<li class='postBox mainPostBox ";
+
+	    	echo "<li href='#dialog' name='modal' class='postBox mainPostBox ";
 	    	
 	    		for ($i = 0; $i <= 8; $i++)
 	    		{
@@ -373,8 +373,12 @@
 	    			}
 	    		}
 	    	
-	    	echo "' onclick=\"trackAction("."'User clicked the postBox in the main window to open the modal window for the post:'".", "."'".$post['bubbleID_post']."'"."); startModalLoader(); TINY.box.show({url:'php/ajax.php?do=getPostInfo&bubble=".$post['bubbleID_post']."&bubbleID=".$bubbleID."',boxid:'bubblebox',width:950,height:500,fixed:true,maskid:'texturemask',animate:false,openjs:function(){modalWindowOpenJS()},closejs:function(){modalWindowCloseJS()}});\">";
-	    
+	    	echo "'";
+		
+		echo "onclick='loadIntoModal(\"".$post["bubbleID_post"]."\", \"".$bubbleID."\");'";	
+
+		echo ">";
+ 
 	    		echo "<section class='postImageContainer'>";
 	    			$pic_big = $post["post_pic_big"];
    					if ($pic_big == "http://profile.ak.fbcdn.net/static-ak/rsrc.php/v2/yn/r/5uwzdFmIMKQ.png" || $pic_big == "http://profile.ak.fbcdn.net/static-ak/rsrc.php/v2/y-/r/qXbA9JmRIZi.png")
@@ -398,7 +402,8 @@
 	    		echo "</section>";
 	    		
 	    		echo "<section class='postInfoAndButtonsContainer'>";
-		    		echo "<section class='postInfoContainer'>";
+		    		
+				echo "<section class='postInfoContainer'>";
 		    			if ($post["venue_name"] != "")
    	    				{
 		    				echo "<section class='postInfoSection'>";
@@ -697,7 +702,7 @@
 				echo "<button class='prev changePost active' onclick='loadIntoModal( \"". $postArray[($index-1)] ."\" , \"". $_GET["bubbleID"] ."\" );' ></button>" ;
 			else 
     			echo "<button class='prev changePost inactive'></button>";
-			    		
+		/*    		
    			echo "<li class='postBox modalPostBox' style='display: block;'>";
        			echo "<section class='postInfoAndButtonsContainer'>";
    	    			echo "<section class='postInfoContainer'>";
@@ -763,7 +768,7 @@
    	    			echo "</section>";
    	    		echo "</section>";
    	   		echo "</li>";
-   	   		
+   	   	*/	
    			echo "<section class='infoContainer'>";
    				
    				echo "<div class='nameAndTimeContainer'>";
@@ -899,6 +904,7 @@
    					$description = $infoArray[0]["event_description"];
    					$description = detectLinks($description);
    					echo "<pre id='postDescription'>";
+
    						echo $description;
    						   						   						
    						if ($venueArray[0]["about"] != "")
@@ -911,7 +917,7 @@
    				echo "</section>";
    				
    			echo "</section>";
-   			
+   		/*
    			echo "<section class='commentDetailBox' id='modalCommentDetailBox'>";
    			
    				echo "<div id='commentContentWrapper'>";
@@ -940,8 +946,7 @@
    		    	echo "</div>";
    		           		    
    		    echo "</section>";
-   		    
-   		       			
+   		*/  
 		echo "</section>";
 	}
 	
@@ -1254,7 +1259,8 @@
 			$("img.lazy_"+loadCount).lazyload({ threshold : 500, effect : "fadeIn" });
 		
 			if(loadCount == 0) $("img.lazy_"+loadCount).trigger("appear");
-		
+			
+			activateModal();
 		</script>
 
 <?php } ?>

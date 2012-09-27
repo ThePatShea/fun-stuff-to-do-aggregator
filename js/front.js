@@ -15,6 +15,97 @@ var urlPrefix         =  "";
 var urlPostfix        =  "";
 
 
+
+
+
+
+function activateModal()
+{
+        //select all the a tag with name equal to modal
+        $('[name=modal]').click(function(e) {
+                //Cancel the link behavior
+                e.preventDefault();
+
+                //Get the A tag
+                var id = $(this).attr('href');
+
+                //Get the screen height and width
+                var maskHeight = $(document).height();
+                var maskWidth = $(window).width();
+
+                //Set heigth and width to mask to fill up the whole screen
+                $('#mask').css({'width':maskWidth,'height':maskHeight});
+
+                //transition effect
+                //$('#mask').fadeIn(100);
+                $('#mask').fadeTo("fast",.95);
+
+                //Get the window height and width
+                var winH = $(window).height();
+                var winW = $(window).width();
+
+                //Set the popup window to center
+                $(id).css('top',  winH/2-$(id).height()/2);
+                $(id).css('left', winW/2-$(id).width()/2);
+
+                //transition effect
+                $(id).fadeIn(100);
+		
+		modalWindowOpenJS();
+        });
+
+        //if close button is clicked
+        $('.window .close').click(function (e) {
+                //Cancel the link behavior
+                e.preventDefault();
+
+                $('#mask').hide();
+                $('.window').hide();
+		modalWindowCloseJS();
+		
+		$("#modalContainer").html("");
+        });
+
+        //if mask is clicked
+        $('#mask').click(function () {
+                $(this).hide();
+                $('.window').hide();
+		modalWindowCloseJS();
+        });
+
+        $(window).resize(function () {
+
+                var box = $('#boxes .window');
+
+        //Get the screen height and width
+        var maskHeight = $(document).height();
+        var maskWidth = $(window).width();
+
+        //Set height and width to mask to fill up the whole screen
+        $('#mask').css({'width':maskWidth,'height':maskHeight});
+
+        //Get the window height and width
+        var winH = $(window).height();
+        var winW = $(window).width();
+
+        //Set the popup window to center
+        box.css('top',  winH/2 - box.height()/2);
+        box.css('left', winW/2 - box.width()/2);
+
+        });
+}
+
+
+
+
+
+
+
+
+
+
+
+
 function trackLinkClick(url)
 {
 	mixpanel.track("User clicked a link to the url: " + url);
@@ -215,9 +306,9 @@ function loadIntoModal(bubble, bubbleID)
 
 function createScrollBars()
 {
-	 	$('#postDescription').slimScroll({
-	    		  height: '450px',
-	    		  width: '445px',
+	 	$('#modalContainer').slimScroll({
+	    		  height: '100%',
+	    		  width: '100%',
 	    		  alwaysVisible: false,
 				  start: 'top',
 	    		  wheelStep: 10,
@@ -919,6 +1010,8 @@ function populateBubble(bubbleTag)
 		
 		if ($(window).width() < 750)
 		{
+			$('.changePost').css({"display": "none"});
+
 			$("#scroller").css({width : ((121 * totalBubbles) - 30)+'px'});
 			
 			
@@ -955,11 +1048,22 @@ function populateBubble(bubbleTag)
 			}
 			
 			
+			if ($(window).width() < 510)
+			{
+				 $('.descriptionContainer').css({"width": "80%"});
+			}
+			else
+			{
+				$('.descriptionContainer').css({"width": "60%"});
+			}
+	
 			
 			postLoad  =  6;
 		}
 		else
 		{
+			$('.changePost').css({"display": "block"});
+			
 			$("#scroller").css({width : '100%'});
 			
 			
@@ -1072,6 +1176,7 @@ function populateBubble(bubbleTag)
 	
 	$(document).ready(function() 
 	{
+		activateModal();
 		activatePath();
 	});
 
