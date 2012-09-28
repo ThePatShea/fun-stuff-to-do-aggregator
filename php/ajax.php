@@ -1050,7 +1050,7 @@
 		global $topBubbleList;
 		global $cover_photo;
 			
-		
+	/*		
 		$bubbleInfo = generateQueryArray
     	("
     		SELECT 		bubbles_connections.bubbleID_bubble, bubbleID_tag, accounts.name, tags_list.tag, nicknames.nickname, places_current.type
@@ -1083,9 +1083,13 @@
  			{
     			$bubbleList[$b] = $bubbleInfo[$b]["bubbleID_bubble"];
     		}
-    	
-    	$index = array_search($bubbleTag, $bubbleList);
-    	
+    	*/
+
+	$bubbleInfo = generateQueryArray("SELECT * FROM bubbles_list WHERE orderID > -1 ORDER BY orderID ASC");
+	$numBubbles = count($bubbleInfo);
+
+	$index = generateQuery_singleVar("SELECT orderID FROM bubbles_list WHERE bubbleID_bubble = '$bubbleTag'");
+	
     	//calculate the indexes for the arrows
     		$rightIndex = $index + 1;
     		$leftIndex = $index - 1;
@@ -1095,10 +1099,9 @@
     		if($rightIndex >= $numBubbles)
     			$rightIndex = 0;
     	
-    	$leftID		= $bubbleInfo[$leftIndex][0];
-    	$leftName 	= $bubbleInfo[$leftIndex][3];
-    	
-    	
+    	$leftID		= $bubbleInfo[$leftIndex]["bubbleID_bubble"];
+    	$leftName 	= $bubbleInfo[$leftIndex]["name"];
+    
 		echo "<button id='prevMain' class='prevMain changeBubble active' onclick='switchBubble(\"".$leftID."\")';>";
 		
 			echo 	"<li class='bubble'>
@@ -1109,14 +1112,14 @@
 				           	echo "</h2>
 				       </div></div>
 				   </div>
-				   <div class='smallestBubbleBG smallestBubbleBG_prev' style='background-image: url(".$cover_photo[$leftName]."); background-size: auto 97px; background-position: center;'></div>
+				   <div class='smallestBubbleBG smallestBubbleBG_prev' style='background-image: url(".$bubbleInfo[$leftIndex]["background_url"]."); background-size: auto 97px; background-position: center;'></div>
 				</li>";
 				
 		echo "</button>";
     	
-    	
-    	$rightID 	= $bubbleInfo[$rightIndex][0];
-    	$rightName 	= $bubbleInfo[$rightIndex][3];
+	$rightID         = $bubbleInfo[$rightIndex]["bubbleID_bubble"];
+        $rightName       = $bubbleInfo[$rightIndex]["name"];    	
+
   		
 		echo "<button id='nextMain' class='nextMain changeBubble active' onclick='switchBubble(\"".$rightID."\")';>";
 		
@@ -1128,7 +1131,7 @@
 				           	echo "</h2>
 				       </div></div>
 				   </div>
-				   <div class='smallestBubbleBG smallestBubbleBG_next' style='background-image: url(".$cover_photo[$rightName]."); background-size: auto 97px; background-position: center;'></div>
+				   <div class='smallestBubbleBG smallestBubbleBG_next' style='background-image: url(".$bubbleInfo[$rightIndex]["background_url"]."); background-size: auto 97px; background-position: center;'></div>
 				</li>";
 				
 		echo "</button>";
