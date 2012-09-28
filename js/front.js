@@ -455,8 +455,8 @@ function populateSelector(bubbleTag)
 	else if (bubbleTag == "e099ace7-ed4b-11e1-bf61-aafbeaa37357")
 	{
 		var selectorHTML   =  "<div style='position: relative; top: 15px;'>";
-			selectorHTML      +=  "<div style='font-size: 14px;'>freshmen</div>";
-			selectorHTML      +=  "<div style='font-size: 19px; position: relative; top: 2px;'>events</div>";
+			selectorHTML      +=  "<div style='font-size: 20px;'>arts&</div>";
+			selectorHTML      +=  "<div style='font-size: 22px; position: relative; top: 4px;'>music</div>";
 		selectorHTML      +=  "</div>";
 	}
 	else if (bubbleTag == "49438594-ed4c-11e1-bf61-aafbeaa37357")

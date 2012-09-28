@@ -159,8 +159,8 @@
 				        		else if ($displayInfo[$i]["bubbleID"] == "e099ace7-ed4b-11e1-bf61-aafbeaa37357")
 				        		{
 				        			echo "<div style='position: relative; top: 3px;'>";
-										echo "<div style='font-size: 14px;'>freshmen</div>";
-										echo "<div style='font-size: 20px; position: relative; top: -8px;'>events</div>";
+										echo "<div style='font-size: 19px;'>arts&</div>";
+										echo "<div style='font-size: 21px; position: relative; top: -6px;'>music</div>";
 									echo "</div>";
 				        		}
 				        		else if ($displayInfo[$i]["bubbleID"] == "49438594-ed4c-11e1-bf61-aafbeaa37357")
@@ -1018,8 +1018,8 @@
 		else if ($leftID == "e099ace7-ed4b-11e1-bf61-aafbeaa37357")
 		{
 		    echo "<div style='position: relative; top: 6px;'>";
-		    	echo "<div style='font-size: 10px;'>freshmen</div>";
-		    	echo "<div style='font-size: 14px; position: relative; top: -11px;'>events</div>";
+		    	echo "<div style='font-size: 12px;'>arts&</div>";
+		    	echo "<div style='font-size: 16px; position: relative; top: -11px;'>music</div>";
 		    echo "</div>";
 		}
 		else if ($leftID == "49438594-ed4c-11e1-bf61-aafbeaa37357")
@@ -1145,15 +1145,15 @@
 			
 					$currentTime = date("H");
 									
-					generateSingleSlide
-					("e099ace7-ed4b-11e1-bf61-aafbeaa37357", "Welcome freshmen. Get the rundown.", "Find everything an Emory freshman needs to know",
-					  array
-					  ("http://profile.ak.fbcdn.net/hprofile-ak-snc4/41566_131848706844940_8282_q.jpg",
-					   "http://profile.ak.fbcdn.net/hprofile-ak-snc4/373047_65545003959_1044067095_q.jpg",
-					   "http://profile.ak.fbcdn.net/hprofile-ak-snc4/373049_27087023869_732786793_q.jpg",
-					   "http://profile.ak.fbcdn.net/hprofile-ak-snc4/157979_175734356409_499653500_q.jpg")
-					);
 					
+						generateSingleSlide
+						("49438594-ed4c-11e1-bf61-aafbeaa37357", "See what's happening on campus now.", "Whether it's your organization's event, a concert, or just some pickup soccer",
+						  array
+						  ("http://sphotos-a.xx.fbcdn.net/hphotos-ash3/7530_132767243557_127398_n.jpg",
+						   "http://external.ak.fbcdn.net/safe_image.php?d=AQBK4Y2FsRIALlM2&w=180&h=540&url=http%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fen%2Fa%2Fae%2FEmory_University_Seal.png&fallback=hub_education&prefix=d",
+						   "http://profile.ak.fbcdn.net/hprofile-ak-snc4/174668_17750124821_77308860_q.jpg",
+						   "http://profile.ak.fbcdn.net/hprofile-ak-snc4/203536_16713069882_4374442_q.jpg")
+						);
 					if ($currentTime >= 18 || $currentTime <= 6)
 					{		
 						generateSingleSlide
@@ -1176,15 +1176,16 @@
 					}
 					else
 					{
-						generateSingleSlide
-						("49438594-ed4c-11e1-bf61-aafbeaa37357", "See what's happening on campus now.", "Whether it's your organization's event, a concert, or just some pickup soccer",
-						  array
-						  ("http://sphotos-a.xx.fbcdn.net/hphotos-ash3/7530_132767243557_127398_n.jpg",
-						   "http://external.ak.fbcdn.net/safe_image.php?d=AQBK4Y2FsRIALlM2&w=180&h=540&url=http%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fen%2Fa%2Fae%2FEmory_University_Seal.png&fallback=hub_education&prefix=d",
-						   "http://profile.ak.fbcdn.net/hprofile-ak-snc4/174668_17750124821_77308860_q.jpg",
-						   "http://profile.ak.fbcdn.net/hprofile-ak-snc4/203536_16713069882_4374442_q.jpg")
-						);
 						
+					generateSingleSlide
+					("e099ace7-ed4b-11e1-bf61-aafbeaa37357", "Explore the arts at Emory.", "Art exhibits, orchestra concerts, and more.",
+					  array
+					  ("http://profile.ak.fbcdn.net/hprofile-ak-snc4/41566_131848706844940_8282_q.jpg",
+					   "http://profile.ak.fbcdn.net/hprofile-ak-snc4/373047_65545003959_1044067095_q.jpg",
+					   "http://profile.ak.fbcdn.net/hprofile-ak-snc4/373049_27087023869_732786793_q.jpg",
+					   "http://profile.ak.fbcdn.net/hprofile-ak-snc4/157979_175734356409_499653500_q.jpg")
+					);
+
 						generateSingleSlide
 						("8475045d-ed4f-11e1-bf61-aafbeaa37357", "Great discounts for Emory students.", "Deals on food, nightlife, retail, events, and more",
 						  array

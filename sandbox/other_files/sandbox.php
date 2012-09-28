@@ -126,19 +126,56 @@
 	
 		generateBubblePosts("posts.name LIKE '% Emory%'", "49438594-ed4c-11e1-bf61-aafbeaa37357");	
 		generateBubblePosts("posts.name LIKE 'Emory%'", "49438594-ed4c-11e1-bf61-aafbeaa37357");
-
 	}
 	
 	function generateBubblePosts_concerts()
 	{
-		generateBubblePosts("posts.description LIKE '%concert%'", "2809077e-d5ef-11e1-b249-002590605566");
+		generateBubblePosts("posts.description LIKE '%concert%' AND pages_info.state = 'GA'", "2809077e-d5ef-11e1-b249-002590605566");
+		generateBubblePosts("posts.name LIKE '%concert%' AND pages_info.state = 'GA'", "2809077e-d5ef-11e1-b249-002590605566");
+		generateBubblePosts("pages_info.type LIKE '%concert%' AND pages_info.state = 'GA'", "2809077e-d5ef-11e1-b249-002590605566");	
+	}
+
+	function generateBubblePosts_nightLife()
+        {
+                generateBubblePosts("pages_info.type LIKE '%night%' AND pages_info.city = 'Atlanta'", "ee14bc9e-d5ed-11e1-b249-002590605566");
+		generateBubblePosts("posts.description LIKE '%party%' AND pages_info.city = 'Atlanta'", "ee14bc9e-d5ed-11e1-b249-002590605566");
+		generateBubblePosts("posts.name LIKE '%party%' AND pages_info.city = 'Atlanta'", "ee14bc9e-d5ed-11e1-b249-002590605566");
+        }	
+
+	function generateBubblePosts_atlantaSports()
+        {
+                generateBubblePosts("pages_info.type LIKE '%sport%' AND pages_info.city = 'Atlanta'", "ee14d968-d5ed-11e1-b249-002590605566");
+        }
+
+	function generateBubblePosts_greekLife()
+        {
+                generateBubblePosts("posts.description LIKE '%greek%' AND pages_info.city = 'Atlanta'", "ee14c716-d5ed-11e1-b249-002590605566");
+		generateBubblePosts("posts.description LIKE '%frat%' AND pages_info.city = 'Atlanta'", "ee14c716-d5ed-11e1-b249-002590605566");
+		generateBubblePosts("posts.description LIKE '%sorority%' AND pages_info.city = 'Atlanta'", "ee14c716-d5ed-11e1-b249-002590605566");
+        }
+
+	function generateBubblePosts_artsAndMusic()
+        {       
+		generateBubblePosts("posts.description LIKE '% art%' AND pages_info.city = 'Atlanta'", "e099ace7-ed4b-11e1-bf61-aafbeaa37357");
 	}
 
 
+	function generateBubblePosts_getFood()        
+	{       
+                generateBubblePosts("posts.description LIKE '%food%' AND pages_info.city = 'Atlanta'", "ee14ab0a-d5ed-11e1-b249-002590605566");
+		generateBubblePosts("pages_info.type LIKE '%restaurant%' AND pages_info.city = 'Atlanta'", "ee14ab0a-d5ed-11e1-b249-002590605566");
+		generateBubblePosts("pages_info.type LIKE '%food%' AND pages_info.city = 'Atlanta'", "ee14ab0a-d5ed-11e1-b249-002590605566");
+        }
+
+
 	mysql_query("DELETE FROM bubbles_front_new_temp WHERE 1");	
-	
-	//generateBubblePosts_concerts();
+
+	generateBubblePosts_getFood();	
+	generateBubblePosts_concerts();
+	generateBubblePosts_greekLife();
+	generateBubblePosts_nightLife();
 	generateBubblePosts_campusEvents();
 	generateBubblePosts_studentDeals();
-
+	generateBubblePosts_atlantaSports();
+	generateBubblePosts_artsAndMusic();
 ?>
