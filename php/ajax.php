@@ -251,7 +251,7 @@
     	$bubbleQuery =
     	"
     		SELECT $select
-		    FROM bubbles_front
+		    FROM bubbles_front_new_temp
 		    LEFT JOIN events_info
 		    ON bubbles_front.bubbleID_post = events_info.bubbleID
 		    LEFT JOIN events_invited_count
@@ -328,9 +328,9 @@
 		$postInfo     =  generateQueryArray
 		("
 			SELECT		*
-			FROM		bubbles_front
+			FROM		bubbles_front_new_temp
 			WHERE		bubbleID_bubble = '$bubbleID' 
-			ORDER BY	rank_outer
+			ORDER BY	start_time  ASC
 			LIMIT		$start, $postLoad
 		");
 				
@@ -599,9 +599,9 @@
 		$postArray  	 =  generateQueryArray_flat
 		("
 			SELECT		bubbleID_post
-			FROM		bubbles_front
+			FROM		bubbles_front_new_temp
 			WHERE		bubbleID_bubble = '$bubbleID' 
-			ORDER BY	rank_outer
+			ORDER BY	start_time  ASC
 		");
 				
 		
@@ -645,10 +645,10 @@
 			
 			$dealsArray  =  generateQueryArray
 			("
-				SELECT		bubbles_front.expires, bubbles_front.subtitle, bubbles_front.price, bubbles_front.value, bubbles_front.discount, bubbles_front.venue_name, bubbles_front.venue_pic_square, bubbles_front.venue_accountFacebookID, bubbles_front.atlanta_joins, deals_info.url, deals_info.end_time
-				FROM		bubbles_front
+				SELECT		bubbles_front_new_temp.expires, bubbles_front_new_temp.subtitle, bubbles_front_new_temp.price, bubbles_front_new_temp.value, bubbles_front_new_temp.discount, bubbles_front_new_temp.venue_name, bubbles_front_new_temp.venue_pic_square, bubbles_front_new_temp.venue_accountFacebookID, bubbles_front_new_temp.atlanta_joins, deals_info.url, deals_info.end_time
+				FROM		bubbles_front_new_temp
 				LEFT JOIN	deals_info
-				ON			bubbles_front.bubbleID_post = deals_info.bubbleID
+				ON			bubbles_front_new_temp.bubbleID_post = deals_info.bubbleID
 				WHERE		bubbleID_post = '$id'
 				LIMIT		1
 			");
