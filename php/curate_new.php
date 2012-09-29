@@ -4,10 +4,35 @@
 
 	function storeSortedEvents($events, $bubbleID_bubble)
 	{
+		$today_start                   =  strtotime("today 00:00");
+ 	        $tonight_start                 =  strtotime("today 18:00");
+            	$tomorrow_start                =  strtotime("tomorrow");
+            	$tomorrow_end                  =  strtotime("tomorrow 23:59");
+            	$this_week_start               =  strtotime("monday this week");
+            	$this_weekend_start            =  strtotime("friday this week");
+            	$next_week_start               =  strtotime("monday next week");
+            	$next_weekend_start            =  strtotime("friday next week");
+            	$next_weekend_end              =  strtotime("friday next week + 3 days");
+
 		foreach($events as $post)
        		{
 			$commentsCount = 0;
 			
+			if      ($post["start_time"] < $currentTime         &&  $post["end_time"]   >= $currentTime)         $post["timeframe"]  =  "now";
+                else if ($post["start_time"] < $tonight_start       &&  $post["start_time"] >= $today_start)         $post["timeframe"]  =  "today";
+                else if ($post["start_time"] < $tomorrow_start      &&  $post["start_time"] >= $tonight_start)       $post["timeframe"]  =  "tonight";
+                else if ($post["start_time"] < $tomorrow_end        &&  $post["start_time"] >= $tomorrow_start)      $post["timeframe"]  =  "tomorrow";
+                else if ($post["start_time"] < $this_weekend_start  &&  $post["start_time"] >= $this_week_start)     $post["timeframe"]  =  "this week";
+                else if ($post["start_time"] < $next_week_start     &&  $post["start_time"] >= $this_weekend_start)  $post["timeframe"]  =  "this weekend";
+                else if ($post["start_time"] < $next_weekend_start  &&  $post["start_time"] >= $next_week_start)     $post["timeframe"]  =  "next week";
+                else if ($post["start_time"] < $next_weekend_end    &&  $post["start_time"] >= $next_weekend_start)  $post["timeframe"]  =  "next weekend";
+                else                                                                                                 $post["timeframe"]  =  "upcoming";
+
+			if ($post["post_name"] == "")
+				continue;			
+
+			echo "<br> <b>".$post["post_name"].": </b>".$post["timeframe"]."<br>";			
+
        			mysql_query
                     	("
                         	INSERT INTO             bubbles_front_new_temp
@@ -105,7 +130,7 @@
                                         (bubbleID_bubble, bubbleID_post, timeframe, score, type, name, post_pic_big, price, value, discount, expires, subtitle, atlanta_joins, venue_accountFacebookID, venue_name, venue_pic_square, comments)
 
                                         VALUES
-                                        ('$bubbleID_bubble', '".$deals[$i]."', 'tomorrow', 100000, 'deal', '".$postInfo[0]["name"]."', '".$postInfo[0]["pic_big"]."', '".$dealsInfo[0]["price"]."', '".$dealsInfo[0]["value"]."', '".$dealsInfo[0]["discount"]."', '$expires', '$subtitle', '$atlanta_joins', '".$dealVenueInfo[0]["accountFacebookID"]."', '".$dealVenueInfo[0]["name"]."', '".$dealVenueInfo[0]["pic_square"]."', $commentsCount)
+                                        ('$bubbleID_bubble', '".$deals[$i]."', 'today', 100000, 'deal', '".$postInfo[0]["name"]."', '".$postInfo[0]["pic_big"]."', '".$dealsInfo[0]["price"]."', '".$dealsInfo[0]["value"]."', '".$dealsInfo[0]["discount"]."', '$expires', '$subtitle', '$atlanta_joins', '".$dealVenueInfo[0]["accountFacebookID"]."', '".$dealVenueInfo[0]["name"]."', '".$dealVenueInfo[0]["pic_square"]."', $commentsCount)
                                 ");
 
                    }
@@ -179,7 +204,7 @@
 		generateBubblePosts_studentDeals();
 		generateBubblePosts_atlantaSports();
 		generateBubblePosts_artsAndMusic();
-
+	
 		mysql_query("DELETE FROM bubbles_front_new WHERE 1");
 
 		mysql_query(" SET SQL_MODE = 'NO_AUTO_VALUE_ON_ZERO' "); // Necessary to copy data from one table to another
@@ -190,6 +215,7 @@
                         SELECT                  *
                         FROM                    bubbles_front_new_temp
                 ");
+	
 	}
 
 	curateBubbles();
