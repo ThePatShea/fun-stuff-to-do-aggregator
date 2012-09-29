@@ -823,8 +823,10 @@
    					$pic_big = $infoArray[0]["pic_big"];
    					if ($pic_big == "http://profile.ak.fbcdn.net/static-ak/rsrc.php/v2/yn/r/5uwzdFmIMKQ.png")
    						$pic_big =  "img/other/defaultPost_modalWindow.jpg";
-   						
-   					echo "<img class='postImage' src='".$pic_big."'/>";
+
+					echo "<div class='postImageContainer'>";   				
+  	 					echo "<img class='postImage' src='".$pic_big."'/>";
+   					echo "</div>";
    					
    					if (($infoArray[0]["venue_name"] != "" || $infoArray[0]["location"] != "") && $dealsArray[0]["price"] == "")
    					{
@@ -880,7 +882,7 @@
    						
    							echo "<div class='postInfoHeading'>";
    		    				    echo "<h5>deal</h5>";
-   		    				    echo "<div class='headingLine'></div>";
+   		    				    echo "<div style='width: 195px;' class='headingLine'></div>";
    		    				echo "</div>";
    		    				
    		    				echo "<p>"."$".$dealsArray[0]["price"]." | ".$dealsArray[0]["discount"]."% off"." | "."Value: $".$dealsArray[0]["value"]."</p>";
@@ -890,13 +892,15 @@
    		    				
    		    				echo "<div class='postInfoHeading'>";
    		    				    echo "<h5>expires</h5>";
-   		    				    echo "<div class='headingLine' style='width: 105px'></div>";
+   		    				    echo "<div class='headingLine'></div>";
    		    				echo "</div>";
    		    				
    		    				echo "<p>"."Expires on ".date("l, F jS",$dealsArray[0]["end_time"])." (in ".$dealsArray[0]["expires"].")"."</p>";
    		    		
    						echo "</div>";
    					}
+   					
+   					echo "<iframe style='width: 250px; height: 400px; border: 0; padding: 0;' src='php/comments_frame.php?bubbleID_post=$id'></iframe>";
    					
    				echo "</section>";
    				
@@ -912,7 +916,9 @@
    							echo $venueArray[0]["about"];
    						}
    						
-   					echo "<br/><br/></pre>";
+   						echo "<br><br><br><br><br>"; // Prevents glitch where you can't scroll all the way down
+   						
+   					echo "</pre>";
    					
    				echo "</section>";
    				
@@ -946,8 +952,9 @@
    		    	echo "</div>";
    		           		    
    		    echo "</section>";
-   		*/  
-		echo "</section>";
+   		*/
+   		
+   		echo "</section>";
 	}
 	
 	function displaySmallestBubble($leftID)

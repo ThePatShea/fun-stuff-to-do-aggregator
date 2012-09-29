@@ -1048,7 +1048,7 @@ function populateBubble(bubbleTag)
 			}
 			
 			
-			if ($(window).width() < 510)
+			if ($(window).width() < 600)
 			{
 				 $('.descriptionContainer').css({"width": "80%"});
 			}
