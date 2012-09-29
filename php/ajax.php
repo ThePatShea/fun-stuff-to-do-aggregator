@@ -35,6 +35,8 @@
     
     function getSelector()
     {
+    	echo "<img id='clickABubble' src='img/phase1/clickABubble.png'/>";
+    	
     	echo "<section id='featured_mobile'>";
 			echo "<h3 id='featured_mobile_text'>";
 		    	echo "Tap a bubble, swipe for more.";

@@ -13,6 +13,7 @@ var longestHeight     =  [];
 var heightCount       =  0;
 var urlPrefix         =  "";
 var urlPostfix        =  "";
+var alreadyBegan      =  0;
 
 
 
@@ -369,6 +370,9 @@ function getBubbles()
 
 function switchBubble(bubbleTag)
 {	
+	alreadyBegan = 1;
+	$('#clickABubble').css({"display": "none"});
+	
 	if (currentBubble != bubbleTag)
 	{
 		//populateFollowBar(bubbleTag);
@@ -1010,7 +1014,9 @@ function populateBubble(bubbleTag)
 		
 		if ($(window).width() < 750)
 		{
+			$('#clickABubble').css({"display": "none"});
 			$('.changePost').css({"display": "none"});
+			
 
 			$("#scroller").css({width : ((121 * totalBubbles) - 30)+'px'});
 			
@@ -1062,6 +1068,9 @@ function populateBubble(bubbleTag)
 		}
 		else
 		{
+			if (alreadyBegan == 0)
+				$('#clickABubble').css({"display": "block"});
+			
 			$('.changePost').css({"display": "block"});
 			
 			$("#scroller").css({width : '100%'});
@@ -1097,10 +1106,14 @@ function populateBubble(bubbleTag)
 			if ($(window).height() > 325)
 			{
 			    $('#featuredContainer').css({"opacity": 1});
+			    
+			    if (alreadyBegan == 0)
+					$('#clickABubble').css({"display": "block"});
 			}
 			else
 			{
 				$('#featuredContainer').css({"opacity": 0});
+				$('#clickABubble').css({"display": "none"});
 			}
 			
 			
