@@ -902,7 +902,7 @@
    						echo "</div>";
    					}
    					
-   					echo "<iframe style='width: 250px; height: 400px; border: 0; padding: 0;' src='php/comments_frame.php?bubbleID_post=$id'></iframe>";
+   					echo "<iframe id='commentsFrame'  style='width: 250px; height: 400px; border: 0; padding: 0;' src='php/comments_frame.php?bubbleID_post=$id'></iframe>";
    					
    				echo "</section>";
    				

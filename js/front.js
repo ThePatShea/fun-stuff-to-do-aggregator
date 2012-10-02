@@ -50,9 +50,10 @@ function activateModal()
                 $(id).css('left', winW/2-$(id).width()/2);
 
                 //transition effect
-                $(id).fadeIn(100);
-		
-		modalWindowOpenJS();
+                $(id).fadeIn(100);		
+	
+		if ($(window).width() < 650)	
+			modalWindowOpenJS();
         });
 
         //if close button is clicked
@@ -62,7 +63,9 @@ function activateModal()
 
                 $('#mask').hide();
                 $('.window').hide();
-		modalWindowCloseJS();
+		
+		if ($(window).width() < 650)
+			modalWindowCloseJS();
 		
 		$("#modalContainer").html("");
         });
@@ -298,7 +301,7 @@ function loadIntoModal(bubble, bubbleID)
 	url = urlPrefix + 'php/ajax.php?do=getPostInfo&bubble='+bubble+'&bubbleID='+bubbleID;
     
     $.ajax(url)
-	.done(  function(data) { $("#modalContainer").html(data);    stopModalLoader();})
+	.done(  function(data) { $("#modalContainer").html(data);    stopModalLoader(); checkMobile();})
     .always(function()     { createScrollBars(); });
     
     
@@ -995,7 +998,7 @@ function populateBubble(bubbleTag)
 			
 			if (agent.indexOf('iphone') != -1)
 			{				
-				var morePhase1Height = 60;				
+				var morePhase1Height = 0;				
 			}
 			else
 			{
@@ -1054,13 +1057,15 @@ function populateBubble(bubbleTag)
 			}
 			
 			
-			if ($(window).width() < 600)
+			if ($(window).width() < 650)
 			{
-				 $('.descriptionContainer').css({"width": "80%"});
+				$('.descriptionContainer').css({"width": "80%"});
+				$('#commentsFrame').css({"display": "none"});
 			}
 			else
 			{
 				$('.descriptionContainer').css({"width": "60%"});
+				$('#commentsFrame').css({"display": "block"});
 			}
 	
 			
