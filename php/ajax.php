@@ -776,9 +776,12 @@
    				echo "<div class='nameAndTimeContainer'>";
    					echo "<h1>".$infoArray[0]["name"]."</h1>";
    					echo "<h2>";
+	
+						$timezone_offset = 14400;
+
    						if ($infoArray[0]["start_time"] != "")
    						{
-   							echo date("l, F jS | g:iA - ",$infoArray[0]["start_time"]).date("g:iA",$infoArray[0]["end_time"]);
+   							echo date("l, F jS | g:iA - ", ($infoArray[0]["start_time"] - $timezone_offset) ).date("g:iA", ($infoArray[0]["end_time"] - $timezone_offset) );
    						}
    						else if ($venueArray[0]["type"] != "")
    						{
