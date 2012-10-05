@@ -52,8 +52,7 @@ function activateModal()
                 //transition effect
                 $(id).fadeIn(100);		
 	
-		if ($(window).width() < 650)	
-			modalWindowOpenJS();
+		modalWindowOpenJS();
         });
 
         //if close button is clicked
@@ -64,8 +63,7 @@ function activateModal()
                 $('#mask').hide();
                 $('.window').hide();
 		
-		if ($(window).width() < 650)
-			modalWindowCloseJS();
+		modalWindowCloseJS();
 		
 		$("#modalContainer").html("");
         });
@@ -581,7 +579,9 @@ function populateBubble(bubbleTag)
         
         // Create a new layout handler.
             activateWookmark();
-        
+
+	
+ 
         
         // Apply mobile or web properties
         	checkMobile();
@@ -600,7 +600,7 @@ function populateBubble(bubbleTag)
     	  autoResize:  true,            // This will auto-update the layout when the browser window is resized.
     	  offset:      wookMarkOffset,  // Optional, the distance between grid items
     	  itemWidth:   280,             // Optional, the width of a grid item
-    	  resizeDelay: 1000				// Optional, delays the re-sizing
+    	  resizeDelay: 0				// Optional, delays the re-sizing
     	};
 
    
@@ -710,16 +710,16 @@ function populateBubble(bubbleTag)
 
 
 	function startModalKeyListener() {
-		//if(navigator.userAgent.toLowerCase().indexOf("firefox") != -1)
-			
 		
     	if (document.addEventListener) {
     	    document.addEventListener("DOMMouseScroll", scrolledInModal, false);
-			document.addEventListener("touchmove", touchMove, false);
+	    document.addEventListener("touchstart", touchStart, false);
+	    document.addEventListener("touchmove", touchMove, false);
     	    document.addEventListener("keydown", keyPressedInModal, false);
     	}
     	document.onmousewheel = scrolledInModal;
     	document.onscroll = scrolledInModal;
+	document.ontouchstart = touchStart;
     	document.ontouchmove = touchMove;
     	document.onkeydown = keyPressedInModal;
 	}
@@ -727,11 +727,13 @@ function populateBubble(bubbleTag)
 	function stopModalKeyListener() {
 	    if (document.removeEventListener) {
 	        document.removeEventListener("DOMMouseScroll", scrolledInModal, false);
-			document.removeEventListener("touchmove", touchMove, false);
+		document.removeEventListener("touchstart", touchStart, false);
+		document.removeEventListener("touchmove", touchMove, false);
 	        document.removeEventListener("keydown", keyPressedInModal, false);
 	    }
 	    document.onmousewheel = null;
 	    document.onscroll = null;
+	    document.ontouchstart = null;
 	    document.ontouchmove = null;
 	    document.onkeydown = null;
 	}
@@ -762,23 +764,26 @@ function populateBubble(bubbleTag)
 		mixpanel.track("User scrolled while in the modal window");
 	}
 	
-	
+	var currentTouchTop = 0;
+
+	function touchStart(event)
+	{
+		var targetEvent =  event.touches.item(0);
+		currentTouchTop = targetEvent.clientY;
+	}	
 		
 	function touchMove(event){
-
-		if(event.target.parentNode.className == 'descriptionContainer')
-		{
-			
-		}
-		else if(event.target.className == 'postComment' || event.target.parentNode.parentNode.className == 'postComment' ||event.target.parentNode.parentNode.parentNode.className == 'postComment' || event.target.parentNode.className == 'commentDetailBox')
-		{
-			
-		}
-		else
-		{
-			preventDefault(event);
-		}
+		var targetEvent =  event.touches.item(0);
 		
+		var startingTop = $("#modalInfoContainer").position().top;
+		var newTop = startingTop + (targetEvent.clientY - currentTouchTop)/5;
+
+		var upperLimit = 0;
+		var lowerLimit = (-1)*($("#modalInfoContainer").height() - $(window).height());		
+
+
+		if (newTop < upperLimit && newTop > lowerLimit)
+			$("#modalInfoContainer").css({'top': newTop + 'px'});	
 	}
 			
 	
@@ -912,6 +917,7 @@ function populateBubble(bubbleTag)
 	//key pressed when NOT in modal window
 	function keyPressed(event)
 	{	
+	
 		var keyCode = event.keyCode;
   		
    		//left click
@@ -935,7 +941,7 @@ function populateBubble(bubbleTag)
   			
   			mixpanel.track("User pressed right arrow on keyboard");
    		}
-   		
+   	
    		//up
    		else if(keyCode == 38){
    			if($(window).scrollTop() <= $("#phase1").height()){
@@ -958,6 +964,7 @@ function populateBubble(bubbleTag)
    			
    			mixpanel.track("User pressed down arrow, which scrolled the user down");
    		}
+	
 	}
 	
 	
@@ -998,7 +1005,7 @@ function populateBubble(bubbleTag)
 			
 			if (agent.indexOf('iphone') != -1)
 			{				
-				var morePhase1Height = 0;				
+				var morePhase1Height = 0;
 			}
 			else
 			{

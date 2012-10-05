@@ -2,7 +2,7 @@
 
 <?php
    
-   	$cover_photo["outdoor adventures"]	=  "img/cover_photo/outdoor_adventures.jpg"; 
+    $cover_photo["outdoor adventures"]	    =  "img/cover_photo/outdoor_adventures.jpg"; 
     $cover_photo["weekend escapes"]	    =     "img/cover_photo/weekend_escapes.jpg"; 
     $cover_photo["campus events"]	    =       "img/cover_photo/campus_events.jpg"; 
     $cover_photo["student deals"]	    =       "img/cover_photo/student_deals.jpg"; 
@@ -771,18 +771,18 @@
    	    		echo "</section>";
    	   		echo "</li>";
    	   	*/	
-   			echo "<section class='infoContainer'>";
+   			echo "<section id='modalInfoContainer' class='infoContainer' ontouchmove='touchMove(event)'>";
    				
    				echo "<div class='nameAndTimeContainer'>";
    					echo "<h1>".$infoArray[0]["name"]."</h1>";
    					echo "<h2>";
-	
+
 						$timezone_offset = 14400;
 
-   						if ($infoArray[0]["start_time"] != "")
-   						{
-   							echo date("l, F jS | g:iA - ", ($infoArray[0]["start_time"] - $timezone_offset) ).date("g:iA", ($infoArray[0]["end_time"] - $timezone_offset) );
-   						}
+                                                if ($infoArray[0]["start_time"] != "")
+                                                {
+                                                        echo date("l, F jS | g:iA - ", ($infoArray[0]["start_time"] - $timezone_offset) ).date("g:iA", ($infoArray[0]["end_time"] - $timezone_offset) );
+                                                }
    						else if ($venueArray[0]["type"] != "")
    						{
    							echo $venueArray[0]["type"];
