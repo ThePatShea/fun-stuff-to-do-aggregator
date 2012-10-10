@@ -35,7 +35,7 @@
     
     function getSelector()
     {
-    	echo "<img id='clickABubble' src='img/phase1/clickABubble.png'/>";
+    	echo "<img onclick='switchBubble(\"ee14bc9e-d5ed-11e1-b249-002590605566\")' id='clickABubble' src='img/phase1/clickABubble.png'/>";
     	
     	echo "<section id='featured_mobile'>";
 			echo "<h3 id='featured_mobile_text'>";

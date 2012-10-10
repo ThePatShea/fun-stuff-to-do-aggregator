@@ -130,17 +130,24 @@ function stopModalLoader()
 
 function selectorClick()
 {
-	if ( $(this).scrollTop() >= $("#phase1").height() )
+	if (alreadyBegan == 0)
 	{
-		$('body,html').clearQueue();
-		$('body,html').animate({scrollTop : 0},'slow');
-	}  
+		switchBubble("ee14bc9e-d5ed-11e1-b249-002590605566");
+	}
 	else
 	{
-		$('body,html').clearQueue();
-		$('body,html').animate({scrollTop : $("#phase1").height()},'slow');
-	}
-	
+		if ( $(this).scrollTop() >= $("#phase1").height() )
+		{
+			$('body,html').clearQueue();
+			$('body,html').animate({scrollTop : 0},'slow');
+		}  
+		else
+		{
+			$('body,html').clearQueue();
+			$('body,html').animate({scrollTop : $("#phase1").height()},'slow');
+		}
+	}	
+
 	mixpanel.track("User clicked the selector");
 }
 
