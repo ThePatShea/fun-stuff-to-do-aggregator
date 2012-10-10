@@ -7,21 +7,41 @@
 
 		$timezone_offset	       =  14400;
 
-		$today_start                   =  strtotime("today 00:00") - $timezone_offset;
- 	        $tonight_start                 =  strtotime("today 18:00") - $timezone_offset;
-            	$tomorrow_start                =  strtotime("tomorrow") - $timezone_offset;
-            	$tomorrow_end                  =  strtotime("tomorrow 23:59") - $timezone_offset;
-            	$this_week_start               =  strtotime("monday this week") - $timezone_offset;
-            	$this_weekend_start            =  strtotime("friday this week") - $timezone_offset;
-            	$next_week_start               =  strtotime("monday next week") - $timezone_offset;
-            	$next_weekend_start            =  strtotime("friday next week") - $timezone_offset;
-            	$next_weekend_end              =  strtotime("friday next week + 3 days") - $timezone_offset;
+		$today_start                   =  strtotime("today 00:00");
+ 	        $tonight_start                 =  strtotime("today 18:00");
+            	$tomorrow_start                =  strtotime("tomorrow");
+            	$tomorrow_end                  =  strtotime("tomorrow 23:59");
+            	$this_week_start               =  strtotime("monday this week");
+            	$this_weekend_start            =  strtotime("friday this week");
+            	$next_week_start               =  strtotime("monday next week");
+            	$next_weekend_start            =  strtotime("friday next week");
+            	$next_weekend_end              =  strtotime("friday next week + 3 days");
+
+		$currentTime		       =  time() - $timezone_offset;
+
+		echo "<br>--current_time---<br>";
+                echo date("l, n/j -- g:ia",$currentTime);
+                echo "<br>----------------<br>";   
+	
+		echo "<br>---tonight_start---<br>";
+                echo date("l, n/j -- g:ia",$tonight_start);
+                echo "<br>----------------<br>";	
+
+		echo "<br>---tomorrow_start---<br>";
+                echo date("l, n/j -- g:ia",$tomorrow_start);
+                echo "<br>----------------<br>";
 
 		foreach($events as $post)
        		{
+			$post["start_time"] = $post["start_time"] - $timezone_offset;
+			
+		echo "<br>---start_time---<br>";
+                echo date("l, n/j -- g:ia",$post["start_time"]);
+                echo "<br>----------------<br>";
+
 			$commentsCount = 0;
 			
-			if      ($post["start_time"] < $currentTime         &&  $post["end_time"]   >= $currentTime)         $post["timeframe"]  =  "now";
+		if      ($post["start_time"] < $currentTime         &&  $post["end_time"]   >= $currentTime)         $post["timeframe"]  =  "now";
                 else if ($post["start_time"] < $tonight_start       &&  $post["start_time"] >= $today_start)         $post["timeframe"]  =  "today";
                 else if ($post["start_time"] < $tomorrow_start      &&  $post["start_time"] >= $tonight_start)       $post["timeframe"]  =  "tonight";
                 else if ($post["start_time"] < $tomorrow_end        &&  $post["start_time"] >= $tomorrow_start)      $post["timeframe"]  =  "tomorrow";
@@ -42,7 +62,7 @@
                         	(`bubbleID_bubble`, `bubbleID_post`, `timeframe`, `comments`, `emory_joins`, `score`, `person0_accountFacebookID`, `person1_accountFacebookID`, `person2_accountFacebookID`, `person3_accountFacebookID`, `person4_accountFacebookID`, `person5_accountFacebookID`, `person0_name`, `person1_name`, `person2_name`, `person3_name`, `person4_name`, `person5_name`, `person0_pic_square`, `person1_pic_square`, `person2_pic_square`, `person3_pic_square`, `person4_pic_square`, `person5_pic_square`, `type`, `name`, `venue_name`, `venue_pic_square`,  `venue_accountFacebookID`, `subtitle`, `atlanta_joins`, `post_pic_big`, `location`, `start_time`)
 
                         	VALUES
-                        	( '".$bubbleID_bubble."', '".$post["bubbleID"]."', '".$post["timeframe"]."', '".$commentsCount."', '".$emoryAttendees."', '".$post["score"]."', '".$post["person0"."_accountFacebookID"]."', '".$post["person1"."_accountFacebookID"]."', '".$post["person2"."_accountFacebookID"]."', '".$post["person3"."_accountFacebookID"]."', '".$post["person4"."_accountFacebookID"]."', '".$post["person5"."_accountFacebookID"]."', '".$post["person0"."_name"]."', '".$post["person1"."_name"]."', '".$post["person2"."_name"]."', '".$post["person3"."_name"]."', '".$post["person4"."_name"]."', '".$post["person5"."_name"]."', '".$post["person0"."_pic_square"]."', '".$post["person1"."_pic_square"]."', '".$post["person2"."_pic_square"]."', '".$post["person3"."_pic_square"]."', '".$post["person4"."_pic_square"]."', '".$post["person5"."_pic_square"]."', '".$post["type"]."', '".$post["post_name"]."', '".$post["account_name"]."', '".$post["pic_square"]."', '".$post["venue_accountFacebookID"]."', '".date("M j | g:iA", ($post["start_time"] - $timezone_offset) )."', ".$post["count_attending"].", '".$post["pic_big"]."', '".$post["location"]."', '".$post["start_time"]."')
+                        	( '".$bubbleID_bubble."', '".$post["bubbleID"]."', '".$post["timeframe"]."', '".$commentsCount."', '".$emoryAttendees."', '".$post["score"]."', '".$post["person0"."_accountFacebookID"]."', '".$post["person1"."_accountFacebookID"]."', '".$post["person2"."_accountFacebookID"]."', '".$post["person3"."_accountFacebookID"]."', '".$post["person4"."_accountFacebookID"]."', '".$post["person5"."_accountFacebookID"]."', '".$post["person0"."_name"]."', '".$post["person1"."_name"]."', '".$post["person2"."_name"]."', '".$post["person3"."_name"]."', '".$post["person4"."_name"]."', '".$post["person5"."_name"]."', '".$post["person0"."_pic_square"]."', '".$post["person1"."_pic_square"]."', '".$post["person2"."_pic_square"]."', '".$post["person3"."_pic_square"]."', '".$post["person4"."_pic_square"]."', '".$post["person5"."_pic_square"]."', '".$post["type"]."', '".$post["post_name"]."', '".$post["account_name"]."', '".$post["pic_square"]."', '".$post["venue_accountFacebookID"]."', '".date("M j | g:iA", ($post["start_time"]) )."', ".$post["count_attending"].", '".$post["pic_big"]."', '".$post["location"]."', '".$post["start_time"]."')
                     	");
         	}
 	}	
