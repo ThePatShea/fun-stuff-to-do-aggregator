@@ -95,6 +95,7 @@ $.fn.wookmark = function(options) {
 
 
 
+      var section_featured_times      =  0;
       var section_now_times           =  0;
       var section_today_times         =  0;
       var section_tonight_times       =  0;
@@ -107,6 +108,10 @@ $.fn.wookmark = function(options) {
 
 
 
+      if (item.hasClass("section_featured") && section_featured_exists ==  1)
+      {
+          topAddition += moreWidgetSpace;
+      }
 
       if (item.hasClass("section_now") && section_now_exists ==  1)
       {
@@ -153,7 +158,28 @@ $.fn.wookmark = function(options) {
           topAddition += moreWidgetSpace;
       }
 
+     
 
+
+
+
+
+     if (item.hasClass("section_featured_first"))
+      {
+          section_featured_times++;
+
+          if (section_featured_times == 1)
+          {
+              for(k=0; k<columns; k++)
+              {
+                  heights[k] = longest;
+
+              }
+
+              shortest      = longest;
+              shortestIndex = 0;
+          }
+      }
 
      if (item.hasClass("section_today_first"))
       {
@@ -308,6 +334,13 @@ $.fn.wookmark = function(options) {
 // START CAMPUS BUBBLE CUSTOM ADDITIONS
 
       var labelOffset = 70;
+
+      if (item.hasClass("section_featured_first"))
+      {
+          var newTop  =  $(".section_featured_first").position().top ;
+
+          $("#timeLabel_featured").css({ top: (newTop - labelOffset)+"px", });
+      }
 
       if (item.hasClass("section_now_first"))
       {

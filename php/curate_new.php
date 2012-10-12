@@ -146,6 +146,12 @@
 
                         if ($atlanta_joins == "") $atlanta_joins = 0;
 
+			
+			if ($dealsInfo[0]["source"] == "bubble-featured")
+				$deal_timeframe = "featured";
+			else
+				$deal_timeframe = "today";
+
                         // Inserts deals into table with really high score so they always so up first in their section
                                 mysql_query
                                 ("
@@ -153,7 +159,7 @@
                                         (bubbleID_bubble, bubbleID_post, timeframe, score, type, name, post_pic_big, price, value, discount, expires, subtitle, atlanta_joins, venue_accountFacebookID, venue_name, venue_pic_square, comments)
 
                                         VALUES
-                                        ('$bubbleID_bubble', '".$deals[$i]."', 'today', 100000, 'deal', '".$postInfo[0]["name"]."', '".$postInfo[0]["pic_big"]."', '".$dealsInfo[0]["price"]."', '".$dealsInfo[0]["value"]."', '".$dealsInfo[0]["discount"]."', '$expires', '$subtitle', '$atlanta_joins', '".$dealVenueInfo[0]["accountFacebookID"]."', '".$dealVenueInfo[0]["name"]."', '".$dealVenueInfo[0]["pic_square"]."', $commentsCount)
+                                        ('$bubbleID_bubble', '".$deals[$i]."', '$deal_timeframe', 100000, 'deal', '".$postInfo[0]["name"]."', '".$postInfo[0]["pic_big"]."', '".$dealsInfo[0]["price"]."', '".$dealsInfo[0]["value"]."', '".$dealsInfo[0]["discount"]."', '$expires', '$subtitle', '$atlanta_joins', '".$dealVenueInfo[0]["accountFacebookID"]."', '".$dealVenueInfo[0]["name"]."', '".$dealVenueInfo[0]["pic_square"]."', $commentsCount)
                                 ");
 
                    }
