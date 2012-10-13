@@ -24,7 +24,13 @@ db.once('open', function () {
 					var resultName =  returnInfo.data[i].name;
 					
 					if (resultName == "user" || resultName == "event" || resultName == "page")
-						db.collection(resultName).insert(returnInfo.data[i].fql_result_set);
+					{
+						var insertInfo         =  returnInfo.data[i].fql_result_set;
+						var insertInfo_length  =  insertInfo.length;
+						
+						for (j = 0; j < insertInfo_length; j++)
+							db.collection(resultName).insert(insertInfo[j]);
+					}
 				}
 
 				console.log('finished');
