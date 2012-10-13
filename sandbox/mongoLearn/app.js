@@ -29,7 +29,7 @@ db.once('open', function () {
 						var insertInfo_length  =  insertInfo.length;
 						
 						for (j = 0; j < insertInfo_length; j++)
-							db.collection(resultName).insert(insertInfo[j]);
+							db.collection(resultName).update({uid: insertInfo[j].uid}, insertInfo[j], {upsert: true});
 					}
 				}
 
