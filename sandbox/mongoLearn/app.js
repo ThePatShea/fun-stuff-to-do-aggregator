@@ -44,7 +44,7 @@ db.once('open', function () {
 
 
 	syncFacebook(
-		"'users_ids':'SELECT+uid+FROM+user+WHERE+uid+IN+(SELECT+uid2+FROM+friend+WHERE+uid1=681701524)+OR+uid=681701524','event':'SELECT+eid+FROM+event_member+WHERE+uid+IN+(SELECT+uid+FROM+%23users_ids)','page':'SELECT+page_id+FROM+page_fan+WHERE+uid+IN+(SELECT+uid+FROM+%23users_ids)','user':'SELECT+name,pic_cover,pic_big,pic_square,username,first_name,middle_name,last_name,sex,email,uid+FROM+user+WHERE+uid=681701524'",
+		"'users_ids':'SELECT+uid+FROM+user+WHERE+uid+IN+(SELECT+uid2+FROM+friend+WHERE+uid1=681701524)+OR+uid=681701524','event':'SELECT+eid+FROM+event_member+WHERE+uid+IN+(SELECT+uid+FROM+%23users_ids)','page':'SELECT+page_id+FROM+page_fan+WHERE+uid+IN+(SELECT+uid+FROM+%23users_ids)','user':'SELECT+pic_square,first_name,last_name,email,uid+FROM+user+WHERE+uid=681701524'",
 		"AAADH49iOK2kBALIei28zWyqqeoZAE52GTSBXmpZC5weYxQT9LlHEDqPNF9vVpDle7XKT68ROcZATCFmrrFAKIBpb044J5aFZA1OvCEtGvAZDZD"
 	);
 });
