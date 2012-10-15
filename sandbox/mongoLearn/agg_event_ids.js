@@ -97,28 +97,54 @@ db.once('open', function () {
 
 
 
-	function agg_from_events_venues() { agg_facebook("fql?q={'page':'SELECT page_id FROM page WHERE page_id IN (SELECT venue.id FROM event WHERE eid IN ("+getEventList()+"))'}"); }
+	function agg_from_events_venues_creators() { agg_facebook("fql?q={'page':'SELECT page_id FROM page WHERE page_id IN (SELECT venue.id,creator FROM event WHERE eid IN ("+getEventList()+"))'}"); }
 
 	
 	function agg_from_search_events()
 	{
+		agg_facebook("search?q=Georgia%20&type=event&fields=id,start_time,end_time&center=33.755,-84.39&distance=10000&limit=5000");
+		agg_facebook("search?q=Atlanta%20&type=event&fields=id,start_time,end_time&center=33.755,-84.39&distance=10000&limit=5000");
+		agg_facebook("search?q=Decatur%20&type=event&fields=id,start_time,end_time&center=33.755,-84.39&distance=10000&limit=5000");
+		agg_facebook("search?q=Emory%20&type=event&fields=id,start_time,end_time&center=33.755,-84.39&distance=10000&limit=5000");
+		agg_facebook("search?q=GA%20&type=event&fields=id,start_time,end_time&center=33.755,-84.39&distance=10000&limit=5000");
+
+		agg_facebook("search?q=Georgia&fields=id,start_time,end_time&type=event&limit=5000");
 		agg_facebook("search?q=Atlanta&fields=id,start_time,end_time&type=event&limit=5000");
 		agg_facebook("search?q=Decatur&fields=id,start_time,end_time&type=event&limit=5000");
 		agg_facebook("search?q=Emory&fields=id,start_time,end_time&type=event&limit=5000");
+		agg_facebook("search?q=GA&fields=id,start_time,end_time&type=event&limit=5000");
+	}
+
+
+	function agg_from_search_pages()
+	{
+		agg_facebook("search?q=%20&type=place&center=33.755,-84.39&distance=10000&limit=5000");
+		agg_facebook("search?q=Georgia&fields=id,name&type=place&limit=5000");
+		agg_facebook("search?q=Atlanta&fields=id,name&type=place&limit=5000");
+		agg_facebook("search?q=Decatur&fields=id,name&type=place&limit=5000");
+		agg_facebook("search?q=Emory&fields=id,name&type=place&limit=5000");
+		agg_facebook("search?q=GA&fields=id,name&type=place&limit=5000");
+		
+		agg_facebook("search?q=Georgia&fields=id,name&type=page&limit=5000");
+		agg_facebook("search?q=Atlanta&fields=id,name&type=page&limit=5000");
+		agg_facebook("search?q=Decatur&fields=id,name&type=page&limit=5000");
+		agg_facebook("search?q=Emory&fields=id,name&type=page&limit=5000");
+		agg_facebook("search?q=GA&fields=id,name&type=page&limit=5000");
 	}
 
 
 
-
 	// Aggregation Functions
-		//Aggregate events
-			//agg_from_search_events();   // Gets events from our search queries
-			//agg_from_users_events();    // Gets events users are invited to
-			//agg_from_pages_events();    // Gets events posted by pages
-		
 		//Aggregate pages
-			agg_from_events_venues();
-			//agg_from_users_likes();     // Gets pages from users' likes
+			//agg_from_events_venues_creators();    // Gets pages from events' venues and creators
+			//agg_from_search_pages();              // Gets pages from our search queries
+			//agg_from_users_likes();               // Gets pages from users' likes
+
+		//Aggregate events
+			//agg_from_search_events();             // Gets events from our search queries
+			//agg_from_users_events();              // Gets events users are invited to
+			//agg_from_pages_events();              // Gets events posted by pages
+		
 			
 
 
