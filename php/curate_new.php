@@ -119,6 +119,11 @@
                     ");
 
 
+		    echo "<br>----- deals -----<br>";
+		    print_r($deals);
+		    echo "<br>-----------------<br>";			
+
+
                     $count_deals = count($deals);
 
                     for($i = 0; $i < $count_deals; $i++)
@@ -144,22 +149,25 @@
 
                         $commentsCount = 0;
 
-                        if ($atlanta_joins == "") $atlanta_joins = 0;
-
-			
 			if ($dealsInfo[0]["source"] == "bubble-featured")
-				$deal_timeframe = "featured";
+			{
+				$start_time = 0;
+			}
 			else
-				$deal_timeframe = "today";
+			{
+				$start_time = 1;
+			}
+
+                        if ($atlanta_joins == "") $atlanta_joins = 0;
 
                         // Inserts deals into table with really high score so they always so up first in their section
                                 mysql_query
                                 ("
                                         INSERT INTO             bubbles_front_new_temp
-                                        (bubbleID_bubble, bubbleID_post, timeframe, score, type, name, post_pic_big, price, value, discount, expires, subtitle, atlanta_joins, venue_accountFacebookID, venue_name, venue_pic_square, comments)
+                                        (bubbleID_bubble, bubbleID_post, timeframe, score, type, name, post_pic_big, price, value, discount, expires, subtitle, atlanta_joins, venue_accountFacebookID, venue_name, venue_pic_square, comments, start_time)
 
                                         VALUES
-                                        ('$bubbleID_bubble', '".$deals[$i]."', '$deal_timeframe', 100000, 'deal', '".$postInfo[0]["name"]."', '".$postInfo[0]["pic_big"]."', '".$dealsInfo[0]["price"]."', '".$dealsInfo[0]["value"]."', '".$dealsInfo[0]["discount"]."', '$expires', '$subtitle', '$atlanta_joins', '".$dealVenueInfo[0]["accountFacebookID"]."', '".$dealVenueInfo[0]["name"]."', '".$dealVenueInfo[0]["pic_square"]."', $commentsCount)
+                                        ('$bubbleID_bubble', '".$deals[$i]."', 'today', 100000, 'deal', '".$postInfo[0]["name"]."', '".$postInfo[0]["pic_big"]."', '".$dealsInfo[0]["price"]."', '".$dealsInfo[0]["value"]."', '".$dealsInfo[0]["discount"]."', '$expires', '$subtitle', '$atlanta_joins', '".$dealVenueInfo[0]["accountFacebookID"]."', '".$dealVenueInfo[0]["name"]."', '".$dealVenueInfo[0]["pic_square"]."', $commentsCount, $start_time)
                                 ");
 
                    }
