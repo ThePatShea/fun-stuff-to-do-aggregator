@@ -1,6 +1,9 @@
 <?php
 
 	// Universal commands
+		// Sets timezone
+			ini_set('date.timezone', 'America/New_York');		
+
 		// Activates session variables
 			session_start();
 		

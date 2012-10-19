@@ -287,10 +287,9 @@
 		    $_SESSION["prevTimeframe"]  =  "";
 		    $_SESSION["sectionNum"]     =  "";
 		    $_SESSION["iteration"]      =  "";
-		   
-	    $_SESSION["sectionExists"]["featured"]          =  0; 
-	    $_SESSION["sectionExists"]["now"]               =  0;
-	    $_SESSION["sectionExists"]["today"]             =  0;
+		    
+		    $_SESSION["sectionExists"]["now"]               =  0;
+	        $_SESSION["sectionExists"]["today"]             =  0;
             $_SESSION["sectionExists"]["tonight"]           =  0;
       	    $_SESSION["sectionExists"]["tomorrow"]          =  0;
       	    $_SESSION["sectionExists"]["this week"]         =  0;
@@ -300,8 +299,8 @@
       	    $_SESSION["sectionExists"]["upcoming"]          =  0;
       	}
 		
-	    $timeframeArray[0]               =  "featured";	
-	    $timeframeArray[0]               =  "now";
+		
+		$timeframeArray[0]               =  "now";
 	    $timeframeArray[1]               =  "today";
 	    $timeframeArray[2]               =  "tonight";
 	    $timeframeArray[3]               =  "tomorrow";
@@ -311,8 +310,7 @@
 	    $timeframeArray[7]               =  "next weekend";
 	    $timeframeArray[8]               =  "upcoming";
 	    
-		    
-	    $timeframeClass["featured"]      =  "featured";
+	    
 	    $timeframeClass["now"]           =  "now";
 	    $timeframeClass["today"]         =  "today";
 	    $timeframeClass["tonight"]       =  "tonight";
@@ -321,7 +319,7 @@
 	    $timeframeClass["this weekend"]  =  "this_weekend";
 	    $timeframeClass["next week"]     =  "next_week";
 	    $timeframeClass["next weekend"]  =  "next_weekend";
-	    $timeframeClass["upcoming"]      =  "upcoming";
+		$timeframeClass["upcoming"]      =  "upcoming";
 	
 	
 		if ($_SESSION["prevTimeframe"] == "")  $_SESSION["prevTimeframe"]  =  -1;
@@ -580,7 +578,6 @@
 	    
 	    echo
 	    "
-	        var section_featured_exists           =  ".$_SESSION["sectionExists"]["featured"].";
 	    	var section_now_exists           =  ".$_SESSION["sectionExists"]["now"].";
 	    	var section_today_exists         =  ".$_SESSION["sectionExists"]["today"].";
             var section_tonight_exists       =  ".$_SESSION["sectionExists"]["tonight"].";
@@ -780,7 +777,7 @@
    					echo "<h1>".$infoArray[0]["name"]."</h1>";
    					echo "<h2>";
 
-						$timezone_offset = 14400;
+						$timezone_offset = 0;
 
                                                 if ($infoArray[0]["start_time"] != "")
                                                 {

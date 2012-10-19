@@ -2,20 +2,21 @@
 
 	include_once("background.php");
 
+
 	function storeSortedEvents($events, $bubbleID_bubble)
 	{
 
-		$timezone_offset	       =  14400;
+		$timezone_offset	       =  0;
 
-		$today_start                   =  strtotime("today 00:00");
- 	        $tonight_start                 =  strtotime("today 18:00");
-            	$tomorrow_start                =  strtotime("tomorrow");
-            	$tomorrow_end                  =  strtotime("tomorrow 23:59");
-            	$this_week_start               =  strtotime("monday this week");
-            	$this_weekend_start            =  strtotime("friday this week");
-            	$next_week_start               =  strtotime("monday next week");
-            	$next_weekend_start            =  strtotime("friday next week");
-            	$next_weekend_end              =  strtotime("friday next week + 3 days");
+		$today_start                   =  strtotime("today 00:00") - $timezone_offset;
+ 	        $tonight_start                 =  strtotime("today 18:00") - $timezone_offset;
+            	$tomorrow_start                =  strtotime("tomorrow") - $timezone_offset;
+            	$tomorrow_end                  =  strtotime("tomorrow 23:59") - $timezone_offset;
+            	$this_week_start               =  strtotime("monday this week") - $timezone_offset;
+            	$this_weekend_start            =  strtotime("friday this week") - $timezone_offset;
+            	$next_week_start               =  strtotime("monday next week") - $timezone_offset;
+            	$next_weekend_start            =  strtotime("friday next week") - $timezone_offset;
+            	$next_weekend_end              =  strtotime("friday next week + 3 days") - $timezone_offset;
 
 		$currentTime		       =  time() - $timezone_offset;
 
@@ -86,7 +87,8 @@
                     	LEFT JOIN posts
                     	ON events_info.bubbleID = posts.bubbleID
                         WHERE           $where_clause
-                        AND             events_info.start_time > ".time()."
+                        AND             events_info.end_time > ".time()."
+			AND		events_info.start_time > ".(time() - 35000)."
                         AND             events_info.start_time < ".strtotime("12/15/2012")."
                         ORDER BY        start_time ASC
                 ");
@@ -182,6 +184,7 @@
 	function generateBubblePosts_campusEvents()
 	{
 		generateBubblePosts("accountFacebookID = 160908570699694", "49438594-ed4c-11e1-bf61-aafbeaa37357");	
+		generateBubblePosts("accountFacebookID = 132765608557", "49438594-ed4c-11e1-bf61-aafbeaa37357");	
 
 		generateBubblePosts("posts.description LIKE '% Emory%'", "49438594-ed4c-11e1-bf61-aafbeaa37357");	
 		generateBubblePosts("posts.description LIKE 'Emory%'", "49438594-ed4c-11e1-bf61-aafbeaa37357");
@@ -202,6 +205,7 @@
                 generateBubblePosts("pages_info.type LIKE '%night%' AND pages_info.city = 'Atlanta'", "ee14bc9e-d5ed-11e1-b249-002590605566");
 		generateBubblePosts("posts.description LIKE '%party%' AND pages_info.city = 'Atlanta'", "ee14bc9e-d5ed-11e1-b249-002590605566");
 		generateBubblePosts("posts.name LIKE '%party%' AND pages_info.city = 'Atlanta'", "ee14bc9e-d5ed-11e1-b249-002590605566");
+		generateBubblePosts("posts.accountFacebookID = 128298896566", "ee14bc9e-d5ed-11e1-b249-002590605566");
         }	
 
 	function generateBubblePosts_atlantaSports()
