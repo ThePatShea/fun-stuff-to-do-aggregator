@@ -206,7 +206,9 @@
 		generateBubblePosts("posts.description LIKE '%party%' AND pages_info.city = 'Atlanta'", "ee14bc9e-d5ed-11e1-b249-002590605566");
 		generateBubblePosts("posts.name LIKE '%party%' AND pages_info.city = 'Atlanta'", "ee14bc9e-d5ed-11e1-b249-002590605566");
 		generateBubblePosts("posts.accountFacebookID = 128298896566", "ee14bc9e-d5ed-11e1-b249-002590605566");
-        }	
+		generateBubblePosts("posts.accountFacebookID = 218760225176", "ee14bc9e-d5ed-11e1-b249-002590605566");
+		generateBubblePosts("posts.accountFacebookID = 106393152740684", "ee14bc9e-d5ed-11e1-b249-002590605566");
+        }
 
 	function generateBubblePosts_atlantaSports()
         {
