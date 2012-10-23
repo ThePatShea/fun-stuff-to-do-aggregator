@@ -1159,8 +1159,18 @@
 				echo "<div id='featured'>";
 			
 					$currentTime = date("H");
-									
 					
+					if ($currentTime < 1351591200)
+					{
+						generateSingleSlide
+                                                ("49438594-ed4c-11e1-bf61-aafbeaa37357", "Come to SPC's Fall Band Party.", "See the Eli Young Band perform on McDonough field. Free pizza too.",                      
+                                                  array
+                                                  ("http://profile.ak.fbcdn.net/hprofile-ak-ash2/41605_128298896566_1433195272_q.jpg",
+                                                   "http://profile.ak.fbcdn.net/hprofile-ak-snc4/373018_100183642159_1333960991_q.jpg",                                                   "http://profile.ak.fbcdn.net/hprofile-ak-snc4/187859_218760225176_583529037_q.jpg",
+                                                   "http://profile.ak.fbcdn.net/hprofile-ak-ash2/162032_24133094143_927846148_q.jpg"),
+						"499832500040620"
+                                                );				
+					}
 						generateSingleSlide
 						("49438594-ed4c-11e1-bf61-aafbeaa37357", "See what's happening on campus now.", "Whether it's your organization's event, a concert, or just some pickup soccer",
 						  array
@@ -1218,9 +1228,11 @@
 		
 	}
 		
-		function generateSingleSlide($bubbleID_link, $title, $subtitle, $pic_circle_array)
+		function generateSingleSlide($bubbleID_link, $title, $subtitle, $pic_circle_array, $bubbleID_post = "")
 		{
-			echo "<div onclick='switchBubble(\"$bubbleID_link\"); trackAction(\"User clicked the slider to switch to the bubble:\", \"$bubbleID_link\");' class='content'>";
+				echo "<div onclick='switchBubble(\"$bubbleID_link\");' class='content'>";
+			if ($bubbleID_post != "")
+				echo "<li href='#dialog' name='modal' onclick='loadIntoModal(\"$bubbleID_post\", \"$bubbleID_link\");' class='content'>";
 				echo "<h3>$title</h3>";
 			    echo "<h4>$subtitle</h4>";
 			    echo "<div class='slider_venuePicsContainer' style='margin: 0 auto; background-color:#000066; width: 155px; position:relative; top: 20px;'>";
@@ -1229,7 +1241,10 @@
 			        echo "<div class='pic_circle' style='position: absolute; left: 72px;'>  <img src='".$pic_circle_array[2]."'/>   </div>";
         	        echo "<div class='pic_circle' style='position: absolute; left: 110px;'> <img src='".$pic_circle_array[3]."'/>    </div>";
 			     echo "</div>";
+			if ($bubbleID_post != "")
+				echo "</li>";
 			echo "</div>";
+
 		}
 		
 		
