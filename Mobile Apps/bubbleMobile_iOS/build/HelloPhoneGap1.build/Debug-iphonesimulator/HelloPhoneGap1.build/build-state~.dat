@@ -1,0 +1,931 @@
+THelloPhoneGap1
+v7
+r0
+t370852415.068057
+cCheck dependencies
+cProcessInfoPlistFile /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/Info.plist HelloPhoneGap1/HelloPhoneGap1-Info.plist
+cProcessPCH /var/folders/xm/_dlbn1xj4bxd8mrpm0nz4r5m0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HelloPhoneGap1-Prefix-ggedbsmxsjfcihdxjegvdbykmzmp/HelloPhoneGap1-Prefix.pch.pth HelloPhoneGap1/HelloPhoneGap1-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/main.o /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/HelloPhoneGapAppDelegate.o /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/HelloPhoneGapAppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/ActivityIndicatorCommand.o /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ActivityIndicator/ActivityIndicatorCommand.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/DSActivityView.o /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ActivityIndicator/DSActivityView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/ChildBrowserCommand.o /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ChildBrowser/ChildBrowserCommand.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/ChildBrowserViewController.o /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ChildBrowser/ChildBrowserViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/iPodCommand.o /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/iPod/iPodCommand.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/iPodViewController.o /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/iPod/iPodViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/NativeControls.o /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/NativeControls/NativeControls.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/PGNavigationBarController.o /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/NativeControls/PGNavigationBarController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/HelloPhoneGap1 normal i386
+cGenerateDSYMFile /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app.dSYM /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/HelloPhoneGap1
+cPhaseScriptExecution "Run Script" /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Script-176B02A813FBF98E0041F86B.sh
+cCpResource build/Debug-iphonesimulator/HelloPhoneGap1.app/www www
+cCopyStringsFile /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/en.lproj/InfoPlist.strings HelloPhoneGap1/en.lproj/InfoPlist.strings
+cCopyStringsFile /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/en.lproj/Localizable.strings HelloPhoneGap1/Resources/en.lproj/Localizable.strings
+cCopyStringsFile /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/es.lproj/Localizable.strings HelloPhoneGap1/Resources/es.lproj/Localizable.strings
+cCpResource build/Debug-iphonesimulator/HelloPhoneGap1.app/icon.png HelloPhoneGap1/Resources/icons/icon.png
+cCpResource build/Debug-iphonesimulator/HelloPhoneGap1.app/icon@2x.png HelloPhoneGap1/Resources/icons/icon@2x.png
+cCpResource build/Debug-iphonesimulator/HelloPhoneGap1.app/icon-72.png HelloPhoneGap1/Resources/icons/icon-72.png
+cCpResource build/Debug-iphonesimulator/HelloPhoneGap1.app/Default.png HelloPhoneGap1/Resources/splash/Default.png
+cCpResource build/Debug-iphonesimulator/HelloPhoneGap1.app/Default@2x.png HelloPhoneGap1/Resources/splash/Default@2x.png
+cCpResource build/Debug-iphonesimulator/HelloPhoneGap1.app/Capture.bundle HelloPhoneGap1/Resources/Capture.bundle
+cCopyPlistFile /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/PhoneGap.plist HelloPhoneGap1/PhoneGap.plist
+cCpResource build/Debug-iphonesimulator/HelloPhoneGap1.app/ChildBrowser.bundle HelloPhoneGap1/Plugins/ChildBrowser/ChildBrowser.bundle
+cCompileXIB /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ChildBrowser/ChildBrowserViewController.xib
+cCpResource build/Debug-iphonesimulator/HelloPhoneGap1.app/PluginCopy.sh PluginCopy.sh
+cCompileXIB /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/NativeControls/PGNavigationBar.xib
+cGenerateDSYMFile /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app.dSYM /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/HelloPhoneGap1
+cPhaseScriptExecution "Run Script" /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Script-173CCCD513FB144A00D5914A.sh
+cTouch /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk
+c000000004D5C9B4E0000000000000110
+t1297914702
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation
+c000000004D5EBEC300000000001340C0
+t1298054851
+s1261760
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/AddressBook.framework/AddressBook
+c000000004D54D3440000000000078770
+t1297404740
+s493424
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/AddressBookUI.framework/AddressBookUI
+c000000004D5C9BB80000000000168430
+t1297914808
+s1475632
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+c000000004D54CF5D0000000000205F50
+t1297403741
+s2121552
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004D54CFFA00000000002999B0
+t1297403898
+s2726320
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CoreLocation.framework/CoreLocation
+c000000004D54DEBC00000000000778F0
+t1297407676
+s489712
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CoreMedia.framework/CoreMedia
+c000000004D5C9AE3000000000006A720
+t1297914595
+s436000
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004D54CFE5000000000029DA70
+t1297403877
+s2742896
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004D54CFB80000000000001466
+t1297403832
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/MediaPlayer.framework/Headers/MediaPlayer.h
+c000000004D5EBF360000000000000294
+t1298054966
+s660
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/MediaPlayer.framework/MediaPlayer
+c000000004D5EBF5300000000001C31B0
+t1298054995
+s1847728
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
+c000000004D54D0BC000000000005C090
+t1297404092
+s376976
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.h
+c000000004D54D2DD00000000000000C4
+t1297404637
+s196
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c000000004D54D4200000000000162C50
+t1297404960
+s1453136
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration
+c000000004D54CF0700000000000689C0
+t1297403655
+s428480
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004D5615B40000000000000AA1
+t1297487284
+s2721
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITabBar.h
+c000000004D5615B50000000000000C0D
+t1297487285
+s3085
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004D5616030000000000766870
+t1297487363
+s7759984
+
+N/Users/Shared/PhoneGap/Frameworks/PhoneGap.framework/Headers/JSON.h
+c000000004EB4DE1200000000000008F9
+t1320476178
+s2297
+i"SBJSON.h"
+i"NSObject+SBJSON.h"
+i"NSString+SBJSON.h"
+
+N/Users/Shared/PhoneGap/Frameworks/PhoneGap.framework/Headers/NSMutableArray+QueueAdditions.h
+c000000004EB4DE120000000000000113
+t1320476178
+s275
+i<Foundation/Foundation.h>
+
+N/Users/Shared/PhoneGap/Frameworks/PhoneGap.framework/Headers/NSObject+SBJSON.h
+c000000004EB4DE120000000000000A01
+t1320476178
+s2561
+i<Foundation/Foundation.h>
+
+N/Users/Shared/PhoneGap/Frameworks/PhoneGap.framework/Headers/NSString+SBJSON.h
+c000000004EB4DE120000000000000916
+t1320476178
+s2326
+i<Foundation/Foundation.h>
+
+N/Users/Shared/PhoneGap/Frameworks/PhoneGap.framework/Headers/PGPlugin.h
+c000000004EB4DE12000000000000078E
+t1320476178
+s1934
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+i"PluginResult.h"
+i"NSMutableArray+QueueAdditions.h"
+
+N/Users/Shared/PhoneGap/Frameworks/PhoneGap.framework/Headers/PhoneGapDelegate.h
+c000000004EB4DE120000000000000815
+t1320476178
+s2069
+i<UIKit/UIKit.h>
+i"JSON.h"
+
+N/Users/Shared/PhoneGap/Frameworks/PhoneGap.framework/Headers/PhoneGapViewController.h
+c000000004EB4DE1200000000000001D8
+t1320476178
+s472
+i<UIKit/UIKit.h>
+i<Foundation/Foundation.h>
+
+N/Users/Shared/PhoneGap/Frameworks/PhoneGap.framework/Headers/PluginResult.h
+c000000004EB4DE120000000000000A65
+t1320476178
+s2661
+i<Foundation/Foundation.h>
+
+N/Users/Shared/PhoneGap/Frameworks/PhoneGap.framework/Headers/SBJSON.h
+c000000004EB4DE120000000000000AFF
+t1320476178
+s2815
+i<Foundation/Foundation.h>
+i"SBJsonParser.h"
+i"SBJsonWriter.h"
+
+N/Users/Shared/PhoneGap/Frameworks/PhoneGap.framework/Headers/SBJsonBase.h
+c000000004EB4DE120000000000000B85
+t1320476178
+s2949
+i<Foundation/Foundation.h>
+
+N/Users/Shared/PhoneGap/Frameworks/PhoneGap.framework/Headers/SBJsonParser.h
+c000000004EB4DE120000000000000C1A
+t1320476178
+s3098
+i<Foundation/Foundation.h>
+i"SBJsonBase.h"
+
+N/Users/Shared/PhoneGap/Frameworks/PhoneGap.framework/Headers/SBJsonWriter.h
+c000000004EB4DE120000000000001152
+t1320476178
+s4434
+i<Foundation/Foundation.h>
+i"SBJsonBase.h"
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/../../../../Shared/PhoneGap/Frameworks/PhoneGap.framework/PhoneGap
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/HelloPhoneGap1-Prefix.pch
+c000000004F0B6F3E000000000000009F
+t1326149438
+s159
+i<UIKit/UIKit.h>
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/HelloPhoneGapAppDelegate.h
+c000000004F0B6F3E0000000000000233
+t1326149438
+s563
+i<UIKit/UIKit.h>
+i<PhoneGap/PhoneGapDelegate.h>
+i"PhoneGapDelegate.h"
+i<MediaPlayer/MediaPlayer.h>
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/HelloPhoneGapAppDelegate.m
+c000000004F0B6F3E0000000000000B55
+t1326149438
+s2901
+i"HelloPhoneGapAppDelegate.h"
+i<PhoneGap/PhoneGapDelegate.h>
+i"PhoneGapDelegate.h"
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/PhoneGap.plist
+c000000004F0B6F3E000000000000069B
+t1326149438
+s1691
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ActivityIndicator/ActivityIndicatorCommand.h
+c000000004F0B6F3E0000000000000257
+t1326149438
+s599
+i<Foundation/Foundation.h>
+i<PhoneGap/PGPlugin.h>
+i"PGPlugin.h"
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ActivityIndicator/ActivityIndicatorCommand.m
+c000000004F0B6F3E000000000000034A
+t1326149438
+s842
+i"ActivityIndicatorCommand.h"
+i"DSActivityView.h"
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ActivityIndicator/DSActivityView.h
+c000000004F0B6F3E0000000000001811
+t1326149438
+s6161
+i<UIKit/UIKit.h>
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ActivityIndicator/DSActivityView.m
+c000000004F0B6F3E0000000000005DE2
+t1326149438
+s24034
+i"DSActivityView.h"
+i<QuartzCore/QuartzCore.h>
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ChildBrowser/ChildBrowser.bundle
+c000000004F0B6F3E0000000000000154
+t1326149438
+s340
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ChildBrowser/ChildBrowserCommand.h
+c000000004F0B6F3E0000000000000280
+t1326149438
+s640
+i<Foundation/Foundation.h>
+i<PhoneGap/PGPlugin.h>
+i"PGPlugin.h"
+i"ChildBrowserViewController.h"
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ChildBrowser/ChildBrowserCommand.m
+c000000004F0B6F3E0000000000000969
+t1326149438
+s2409
+i"ChildBrowserCommand.h"
+i"HelloPhoneGapAppDelegate.h"
+i<PhoneGap/PhoneGapViewController.h>
+i"PhoneGapViewController.h"
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ChildBrowser/ChildBrowserViewController.h
+c000000004F0B6F3E000000000000057E
+t1326149438
+s1406
+i<UIKit/UIKit.h>
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ChildBrowser/ChildBrowserViewController.m
+c000000004F0B6F3E0000000000001624
+t1326149438
+s5668
+i"ChildBrowserViewController.h"
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ChildBrowser/ChildBrowserViewController.xib
+c000000004F0B6F3E0000000000006828
+t1326149438
+s26664
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/NativeControls/NativeControls.h
+c000000004F0B6F3E0000000000000AC1
+t1326149438
+s2753
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+i<UIKit/UITabBar.h>
+i<PhoneGap/PGPlugin.h>
+i"PGPlugin.h"
+i"PGNavigationBarController.h"
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/NativeControls/NativeControls.m
+c000000004F0B6F3E00000000000046E9
+t1326149438
+s18153
+i"NativeControls.h"
+i"HelloPhoneGapAppDelegate.h"
+i<QuartzCore/QuartzCore.h>
+i<PhoneGap/PhoneGapDelegate.h>
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/NativeControls/PGNavigationBar.xib
+c000000004F0B6F3E000000000000331E
+t1326149438
+s13086
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/NativeControls/PGNavigationBarController.h
+c000000004F0B6F3E0000000000000370
+t1326149438
+s880
+i<UIKit/UIKit.h>
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/NativeControls/PGNavigationBarController.m
+c000000004F0B6F3E00000000000006EA
+t1326149438
+s1770
+i"PGNavigationBarController.h"
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/iPod/iPodCommand.h
+c000000004F0B6F3E0000000000000325
+t1326149438
+s805
+i<Foundation/Foundation.h>
+i<MediaPlayer/MediaPlayer.h>
+i<PhoneGap/PGPlugin.h>
+i"PGPlugin.h"
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/iPod/iPodCommand.m
+c000000004F0B6F3E00000000000010D4
+t1326149438
+s4308
+i"iPodCommand.h"
+i<MediaPlayer/MediaPlayer.h>
+i"HelloPhoneGapAppDelegate.h"
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/iPod/iPodViewController.h
+c000000004F0B6F3E00000000000000F5
+t1326149438
+s245
+i<UIKit/UIKit.h>
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/iPod/iPodViewController.m
+c000000004F0B6F3E00000000000003B1
+t1326149438
+s945
+i"iPodViewController.h"
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Resources/Capture.bundle
+c000000004F0B6F3E0000000000000242
+t1326149438
+s578
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Resources/en.lproj/Localizable.strings
+c000000004F0B6F3E0000000000000248
+t1326149438
+s584
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Resources/es.lproj/Localizable.strings
+c000000004F0B6F3E0000000000000254
+t1326149438
+s596
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Resources/icons/icon-72.png
+c000000004F0B6F3E00000000000013B9
+t1326149438
+s5049
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Resources/icons/icon.png
+c000000004F0B6F3E0000000000000C36
+t1326149438
+s3126
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Resources/icons/icon@2x.png
+c000000004F0B6F3E00000000000014DC
+t1326149438
+s5340
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Resources/splash/Default.png
+c000000004F0B6F3E00000000000033AA
+t1326149438
+s13226
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Resources/splash/Default@2x.png
+c000000004F0B6F3E0000000000007F9A
+t1326149438
+s32666
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/en.lproj/InfoPlist.strings
+c000000004F0B6F3E000000000000002D
+t1326149438
+s45
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/main.m
+c000000004F0B6F3E0000000000000187
+t1326149438
+s391
+i<UIKit/UIKit.h>
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/PluginCopy.sh
+c000000004F0B6F3E00000000000000D8
+t1326149438
+s216
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app
+t1349159615
+s646
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app.dSYM
+t1349159614
+s102
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/Capture.bundle
+t1349159613
+s578
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/ChildBrowser.bundle
+t1349159614
+s340
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/ChildBrowserViewController.nib
+t1349159614
+s4468
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/Default.png
+t1349159613
+s13226
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/Default@2x.png
+t1349159613
+s32666
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/HelloPhoneGap1
+t1349159612
+s382368
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/Info.plist
+t1349159610
+s844
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/PGNavigationBar.nib
+t1349159614
+s1919
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/PhoneGap.plist
+t1349159613
+s922
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/PkgInfo
+t1349159610
+s8
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/PluginCopy.sh
+t1349159614
+s216
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/en.lproj/InfoPlist.strings
+t1349159613
+s42
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/en.lproj/Localizable.strings
+t1349159613
+s142
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/es.lproj/Localizable.strings
+t1349159613
+s308
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/icon-72.png
+t1349159613
+s5049
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/icon.png
+t1349159613
+s3126
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/icon@2x.png
+t1349159613
+s5340
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/www
+t1349159613
+s1054
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/ActivityIndicatorCommand.o
+t1349159611
+s7036
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/ChildBrowserCommand.o
+t1349159611
+s51788
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/ChildBrowserViewController.o
+t1349159611
+s68644
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/DSActivityView.o
+t1349159611
+s98396
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/HelloPhoneGap1.LinkFileList
+c00000000506A8ABA00000000000006A3
+t1349159610
+s1699
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/HelloPhoneGapAppDelegate.o
+t1349159611
+s51452
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/NativeControls.o
+t1349159612
+s98764
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/PGNavigationBarController.o
+t1349159612
+s48940
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/iPodCommand.o
+t1349159611
+s63048
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/iPodViewController.o
+t1349159612
+s40236
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/main.o
+t1349159611
+s3756
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Script-173CCCD513FB144A00D5914A.sh
+c00000000506A8ABA0000000000000270
+t1349159610
+s624
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Script-176B02A813FBF98E0041F86B.sh
+c00000000506A8ABA000000000000002C
+t1349159610
+s44
+
+N/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/www
+c000000004F0B6F3E0000000000000440
+t1326149438
+s1088
+
+N/var/folders/xm/_dlbn1xj4bxd8mrpm0nz4r5m0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HelloPhoneGap1-Prefix-ggedbsmxsjfcihdxjegvdbykmzmp/HelloPhoneGap1-Prefix.pch.pth
+t1349159611
+s3348964
+
+NHelloPhoneGap1/HelloPhoneGap1-Info.plist
+c000000004F0B6F3E0000000000000523
+t1326149438
+s1315
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies370852410#370852410#0(0"0(0#1#0"17205460480#0"0#
+
+CCompileC build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/ActivityIndicatorCommand.o /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ActivityIndicator/ActivityIndicatorCommand.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s370852411.330870
+e370852411.376669
+r1
+xCompileC
+xbuild/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/ActivityIndicatorCommand.o
+x/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ActivityIndicator/ActivityIndicatorCommand.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@134"Compile /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ActivityIndicator/ActivityIndicatorCommand.m370852411#370852411#0(0"0(0#0#126"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ActivityIndicator/ActivityIndicatorCommand.m4418821776#1916"    cd /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DPHONEGAP_FRAMEWORK=YES -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/HelloPhoneGap1.hmap -F/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator -F/Users/Shared/PhoneGap/Frameworks -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/include -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/DerivedSources/i386 -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/DerivedSources -include /var/folders/xm/_dlbn1xj4bxd8mrpm0nz4r5m0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HelloPhoneGap1-Prefix-ggedbsmxsjfcihdxjegvdbykmzmp/HelloPhoneGap1-Prefix.pch -c /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ActivityIndicator/ActivityIndicatorCommand.m -o /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/ActivityIndicatorCommand.o0#
+
+CCompileC build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/ChildBrowserCommand.o /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ChildBrowser/ChildBrowserCommand.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s370852411.376772
+e370852411.499087
+r1
+xCompileC
+xbuild/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/ChildBrowserCommand.o
+x/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ChildBrowser/ChildBrowserCommand.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@124"Compile /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ChildBrowser/ChildBrowserCommand.m370852411#370852411#0(0"0(0#0#116"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ChildBrowser/ChildBrowserCommand.m4418821776#1901"    cd /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DPHONEGAP_FRAMEWORK=YES -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/HelloPhoneGap1.hmap -F/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator -F/Users/Shared/PhoneGap/Frameworks -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/include -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/DerivedSources/i386 -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/DerivedSources -include /var/folders/xm/_dlbn1xj4bxd8mrpm0nz4r5m0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HelloPhoneGap1-Prefix-ggedbsmxsjfcihdxjegvdbykmzmp/HelloPhoneGap1-Prefix.pch -c /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ChildBrowser/ChildBrowserCommand.m -o /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/ChildBrowserCommand.o0#
+
+CCompileC build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/ChildBrowserViewController.o /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ChildBrowser/ChildBrowserViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s370852411.503363
+e370852411.700439
+r1
+xCompileC
+xbuild/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/ChildBrowserViewController.o
+x/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ChildBrowser/ChildBrowserViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+o/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ChildBrowser/ChildBrowserViewController.m:112:10:{112:10-112:42}: warning: method '-presentingViewController' not found (return type defaults to 'id')
+o         [[super presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+o          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+o/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ChildBrowser/ChildBrowserViewController.m:112:9:{112:9-112:92}: warning: method '-dismissViewControllerAnimated:completion:' not found (return type defaults to 'id')
+o         [[super presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+o         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+o2 warnings generated.
+lSLF07#2@131"Compile /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ChildBrowser/ChildBrowserViewController.m370852411#370852411#0(827"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ChildBrowser/ChildBrowserViewController.m:112:10:{112:10-112:42}: warning: method '-presentingViewController' not found (return type defaults to 'id')         [[super presentingViewController] dismissViewControllerAnimated:YES completion:nil];          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ChildBrowser/ChildBrowserViewController.m:112:9:{112:9-112:92}: warning: method '-dismissViewControllerAnimated:completion:' not found (return type defaults to 'id')         [[super presentingViewController] dismissViewControllerAnimated:YES completion:nil];         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~2 warnings generated.2(22@75"Method '-presentingViewController' not found (return type defaults to 'id')370852411#0#233#0(6@123"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ChildBrowser/ChildBrowserViewController.m347842238#112#10#0#0#49"method * not found (return type defaults to 'id')1(6@123"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ChildBrowser/ChildBrowserViewController.m347842238#112#10#112#42#22@92"Method '-dismissViewControllerAnimated:completion:' not found (return type defaults to 'id')370852411#370#248#0(6@123"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ChildBrowser/ChildBrowserViewController.m347842238#112#9#0#0#49"method * not found (return type defaults to 'id')1(6@123"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ChildBrowser/ChildBrowserViewController.m347842238#112#9#112#92#0#0#123"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ChildBrowser/ChildBrowserViewController.m4418821776#1915"    cd /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DPHONEGAP_FRAMEWORK=YES -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/HelloPhoneGap1.hmap -F/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator -F/Users/Shared/PhoneGap/Frameworks -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/include -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/DerivedSources/i386 -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/DerivedSources -include /var/folders/xm/_dlbn1xj4bxd8mrpm0nz4r5m0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HelloPhoneGap1-Prefix-ggedbsmxsjfcihdxjegvdbykmzmp/HelloPhoneGap1-Prefix.pch -c /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ChildBrowser/ChildBrowserViewController.m -o /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/ChildBrowserViewController.o0#
+
+CCompileC build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/DSActivityView.o /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ActivityIndicator/DSActivityView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s370852411.347180
+e370852411.857333
+r1
+xCompileC
+xbuild/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/DSActivityView.o
+x/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ActivityIndicator/DSActivityView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@124"Compile /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ActivityIndicator/DSActivityView.m370852411#370852411#0(0"0(0#0#116"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ActivityIndicator/DSActivityView.m4418821776#1896"    cd /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DPHONEGAP_FRAMEWORK=YES -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/HelloPhoneGap1.hmap -F/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator -F/Users/Shared/PhoneGap/Frameworks -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/include -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/DerivedSources/i386 -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/DerivedSources -include /var/folders/xm/_dlbn1xj4bxd8mrpm0nz4r5m0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HelloPhoneGap1-Prefix-ggedbsmxsjfcihdxjegvdbykmzmp/HelloPhoneGap1-Prefix.pch -c /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ActivityIndicator/DSActivityView.m -o /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/DSActivityView.o0#
+
+CCompileC build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/HelloPhoneGapAppDelegate.o /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/HelloPhoneGapAppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s370852411.034183
+e370852411.347061
+r1
+xCompileC
+xbuild/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/HelloPhoneGapAppDelegate.o
+x/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/HelloPhoneGapAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@108"Compile /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/HelloPhoneGapAppDelegate.m370852411#370852411#0(0"0(0#0#100"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/HelloPhoneGapAppDelegate.m4418821776#1890"    cd /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DPHONEGAP_FRAMEWORK=YES -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/HelloPhoneGap1.hmap -F/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator -F/Users/Shared/PhoneGap/Frameworks -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/include -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/DerivedSources/i386 -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/DerivedSources -include /var/folders/xm/_dlbn1xj4bxd8mrpm0nz4r5m0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HelloPhoneGap1-Prefix-ggedbsmxsjfcihdxjegvdbykmzmp/HelloPhoneGap1-Prefix.pch -c /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/HelloPhoneGapAppDelegate.m -o /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/HelloPhoneGapAppDelegate.o0#
+
+CCompileC build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/NativeControls.o /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/NativeControls/NativeControls.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s370852411.861650
+e370852412.174591
+r1
+xCompileC
+xbuild/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/NativeControls.o
+x/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/NativeControls/NativeControls.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@121"Compile /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/NativeControls/NativeControls.m370852411#370852412#0(0"0(0#0#113"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/NativeControls/NativeControls.m4418821776#1893"    cd /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DPHONEGAP_FRAMEWORK=YES -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/HelloPhoneGap1.hmap -F/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator -F/Users/Shared/PhoneGap/Frameworks -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/include -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/DerivedSources/i386 -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/DerivedSources -include /var/folders/xm/_dlbn1xj4bxd8mrpm0nz4r5m0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HelloPhoneGap1-Prefix-ggedbsmxsjfcihdxjegvdbykmzmp/HelloPhoneGap1-Prefix.pch -c /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/NativeControls/NativeControls.m -o /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/NativeControls.o0#
+
+CCompileC build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/PGNavigationBarController.o /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/NativeControls/PGNavigationBarController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s370852412.037997
+e370852412.184334
+r1
+xCompileC
+xbuild/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/PGNavigationBarController.o
+x/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/NativeControls/PGNavigationBarController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@132"Compile /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/NativeControls/PGNavigationBarController.m370852412#370852412#0(0"0(0#0#124"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/NativeControls/PGNavigationBarController.m4418821776#1915"    cd /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DPHONEGAP_FRAMEWORK=YES -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/HelloPhoneGap1.hmap -F/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator -F/Users/Shared/PhoneGap/Frameworks -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/include -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/DerivedSources/i386 -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/DerivedSources -include /var/folders/xm/_dlbn1xj4bxd8mrpm0nz4r5m0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HelloPhoneGap1-Prefix-ggedbsmxsjfcihdxjegvdbykmzmp/HelloPhoneGap1-Prefix.pch -c /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/NativeControls/PGNavigationBarController.m -o /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/PGNavigationBarController.o0#
+
+CCompileC build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/iPodCommand.o /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/iPod/iPodCommand.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s370852411.700538
+e370852411.820088
+r1
+xCompileC
+xbuild/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/iPodCommand.o
+x/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/iPod/iPodCommand.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@108"Compile /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/iPod/iPodCommand.m370852411#370852411#0(0"0(0#0#100"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/iPod/iPodCommand.m4418821776#1877"    cd /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DPHONEGAP_FRAMEWORK=YES -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/HelloPhoneGap1.hmap -F/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator -F/Users/Shared/PhoneGap/Frameworks -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/include -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/DerivedSources/i386 -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/DerivedSources -include /var/folders/xm/_dlbn1xj4bxd8mrpm0nz4r5m0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HelloPhoneGap1-Prefix-ggedbsmxsjfcihdxjegvdbykmzmp/HelloPhoneGap1-Prefix.pch -c /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/iPod/iPodCommand.m -o /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/iPodCommand.o0#
+
+CCompileC build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/iPodViewController.o /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/iPod/iPodViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s370852411.820187
+e370852412.037897
+r1
+xCompileC
+xbuild/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/iPodViewController.o
+x/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/iPod/iPodViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@115"Compile /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/iPod/iPodViewController.m370852411#370852412#0(0"0(0#0#107"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/iPod/iPodViewController.m4418821776#1891"    cd /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DPHONEGAP_FRAMEWORK=YES -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/HelloPhoneGap1.hmap -F/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator -F/Users/Shared/PhoneGap/Frameworks -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/include -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/DerivedSources/i386 -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/DerivedSources -include /var/folders/xm/_dlbn1xj4bxd8mrpm0nz4r5m0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HelloPhoneGap1-Prefix-ggedbsmxsjfcihdxjegvdbykmzmp/HelloPhoneGap1-Prefix.pch -c /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/iPod/iPodViewController.m -o /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/iPodViewController.o0#
+
+CCompileC build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/main.o /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s370852411.033001
+e370852411.330775
+r1
+xCompileC
+xbuild/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/main.o
+x/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@88"Compile /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/main.m370852411#370852411#0(0"0(0#0#80"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/main.m4418821776#1850"    cd /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DPHONEGAP_FRAMEWORK=YES -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/HelloPhoneGap1.hmap -F/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator -F/Users/Shared/PhoneGap/Frameworks -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/include -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/DerivedSources/i386 -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/DerivedSources -include /var/folders/xm/_dlbn1xj4bxd8mrpm0nz4r5m0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HelloPhoneGap1-Prefix-ggedbsmxsjfcihdxjegvdbykmzmp/HelloPhoneGap1-Prefix.pch -c /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/main.m -o /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/main.o0#
+
+CCompileXIB /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ChildBrowser/ChildBrowserViewController.xib
+s370852414.200552
+e370852414.940120
+r1
+xCompileXIB
+x/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ChildBrowser/ChildBrowserViewController.xib
+lSLF07#2@77"CompileXIB HelloPhoneGap1/Plugins/ChildBrowser/ChildBrowserViewController.xib370852414#370852414#0(0"0(0#0#125"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ChildBrowser/ChildBrowserViewController.xib4418821776#705"    cd /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/ChildBrowserViewController.nib /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ChildBrowser/ChildBrowserViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
+
+CCompileXIB /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/NativeControls/PGNavigationBar.xib
+s370852414.214057
+e370852414.900231
+r1
+xCompileXIB
+x/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/NativeControls/PGNavigationBar.xib
+lSLF07#2@68"CompileXIB HelloPhoneGap1/Plugins/NativeControls/PGNavigationBar.xib370852414#370852414#0(0"0(0#0#116"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/NativeControls/PGNavigationBar.xib4418821776#685"    cd /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/PGNavigationBar.nib /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/NativeControls/PGNavigationBar.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
+
+CCopyPlistFile /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/PhoneGap.plist HelloPhoneGap1/PhoneGap.plist
+s370852413.895864
+e370852414.213112
+r1
+xCopyPlistFile
+x/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/PhoneGap.plist
+xHelloPhoneGap1/PhoneGap.plist
+lSLF07#2@34"Copy HelloPhoneGap1/PhoneGap.plist370852413#370852414#0(0"0(0#0#88"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/PhoneGap.plist4418821776#451"    cd /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copyplist --convert binary1 HelloPhoneGap1/PhoneGap.plist --outdir /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app0#
+
+CCopyStringsFile /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/en.lproj/InfoPlist.strings HelloPhoneGap1/en.lproj/InfoPlist.strings
+s370852413.076532
+e370852413.875461
+r1
+xCopyStringsFile
+x/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/en.lproj/InfoPlist.strings
+xHelloPhoneGap1/en.lproj/InfoPlist.strings
+lSLF07#2@46"Copy HelloPhoneGap1/en.lproj/InfoPlist.strings370852413#370852413#0(0"0(0#0#100"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/en.lproj/InfoPlist.strings4418821776#545"    cd /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv ICONV /usr/bin/iconv    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding binary HelloPhoneGap1/en.lproj/InfoPlist.strings --outdir /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/en.lproj0#
+
+CCopyStringsFile /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/en.lproj/Localizable.strings HelloPhoneGap1/Resources/en.lproj/Localizable.strings
+s370852413.126829
+e370852413.863066
+r1
+xCopyStringsFile
+x/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/en.lproj/Localizable.strings
+xHelloPhoneGap1/Resources/en.lproj/Localizable.strings
+lSLF07#2@58"Copy HelloPhoneGap1/Resources/en.lproj/Localizable.strings370852413#370852413#0(0"0(0#0#112"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Resources/en.lproj/Localizable.strings4418821776#557"    cd /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv ICONV /usr/bin/iconv    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding binary HelloPhoneGap1/Resources/en.lproj/Localizable.strings --outdir /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/en.lproj0#
+
+CCopyStringsFile /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/es.lproj/Localizable.strings HelloPhoneGap1/Resources/es.lproj/Localizable.strings
+s370852413.863189
+e370852414.199638
+r1
+xCopyStringsFile
+x/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/es.lproj/Localizable.strings
+xHelloPhoneGap1/Resources/es.lproj/Localizable.strings
+lSLF07#2@58"Copy HelloPhoneGap1/Resources/es.lproj/Localizable.strings370852413#370852414#0(0"0(0#0#112"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Resources/es.lproj/Localizable.strings4418821776#557"    cd /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv ICONV /usr/bin/iconv    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding binary HelloPhoneGap1/Resources/es.lproj/Localizable.strings --outdir /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/es.lproj0#
+
+CCpResource build/Debug-iphonesimulator/HelloPhoneGap1.app/Capture.bundle HelloPhoneGap1/Resources/Capture.bundle
+s370852413.888100
+e370852413.930219
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/HelloPhoneGap1.app/Capture.bundle
+xHelloPhoneGap1/Resources/Capture.bundle
+lSLF07#2@44"Copy HelloPhoneGap1/Resources/Capture.bundle370852413#370852413#0(0"0(0#0#98"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Resources/Capture.bundle4418821776#564"    cd /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Resources/Capture.bundle /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app0#
+
+CCpResource build/Debug-iphonesimulator/HelloPhoneGap1.app/ChildBrowser.bundle HelloPhoneGap1/Plugins/ChildBrowser/ChildBrowser.bundle
+s370852414.199754
+e370852414.212358
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/HelloPhoneGap1.app/ChildBrowser.bundle
+xHelloPhoneGap1/Plugins/ChildBrowser/ChildBrowser.bundle
+lSLF07#2@60"Copy HelloPhoneGap1/Plugins/ChildBrowser/ChildBrowser.bundle370852414#370852414#0(0"0(0#0#114"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ChildBrowser/ChildBrowser.bundle4418821776#580"    cd /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Plugins/ChildBrowser/ChildBrowser.bundle /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app0#
+
+CCpResource build/Debug-iphonesimulator/HelloPhoneGap1.app/Default.png HelloPhoneGap1/Resources/splash/Default.png
+s370852413.880815
+e370852413.943379
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/HelloPhoneGap1.app/Default.png
+xHelloPhoneGap1/Resources/splash/Default.png
+lSLF07#2@48"Copy HelloPhoneGap1/Resources/splash/Default.png370852413#370852413#0(0"0(0#0#102"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Resources/splash/Default.png4418821776#568"    cd /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Resources/splash/Default.png /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app0#
+
+CCpResource build/Debug-iphonesimulator/HelloPhoneGap1.app/Default@2x.png HelloPhoneGap1/Resources/splash/Default@2x.png
+s370852413.882772
+e370852413.953999
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/HelloPhoneGap1.app/Default@2x.png
+xHelloPhoneGap1/Resources/splash/Default@2x.png
+lSLF07#2@51"Copy HelloPhoneGap1/Resources/splash/Default@2x.png370852413#370852413#0(0"0(0#0#105"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Resources/splash/Default@2x.png4418821776#571"    cd /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Resources/splash/Default@2x.png /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app0#
+
+CCpResource build/Debug-iphonesimulator/HelloPhoneGap1.app/PluginCopy.sh PluginCopy.sh
+s370852414.213183
+e370852414.224895
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/HelloPhoneGap1.app/PluginCopy.sh
+xPluginCopy.sh
+lSLF07#2@18"Copy PluginCopy.sh370852414#370852414#0(0"0(0#0#72"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/PluginCopy.sh4418821776#538"    cd /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/PluginCopy.sh /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app0#
+
+CCpResource build/Debug-iphonesimulator/HelloPhoneGap1.app/icon-72.png HelloPhoneGap1/Resources/icons/icon-72.png
+s370852413.878938
+e370852413.952945
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/HelloPhoneGap1.app/icon-72.png
+xHelloPhoneGap1/Resources/icons/icon-72.png
+lSLF07#2@47"Copy HelloPhoneGap1/Resources/icons/icon-72.png370852413#370852413#0(0"0(0#0#101"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Resources/icons/icon-72.png4418821776#567"    cd /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Resources/icons/icon-72.png /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app0#
+
+CCpResource build/Debug-iphonesimulator/HelloPhoneGap1.app/icon.png HelloPhoneGap1/Resources/icons/icon.png
+s370852413.875630
+e370852413.898278
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/HelloPhoneGap1.app/icon.png
+xHelloPhoneGap1/Resources/icons/icon.png
+lSLF07#2@44"Copy HelloPhoneGap1/Resources/icons/icon.png370852413#370852413#0(0"0(0#0#98"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Resources/icons/icon.png4418821776#564"    cd /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Resources/icons/icon.png /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app0#
+
+CCpResource build/Debug-iphonesimulator/HelloPhoneGap1.app/icon@2x.png HelloPhoneGap1/Resources/icons/icon@2x.png
+s370852413.877160
+e370852413.944265
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/HelloPhoneGap1.app/icon@2x.png
+xHelloPhoneGap1/Resources/icons/icon@2x.png
+lSLF07#2@47"Copy HelloPhoneGap1/Resources/icons/icon@2x.png370852413#370852413#0(0"0(0#0#101"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Resources/icons/icon@2x.png4418821776#567"    cd /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/Resources/icons/icon@2x.png /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app0#
+
+CCpResource build/Debug-iphonesimulator/HelloPhoneGap1.app/www www
+s370852413.075651
+e370852413.126739
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/HelloPhoneGap1.app/www
+xwww
+lSLF07#2@8"Copy www370852413#370852413#0(0"0(0#0#62"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/www4418821776#528"    cd /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/www /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app0#
+
+CGenerateDSYMFile /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app.dSYM /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/HelloPhoneGap1
+s370852414.940220
+e370852414.977590
+r1
+xGenerateDSYMFile
+x/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app.dSYM
+x/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/HelloPhoneGap1
+lSLF07#2@130"GenerateDSYMFile build/Debug-iphonesimulator/HelloPhoneGap1.app.dSYM build/Debug-iphonesimulator/HelloPhoneGap1.app/HelloPhoneGap1370852414#370852414#0(0"0(0#0#120"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/HelloPhoneGap14418821776#464"    cd /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/HelloPhoneGap1 -o /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app.dSYM0#
+
+CLd /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/HelloPhoneGap1 normal i386
+s370852412.184435
+e370852412.714760
+r1
+xLd
+x/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/HelloPhoneGap1
+xnormal
+xi386
+lSLF07#2@125"Link /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/HelloPhoneGap1370852412#370852412#0(0"0(0#0#0"4418821776#1345"    cd /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -L/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator -F/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator -F/Users/Shared/PhoneGap/Frameworks -filelist /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/HelloPhoneGap1.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework PhoneGap -framework Foundation -framework UIKit -framework CoreGraphics -framework AddressBook -framework AddressBookUI -framework AudioToolbox -framework AVFoundation -framework CoreLocation -framework MediaPlayer -framework QuartzCore -framework SystemConfiguration -framework MobileCoreServices -framework CoreMedia -prebind -o /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/HelloPhoneGap10#
+
+CPhaseScriptExecution "Run Script" /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Script-173CCCD513FB144A00D5914A.sh
+s370852414.977694
+e370852415.043220
+r1
+xPhaseScriptExecution
+xRun Script
+x/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Script-173CCCD513FB144A00D5914A.sh
+o		176B02B813FC0EFA0041F86B /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
+lSLF07#2@36"Run custom shell script 'Run Script'370852414#370852415#0(131"		176B02B813FC0EFA0041F86B /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };1(13@131"		176B02B813FC0EFA0041F86B /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };370852415#0#131#0(1@0"0(0#0#0"4418821776#19106"    cd /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv ACTION build    setenv ALTERNATE_GROUP staff    setenv ALTERNATE_MODE u+w,go-w,a+rX    setenv ALTERNATE_OWNER patshea56    setenv ALWAYS_SEARCH_USER_PATHS YES    setenv APPLE_INTERNAL_DEVELOPER_DIR /AppleInternal/Developer    setenv APPLE_INTERNAL_DIR /AppleInternal    setenv APPLE_INTERNAL_DOCUMENTATION_DIR /AppleInternal/Documentation    setenv APPLE_INTERNAL_LIBRARY_DIR /AppleInternal/Library    setenv APPLE_INTERNAL_TOOLS /AppleInternal/Developer/Tools    setenv APPLY_RULES_IN_COPY_FILES NO    setenv ARCHS i386    setenv ARCHS_STANDARD_32_BIT i386    setenv ARCHS_UNIVERSAL_IPHONE_OS i386    setenv BUILD_COMPONENTS "headers build"    setenv BUILD_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build    setenv BUILD_ROOT /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build    setenv BUILD_STYLE Debug    setenv BUILD_VARIANTS normal    setenv BUILT_PRODUCTS_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator    setenv CACHE_ROOT /var/folders/xm/_dlbn1xj4bxd8mrpm0nz4r5m0000gn/C/com.apple.Xcode.501    setenv CCHROOT /var/folders/xm/_dlbn1xj4bxd8mrpm0nz4r5m0000gn/C/com.apple.Xcode.501    setenv CHMOD /bin/chmod    setenv CHOWN /usr/sbin/chown    setenv CLANG_ENABLE_OBJC_ARC NO    setenv CLASS_FILE_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/JavaClasses    setenv CLEAN_PRECOMPS YES    setenv CLONE_HEADERS NO    setenv CODESIGNING_FOLDER_PATH /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app    setenv CODE_SIGN_CONTEXT_CLASS XCCodeSignContext    setenv COMMAND_MODE legacy    setenv COMPOSITE_SDK_DIRS /var/folders/xm/_dlbn1xj4bxd8mrpm0nz4r5m0000gn/C/com.apple.Xcode.501/CompositeSDKs    setenv COMPRESS_PNG_FILES YES    setenv CONFIGURATION Debug    setenv CONFIGURATION_BUILD_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator    setenv CONFIGURATION_TEMP_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator    setenv CONTENTS_FOLDER_PATH HelloPhoneGap1.app    setenv COPYING_PRESERVES_HFS_DATA NO    setenv COPY_PHASE_STRIP NO    setenv COPY_RESOURCES_FROM_STATIC_FRAMEWORKS YES    setenv CORDOVALIB /Users/patshea56/Documents/CordovaLib    setenv CP /bin/cp    setenv CURRENT_ARCH i386    setenv CURRENT_VARIANT normal    setenv DEAD_CODE_STRIPPING NO    setenv DEBUGGING_SYMBOLS YES    setenv DEBUG_INFORMATION_FORMAT dwarf-with-dsym    setenv DEPLOYMENT_LOCATION NO    setenv DEPLOYMENT_POSTPROCESSING NO    setenv DERIVED_FILES_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/DerivedSources    setenv DERIVED_FILE_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/DerivedSources    setenv DERIVED_SOURCES_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/DerivedSources    setenv DEVELOPER_APPLICATIONS_DIR /Developer/Applications    setenv DEVELOPER_BIN_DIR /Developer/usr/bin    setenv DEVELOPER_DIR /Developer    setenv DEVELOPER_FRAMEWORKS_DIR /Developer/Library/Frameworks    setenv DEVELOPER_FRAMEWORKS_DIR_QUOTED "\"/Developer/Library/Frameworks\""    setenv DEVELOPER_LIBRARY_DIR /Developer/Library    setenv DEVELOPER_SDK_DIR /Developer/SDKs    setenv DEVELOPER_TOOLS_DIR /Developer/Tools    setenv DEVELOPER_USR_DIR /Developer/usr    setenv DEVELOPMENT_LANGUAGE English    setenv DOCUMENTATION_FOLDER_PATH HelloPhoneGap1.app/English.lproj/Documentation    setenv DO_HEADER_SCANNING_IN_JAM NO    setenv DSTROOT /tmp/HelloPhoneGap1.dst    setenv DWARF_DSYM_FILE_NAME HelloPhoneGap1.app.dSYM    setenv DWARF_DSYM_FOLDER_PATH /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator    setenv EFFECTIVE_PLATFORM_NAME -iphonesimulator    setenv ENABLE_HEADER_DEPENDENCIES YES    setenv ENABLE_OPENMP_SUPPORT NO    setenv EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS ".svn .git CVS"    setenv EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES "*.nib *.lproj *.framework *.gch (*) CVS .svn .git *.xcodeproj *.xcode *.pbproj *.pbxproj"    setenv EXECUTABLES_FOLDER_PATH HelloPhoneGap1.app/Executables    setenv EXECUTABLE_FOLDER_PATH HelloPhoneGap1.app    setenv EXECUTABLE_NAME HelloPhoneGap1    setenv EXECUTABLE_PATH HelloPhoneGap1.app/HelloPhoneGap1    setenv FILE_LIST /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects/LinkFileList    setenv FIXED_FILES_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/FixedFiles    setenv FRAMEWORKS_FOLDER_PATH HelloPhoneGap1.app/Frameworks    setenv FRAMEWORK_FLAG_PREFIX -framework    setenv FRAMEWORK_SEARCH_PATHS "\"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator\" \"/Users/Shared/PhoneGap/Frameworks\""    setenv FRAMEWORK_VERSION A    setenv FULL_PRODUCT_NAME HelloPhoneGap1.app    setenv GCC3_VERSION 3.3    setenv GCC_C_LANGUAGE_STANDARD gnu99    setenv GCC_DYNAMIC_NO_PIC NO    setenv GCC_INLINES_ARE_PRIVATE_EXTERN YES    setenv GCC_OBJC_LEGACY_DISPATCH YES    setenv GCC_OPTIMIZATION_LEVEL 0    setenv GCC_PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"    setenv GCC_PRECOMPILE_PREFIX_HEADER YES    setenv GCC_PREFIX_HEADER HelloPhoneGap1/HelloPhoneGap1-Prefix.pch    setenv GCC_PREPROCESSOR_DEFINITIONS PHONEGAP_FRAMEWORK=YES    setenv GCC_SYMBOLS_PRIVATE_EXTERN NO    setenv GCC_TREAT_WARNINGS_AS_ERRORS NO    setenv GCC_VERSION com.apple.compilers.llvm.clang.1_0    setenv GCC_VERSION_IDENTIFIER com_apple_compilers_llvm_clang_1_0    setenv GCC_WARN_ABOUT_MISSING_PROTOTYPES YES    setenv GCC_WARN_ABOUT_RETURN_TYPE YES    setenv GCC_WARN_UNUSED_VARIABLE YES    setenv GENERATE_MASTER_OBJECT_FILE NO    setenv GENERATE_PKGINFO_FILE YES    setenv GENERATE_PROFILING_CODE NO    setenv GID 20    setenv GROUP staff    setenv HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT YES    setenv HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES YES    setenv HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS YES    setenv HEADERMAP_INCLUDES_PROJECT_HEADERS YES    setenv HEADER_SEARCH_PATHS "\"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/include\" "    setenv ICONV /usr/bin/iconv    setenv INFOPLIST_EXPAND_BUILD_SETTINGS YES    setenv INFOPLIST_FILE HelloPhoneGap1/HelloPhoneGap1-Info.plist    setenv INFOPLIST_OUTPUT_FORMAT binary    setenv INFOPLIST_PATH HelloPhoneGap1.app/Info.plist    setenv INFOPLIST_PREPROCESS NO    setenv INFOSTRINGS_PATH HelloPhoneGap1.app/English.lproj/InfoPlist.strings    setenv INSTALL_DIR /tmp/HelloPhoneGap1.dst/Applications    setenv INSTALL_GROUP staff    setenv INSTALL_MODE_FLAG u+w,go-w,a+rX    setenv INSTALL_OWNER patshea56    setenv INSTALL_PATH /Applications    setenv INSTALL_ROOT /tmp/HelloPhoneGap1.dst    setenv IPHONEOS_DEPLOYMENT_TARGET 4.3    setenv JAVAC_DEFAULT_FLAGS "-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8"    setenv JAVA_APP_STUB /System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub    setenv JAVA_ARCHIVE_CLASSES YES    setenv JAVA_ARCHIVE_TYPE JAR    setenv JAVA_COMPILER /usr/bin/javac    setenv JAVA_FOLDER_PATH HelloPhoneGap1.app/Java    setenv JAVA_FRAMEWORK_RESOURCES_DIRS Resources    setenv JAVA_JAR_FLAGS cv    setenv JAVA_SOURCE_SUBDIR .    setenv JAVA_USE_DEPENDENCIES YES    setenv JAVA_ZIP_FLAGS -urg    setenv JIKES_DEFAULT_FLAGS "+E +OLDCSO"    setenv KEEP_PRIVATE_EXTERNS NO    setenv LD_GENERATE_MAP_FILE NO    setenv LD_MAP_FILE_PATH /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/HelloPhoneGap1-LinkMap-normal-i386.txt    setenv LD_OPENMP_FLAGS -fopenmp    setenv LEX /Developer/usr/bin/lex    setenv LIBRARY_FLAG_NOSPACE YES    setenv LIBRARY_FLAG_PREFIX -l    setenv LIBRARY_SEARCH_PATHS "\"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator\" "    setenv LINKER_DISPLAYS_MANGLED_NAMES NO    setenv LINK_FILE_LIST_normal_i386 /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/HelloPhoneGap1.LinkFileList    setenv LINK_WITH_STANDARD_LIBRARIES YES    setenv LOCALIZED_RESOURCES_FOLDER_PATH HelloPhoneGap1.app/English.lproj    setenv LOCAL_ADMIN_APPS_DIR /Applications/Utilities    setenv LOCAL_APPS_DIR /Applications    setenv LOCAL_DEVELOPER_DIR /Library/Developer    setenv LOCAL_LIBRARY_DIR /Library    setenv MACH_O_TYPE mh_execute    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv MAC_OS_X_PRODUCT_BUILD_VERSION 11E53    setenv MAC_OS_X_VERSION_ACTUAL 1074    setenv MAC_OS_X_VERSION_MAJOR 1070    setenv MAC_OS_X_VERSION_MINOR 0704    setenv NATIVE_ARCH i386    setenv NATIVE_ARCH_32_BIT i386    setenv NATIVE_ARCH_64_BIT x86_64    setenv NATIVE_ARCH_ACTUAL x86_64    setenv NO_COMMON YES    setenv OBJC_ABI_VERSION 2    setenv OBJECT_FILE_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects    setenv OBJECT_FILE_DIR_normal /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal    setenv OBJROOT /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build    setenv ONLY_ACTIVE_ARCH NO    setenv OPTIMIZATION_LEVEL 0    setenv OS MACOS    setenv OSAC /usr/bin/osacompile    setenv PACKAGE_TYPE com.apple.package-type.wrapper.application    setenv PASCAL_STRINGS YES    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES "/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Developer/Headers /Developer/SDKs /Developer/Platforms"    setenv PBDEVELOPMENTPLIST_PATH HelloPhoneGap1.app/pbdevelopment.plist    setenv PFE_FILE_C_DIALECTS objective-c    setenv PHONEGAPLIB /Users/patshea56/Documents/PhoneGapLib    setenv PKGINFO_FILE_PATH /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/PkgInfo    setenv PKGINFO_PATH HelloPhoneGap1.app/PkgInfo    setenv PLATFORM_DEVELOPER_APPLICATIONS_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/Applications    setenv PLATFORM_DEVELOPER_BIN_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin    setenv PLATFORM_DEVELOPER_LIBRARY_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/Library    setenv PLATFORM_DEVELOPER_SDK_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs    setenv PLATFORM_DEVELOPER_TOOLS_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/Tools    setenv PLATFORM_DEVELOPER_USR_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/usr    setenv PLATFORM_DIR /Developer/Platforms/iPhoneSimulator.platform    setenv PLATFORM_NAME iphonesimulator    setenv PLATFORM_PRODUCT_BUILD_VERSION 8F192    setenv PLATFORM_VERSION_AVAILABILITY_H_FORMAT 40300    setenv PLIST_FILE_OUTPUT_FORMAT binary    setenv PLUGINS_FOLDER_PATH HelloPhoneGap1.app/PlugIns    setenv PREBINDING YES    setenv PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR YES    setenv PRECOMP_DESTINATION_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/PrefixHeaders    setenv PRESERVE_DEAD_CODE_INITS_AND_TERMS NO    setenv PRIVATE_HEADERS_FOLDER_PATH HelloPhoneGap1.app/PrivateHeaders    setenv PRODUCT_NAME HelloPhoneGap1    setenv PRODUCT_SETTINGS_PATH /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/HelloPhoneGap1-Info.plist    setenv PRODUCT_TYPE com.apple.product-type.application    setenv PROFILING_CODE NO    setenv PROJECT HelloPhoneGap1    setenv PROJECT_DERIVED_FILE_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/DerivedSources    setenv PROJECT_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv PROJECT_FILE_PATH /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1.xcodeproj    setenv PROJECT_NAME HelloPhoneGap1    setenv PROJECT_TEMP_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build    setenv PUBLIC_HEADERS_FOLDER_PATH HelloPhoneGap1.app/Headers    setenv RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS YES    setenv REMOVE_CVS_FROM_RESOURCES YES    setenv REMOVE_GIT_FROM_RESOURCES YES    setenv REMOVE_SVN_FROM_RESOURCES YES    setenv REZ_COLLECTOR_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/ResourceManagerResources    setenv REZ_OBJECTS_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/ResourceManagerResources/Objects    setenv REZ_SEARCH_PATHS "\"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator\" "    setenv RUN_CLANG_STATIC_ANALYZER NO    setenv SCAN_ALL_SOURCE_FILES_FOR_INCLUDES NO    setenv SCRIPTS_FOLDER_PATH HelloPhoneGap1.app/Scripts    setenv SCRIPT_INPUT_FILE_COUNT 0    setenv SCRIPT_OUTPUT_FILE_COUNT 0    setenv SDKROOT /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk    setenv SDK_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk    setenv SDK_NAME iphonesimulator4.3    setenv SDK_PRODUCT_BUILD_VERSION 8F192    setenv SED /usr/bin/sed    setenv SEPARATE_STRIP NO    setenv SEPARATE_SYMBOL_EDIT NO    setenv SET_DIR_MODE_OWNER_GROUP YES    setenv SET_FILE_MODE_OWNER_GROUP NO    setenv SHALLOW_BUNDLE YES    setenv SHARED_DERIVED_FILE_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/DerivedSources    setenv SHARED_FRAMEWORKS_FOLDER_PATH HelloPhoneGap1.app/SharedFrameworks    setenv SHARED_PRECOMPS_DIR /var/folders/xm/_dlbn1xj4bxd8mrpm0nz4r5m0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders    setenv SHARED_SUPPORT_FOLDER_PATH HelloPhoneGap1.app/SharedSupport    setenv SKIP_INSTALL YES    setenv SOURCE_ROOT /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv SRCROOT /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv STANDARD_C_PLUS_PLUS_LIBRARY_TYPE dynamic    setenv STRINGS_FILE_OUTPUT_ENCODING binary    setenv STRIP_INSTALLED_PRODUCT YES    setenv STRIP_STYLE all    setenv SUPPORTED_DEVICE_FAMILIES "1 2"    setenv SYMBOL_REPOSITORY_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/SymbolRepositories    setenv SYMROOT /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build    setenv SYSTEM_ADMIN_APPS_DIR /Applications/Utilities    setenv SYSTEM_APPS_DIR /Applications    setenv SYSTEM_CORE_SERVICES_DIR /System/Library/CoreServices    setenv SYSTEM_DEMOS_DIR /Applications/Extras    setenv SYSTEM_DEVELOPER_APPS_DIR /Developer/Applications    setenv SYSTEM_DEVELOPER_BIN_DIR /Developer/usr/bin    setenv SYSTEM_DEVELOPER_DEMOS_DIR "/Developer/Applications/Utilities/Built Examples"    setenv SYSTEM_DEVELOPER_DIR /Developer    setenv SYSTEM_DEVELOPER_DOC_DIR "/Developer/ADC Reference Library"    setenv SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR "/Developer/Applications/Graphics Tools"    setenv SYSTEM_DEVELOPER_JAVA_TOOLS_DIR "/Developer/Applications/Java Tools"    setenv SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR "/Developer/Applications/Performance Tools"    setenv SYSTEM_DEVELOPER_RELEASENOTES_DIR "/Developer/ADC Reference Library/releasenotes"    setenv SYSTEM_DEVELOPER_TOOLS /Developer/Tools    setenv SYSTEM_DEVELOPER_TOOLS_DOC_DIR "/Developer/ADC Reference Library/documentation/DeveloperTools"    setenv SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR "/Developer/ADC Reference Library/releasenotes/DeveloperTools"    setenv SYSTEM_DEVELOPER_USR_DIR /Developer/usr    setenv SYSTEM_DEVELOPER_UTILITIES_DIR /Developer/Applications/Utilities    setenv SYSTEM_DOCUMENTATION_DIR /Library/Documentation    setenv SYSTEM_LIBRARY_DIR /System/Library    setenv TARGETED_DEVICE_FAMILY 1,2    setenv TARGETNAME HelloPhoneGap1    setenv TARGET_BUILD_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator    setenv TARGET_NAME HelloPhoneGap1    setenv TARGET_TEMP_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build    setenv TEMP_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build    setenv TEMP_FILES_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build    setenv TEMP_FILE_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build    setenv TEMP_ROOT /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build    setenv UID 501    setenv UNLOCALIZED_RESOURCES_FOLDER_PATH HelloPhoneGap1.app    setenv UNSTRIPPED_PRODUCT NO    setenv USER patshea56    setenv USER_APPS_DIR /Users/patshea56/Applications    setenv USER_LIBRARY_DIR /Users/patshea56/Library    setenv USE_DYNAMIC_NO_PIC YES    setenv USE_HEADERMAP YES    setenv USE_HEADER_SYMLINKS NO    setenv VALIDATE_PRODUCT NO    setenv VALID_ARCHS i386    setenv VERBOSE_PBXCP NO    setenv VERSIONPLIST_PATH HelloPhoneGap1.app/version.plist    setenv VERSION_INFO_BUILDER patshea56    setenv VERSION_INFO_FILE HelloPhoneGap1_vers.c    setenv VERSION_INFO_STRING "\"@(#)PROGRAM:HelloPhoneGap1  PROJECT:HelloPhoneGap1-\""    setenv WRAPPER_EXTENSION app    setenv WRAPPER_NAME HelloPhoneGap1.app    setenv WRAPPER_SUFFIX .app    setenv XCODE_APP_SUPPORT_DIR /Developer/Library/Xcode    setenv XCODE_PRODUCT_BUILD_VERSION 10M2518    setenv XCODE_VERSION_ACTUAL 0400    setenv XCODE_VERSION_MAJOR 0400    setenv XCODE_VERSION_MINOR 0400    setenv YACC /Developer/usr/bin/yacc    setenv _REAL_SDKROOT iphoneos    /bin/sh -c /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Script-173CCCD513FB144A00D5914A.sh0#
+
+CPhaseScriptExecution "Run Script" /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Script-176B02A813FBF98E0041F86B.sh
+s370852412.983778
+e370852413.075567
+r1
+xPhaseScriptExecution
+xRun Script
+x/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Script-176B02A813FBF98E0041F86B.sh
+lSLF07#2@36"Run custom shell script 'Run Script'370852412#370852413#0(0"0(0#0#0"4418821776#19106"    cd /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv ACTION build    setenv ALTERNATE_GROUP staff    setenv ALTERNATE_MODE u+w,go-w,a+rX    setenv ALTERNATE_OWNER patshea56    setenv ALWAYS_SEARCH_USER_PATHS YES    setenv APPLE_INTERNAL_DEVELOPER_DIR /AppleInternal/Developer    setenv APPLE_INTERNAL_DIR /AppleInternal    setenv APPLE_INTERNAL_DOCUMENTATION_DIR /AppleInternal/Documentation    setenv APPLE_INTERNAL_LIBRARY_DIR /AppleInternal/Library    setenv APPLE_INTERNAL_TOOLS /AppleInternal/Developer/Tools    setenv APPLY_RULES_IN_COPY_FILES NO    setenv ARCHS i386    setenv ARCHS_STANDARD_32_BIT i386    setenv ARCHS_UNIVERSAL_IPHONE_OS i386    setenv BUILD_COMPONENTS "headers build"    setenv BUILD_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build    setenv BUILD_ROOT /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build    setenv BUILD_STYLE Debug    setenv BUILD_VARIANTS normal    setenv BUILT_PRODUCTS_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator    setenv CACHE_ROOT /var/folders/xm/_dlbn1xj4bxd8mrpm0nz4r5m0000gn/C/com.apple.Xcode.501    setenv CCHROOT /var/folders/xm/_dlbn1xj4bxd8mrpm0nz4r5m0000gn/C/com.apple.Xcode.501    setenv CHMOD /bin/chmod    setenv CHOWN /usr/sbin/chown    setenv CLANG_ENABLE_OBJC_ARC NO    setenv CLASS_FILE_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/JavaClasses    setenv CLEAN_PRECOMPS YES    setenv CLONE_HEADERS NO    setenv CODESIGNING_FOLDER_PATH /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app    setenv CODE_SIGN_CONTEXT_CLASS XCCodeSignContext    setenv COMMAND_MODE legacy    setenv COMPOSITE_SDK_DIRS /var/folders/xm/_dlbn1xj4bxd8mrpm0nz4r5m0000gn/C/com.apple.Xcode.501/CompositeSDKs    setenv COMPRESS_PNG_FILES YES    setenv CONFIGURATION Debug    setenv CONFIGURATION_BUILD_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator    setenv CONFIGURATION_TEMP_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator    setenv CONTENTS_FOLDER_PATH HelloPhoneGap1.app    setenv COPYING_PRESERVES_HFS_DATA NO    setenv COPY_PHASE_STRIP NO    setenv COPY_RESOURCES_FROM_STATIC_FRAMEWORKS YES    setenv CORDOVALIB /Users/patshea56/Documents/CordovaLib    setenv CP /bin/cp    setenv CURRENT_ARCH i386    setenv CURRENT_VARIANT normal    setenv DEAD_CODE_STRIPPING NO    setenv DEBUGGING_SYMBOLS YES    setenv DEBUG_INFORMATION_FORMAT dwarf-with-dsym    setenv DEPLOYMENT_LOCATION NO    setenv DEPLOYMENT_POSTPROCESSING NO    setenv DERIVED_FILES_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/DerivedSources    setenv DERIVED_FILE_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/DerivedSources    setenv DERIVED_SOURCES_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/DerivedSources    setenv DEVELOPER_APPLICATIONS_DIR /Developer/Applications    setenv DEVELOPER_BIN_DIR /Developer/usr/bin    setenv DEVELOPER_DIR /Developer    setenv DEVELOPER_FRAMEWORKS_DIR /Developer/Library/Frameworks    setenv DEVELOPER_FRAMEWORKS_DIR_QUOTED "\"/Developer/Library/Frameworks\""    setenv DEVELOPER_LIBRARY_DIR /Developer/Library    setenv DEVELOPER_SDK_DIR /Developer/SDKs    setenv DEVELOPER_TOOLS_DIR /Developer/Tools    setenv DEVELOPER_USR_DIR /Developer/usr    setenv DEVELOPMENT_LANGUAGE English    setenv DOCUMENTATION_FOLDER_PATH HelloPhoneGap1.app/English.lproj/Documentation    setenv DO_HEADER_SCANNING_IN_JAM NO    setenv DSTROOT /tmp/HelloPhoneGap1.dst    setenv DWARF_DSYM_FILE_NAME HelloPhoneGap1.app.dSYM    setenv DWARF_DSYM_FOLDER_PATH /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator    setenv EFFECTIVE_PLATFORM_NAME -iphonesimulator    setenv ENABLE_HEADER_DEPENDENCIES YES    setenv ENABLE_OPENMP_SUPPORT NO    setenv EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS ".svn .git CVS"    setenv EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES "*.nib *.lproj *.framework *.gch (*) CVS .svn .git *.xcodeproj *.xcode *.pbproj *.pbxproj"    setenv EXECUTABLES_FOLDER_PATH HelloPhoneGap1.app/Executables    setenv EXECUTABLE_FOLDER_PATH HelloPhoneGap1.app    setenv EXECUTABLE_NAME HelloPhoneGap1    setenv EXECUTABLE_PATH HelloPhoneGap1.app/HelloPhoneGap1    setenv FILE_LIST /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects/LinkFileList    setenv FIXED_FILES_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/FixedFiles    setenv FRAMEWORKS_FOLDER_PATH HelloPhoneGap1.app/Frameworks    setenv FRAMEWORK_FLAG_PREFIX -framework    setenv FRAMEWORK_SEARCH_PATHS "\"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator\" \"/Users/Shared/PhoneGap/Frameworks\""    setenv FRAMEWORK_VERSION A    setenv FULL_PRODUCT_NAME HelloPhoneGap1.app    setenv GCC3_VERSION 3.3    setenv GCC_C_LANGUAGE_STANDARD gnu99    setenv GCC_DYNAMIC_NO_PIC NO    setenv GCC_INLINES_ARE_PRIVATE_EXTERN YES    setenv GCC_OBJC_LEGACY_DISPATCH YES    setenv GCC_OPTIMIZATION_LEVEL 0    setenv GCC_PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"    setenv GCC_PRECOMPILE_PREFIX_HEADER YES    setenv GCC_PREFIX_HEADER HelloPhoneGap1/HelloPhoneGap1-Prefix.pch    setenv GCC_PREPROCESSOR_DEFINITIONS PHONEGAP_FRAMEWORK=YES    setenv GCC_SYMBOLS_PRIVATE_EXTERN NO    setenv GCC_TREAT_WARNINGS_AS_ERRORS NO    setenv GCC_VERSION com.apple.compilers.llvm.clang.1_0    setenv GCC_VERSION_IDENTIFIER com_apple_compilers_llvm_clang_1_0    setenv GCC_WARN_ABOUT_MISSING_PROTOTYPES YES    setenv GCC_WARN_ABOUT_RETURN_TYPE YES    setenv GCC_WARN_UNUSED_VARIABLE YES    setenv GENERATE_MASTER_OBJECT_FILE NO    setenv GENERATE_PKGINFO_FILE YES    setenv GENERATE_PROFILING_CODE NO    setenv GID 20    setenv GROUP staff    setenv HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT YES    setenv HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES YES    setenv HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS YES    setenv HEADERMAP_INCLUDES_PROJECT_HEADERS YES    setenv HEADER_SEARCH_PATHS "\"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/include\" "    setenv ICONV /usr/bin/iconv    setenv INFOPLIST_EXPAND_BUILD_SETTINGS YES    setenv INFOPLIST_FILE HelloPhoneGap1/HelloPhoneGap1-Info.plist    setenv INFOPLIST_OUTPUT_FORMAT binary    setenv INFOPLIST_PATH HelloPhoneGap1.app/Info.plist    setenv INFOPLIST_PREPROCESS NO    setenv INFOSTRINGS_PATH HelloPhoneGap1.app/English.lproj/InfoPlist.strings    setenv INSTALL_DIR /tmp/HelloPhoneGap1.dst/Applications    setenv INSTALL_GROUP staff    setenv INSTALL_MODE_FLAG u+w,go-w,a+rX    setenv INSTALL_OWNER patshea56    setenv INSTALL_PATH /Applications    setenv INSTALL_ROOT /tmp/HelloPhoneGap1.dst    setenv IPHONEOS_DEPLOYMENT_TARGET 4.3    setenv JAVAC_DEFAULT_FLAGS "-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8"    setenv JAVA_APP_STUB /System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub    setenv JAVA_ARCHIVE_CLASSES YES    setenv JAVA_ARCHIVE_TYPE JAR    setenv JAVA_COMPILER /usr/bin/javac    setenv JAVA_FOLDER_PATH HelloPhoneGap1.app/Java    setenv JAVA_FRAMEWORK_RESOURCES_DIRS Resources    setenv JAVA_JAR_FLAGS cv    setenv JAVA_SOURCE_SUBDIR .    setenv JAVA_USE_DEPENDENCIES YES    setenv JAVA_ZIP_FLAGS -urg    setenv JIKES_DEFAULT_FLAGS "+E +OLDCSO"    setenv KEEP_PRIVATE_EXTERNS NO    setenv LD_GENERATE_MAP_FILE NO    setenv LD_MAP_FILE_PATH /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/HelloPhoneGap1-LinkMap-normal-i386.txt    setenv LD_OPENMP_FLAGS -fopenmp    setenv LEX /Developer/usr/bin/lex    setenv LIBRARY_FLAG_NOSPACE YES    setenv LIBRARY_FLAG_PREFIX -l    setenv LIBRARY_SEARCH_PATHS "\"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator\" "    setenv LINKER_DISPLAYS_MANGLED_NAMES NO    setenv LINK_FILE_LIST_normal_i386 /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal/i386/HelloPhoneGap1.LinkFileList    setenv LINK_WITH_STANDARD_LIBRARIES YES    setenv LOCALIZED_RESOURCES_FOLDER_PATH HelloPhoneGap1.app/English.lproj    setenv LOCAL_ADMIN_APPS_DIR /Applications/Utilities    setenv LOCAL_APPS_DIR /Applications    setenv LOCAL_DEVELOPER_DIR /Library/Developer    setenv LOCAL_LIBRARY_DIR /Library    setenv MACH_O_TYPE mh_execute    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv MAC_OS_X_PRODUCT_BUILD_VERSION 11E53    setenv MAC_OS_X_VERSION_ACTUAL 1074    setenv MAC_OS_X_VERSION_MAJOR 1070    setenv MAC_OS_X_VERSION_MINOR 0704    setenv NATIVE_ARCH i386    setenv NATIVE_ARCH_32_BIT i386    setenv NATIVE_ARCH_64_BIT x86_64    setenv NATIVE_ARCH_ACTUAL x86_64    setenv NO_COMMON YES    setenv OBJC_ABI_VERSION 2    setenv OBJECT_FILE_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects    setenv OBJECT_FILE_DIR_normal /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Objects-normal    setenv OBJROOT /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build    setenv ONLY_ACTIVE_ARCH NO    setenv OPTIMIZATION_LEVEL 0    setenv OS MACOS    setenv OSAC /usr/bin/osacompile    setenv PACKAGE_TYPE com.apple.package-type.wrapper.application    setenv PASCAL_STRINGS YES    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES "/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Developer/Headers /Developer/SDKs /Developer/Platforms"    setenv PBDEVELOPMENTPLIST_PATH HelloPhoneGap1.app/pbdevelopment.plist    setenv PFE_FILE_C_DIALECTS objective-c    setenv PHONEGAPLIB /Users/patshea56/Documents/PhoneGapLib    setenv PKGINFO_FILE_PATH /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/PkgInfo    setenv PKGINFO_PATH HelloPhoneGap1.app/PkgInfo    setenv PLATFORM_DEVELOPER_APPLICATIONS_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/Applications    setenv PLATFORM_DEVELOPER_BIN_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin    setenv PLATFORM_DEVELOPER_LIBRARY_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/Library    setenv PLATFORM_DEVELOPER_SDK_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs    setenv PLATFORM_DEVELOPER_TOOLS_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/Tools    setenv PLATFORM_DEVELOPER_USR_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/usr    setenv PLATFORM_DIR /Developer/Platforms/iPhoneSimulator.platform    setenv PLATFORM_NAME iphonesimulator    setenv PLATFORM_PRODUCT_BUILD_VERSION 8F192    setenv PLATFORM_VERSION_AVAILABILITY_H_FORMAT 40300    setenv PLIST_FILE_OUTPUT_FORMAT binary    setenv PLUGINS_FOLDER_PATH HelloPhoneGap1.app/PlugIns    setenv PREBINDING YES    setenv PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR YES    setenv PRECOMP_DESTINATION_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/PrefixHeaders    setenv PRESERVE_DEAD_CODE_INITS_AND_TERMS NO    setenv PRIVATE_HEADERS_FOLDER_PATH HelloPhoneGap1.app/PrivateHeaders    setenv PRODUCT_NAME HelloPhoneGap1    setenv PRODUCT_SETTINGS_PATH /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/HelloPhoneGap1-Info.plist    setenv PRODUCT_TYPE com.apple.product-type.application    setenv PROFILING_CODE NO    setenv PROJECT HelloPhoneGap1    setenv PROJECT_DERIVED_FILE_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/DerivedSources    setenv PROJECT_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv PROJECT_FILE_PATH /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1.xcodeproj    setenv PROJECT_NAME HelloPhoneGap1    setenv PROJECT_TEMP_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build    setenv PUBLIC_HEADERS_FOLDER_PATH HelloPhoneGap1.app/Headers    setenv RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS YES    setenv REMOVE_CVS_FROM_RESOURCES YES    setenv REMOVE_GIT_FROM_RESOURCES YES    setenv REMOVE_SVN_FROM_RESOURCES YES    setenv REZ_COLLECTOR_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/ResourceManagerResources    setenv REZ_OBJECTS_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/ResourceManagerResources/Objects    setenv REZ_SEARCH_PATHS "\"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator\" "    setenv RUN_CLANG_STATIC_ANALYZER NO    setenv SCAN_ALL_SOURCE_FILES_FOR_INCLUDES NO    setenv SCRIPTS_FOLDER_PATH HelloPhoneGap1.app/Scripts    setenv SCRIPT_INPUT_FILE_COUNT 0    setenv SCRIPT_OUTPUT_FILE_COUNT 0    setenv SDKROOT /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk    setenv SDK_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk    setenv SDK_NAME iphonesimulator4.3    setenv SDK_PRODUCT_BUILD_VERSION 8F192    setenv SED /usr/bin/sed    setenv SEPARATE_STRIP NO    setenv SEPARATE_SYMBOL_EDIT NO    setenv SET_DIR_MODE_OWNER_GROUP YES    setenv SET_FILE_MODE_OWNER_GROUP NO    setenv SHALLOW_BUNDLE YES    setenv SHARED_DERIVED_FILE_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/DerivedSources    setenv SHARED_FRAMEWORKS_FOLDER_PATH HelloPhoneGap1.app/SharedFrameworks    setenv SHARED_PRECOMPS_DIR /var/folders/xm/_dlbn1xj4bxd8mrpm0nz4r5m0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders    setenv SHARED_SUPPORT_FOLDER_PATH HelloPhoneGap1.app/SharedSupport    setenv SKIP_INSTALL YES    setenv SOURCE_ROOT /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv SRCROOT /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv STANDARD_C_PLUS_PLUS_LIBRARY_TYPE dynamic    setenv STRINGS_FILE_OUTPUT_ENCODING binary    setenv STRIP_INSTALLED_PRODUCT YES    setenv STRIP_STYLE all    setenv SUPPORTED_DEVICE_FAMILIES "1 2"    setenv SYMBOL_REPOSITORY_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/SymbolRepositories    setenv SYMROOT /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build    setenv SYSTEM_ADMIN_APPS_DIR /Applications/Utilities    setenv SYSTEM_APPS_DIR /Applications    setenv SYSTEM_CORE_SERVICES_DIR /System/Library/CoreServices    setenv SYSTEM_DEMOS_DIR /Applications/Extras    setenv SYSTEM_DEVELOPER_APPS_DIR /Developer/Applications    setenv SYSTEM_DEVELOPER_BIN_DIR /Developer/usr/bin    setenv SYSTEM_DEVELOPER_DEMOS_DIR "/Developer/Applications/Utilities/Built Examples"    setenv SYSTEM_DEVELOPER_DIR /Developer    setenv SYSTEM_DEVELOPER_DOC_DIR "/Developer/ADC Reference Library"    setenv SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR "/Developer/Applications/Graphics Tools"    setenv SYSTEM_DEVELOPER_JAVA_TOOLS_DIR "/Developer/Applications/Java Tools"    setenv SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR "/Developer/Applications/Performance Tools"    setenv SYSTEM_DEVELOPER_RELEASENOTES_DIR "/Developer/ADC Reference Library/releasenotes"    setenv SYSTEM_DEVELOPER_TOOLS /Developer/Tools    setenv SYSTEM_DEVELOPER_TOOLS_DOC_DIR "/Developer/ADC Reference Library/documentation/DeveloperTools"    setenv SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR "/Developer/ADC Reference Library/releasenotes/DeveloperTools"    setenv SYSTEM_DEVELOPER_USR_DIR /Developer/usr    setenv SYSTEM_DEVELOPER_UTILITIES_DIR /Developer/Applications/Utilities    setenv SYSTEM_DOCUMENTATION_DIR /Library/Documentation    setenv SYSTEM_LIBRARY_DIR /System/Library    setenv TARGETED_DEVICE_FAMILY 1,2    setenv TARGETNAME HelloPhoneGap1    setenv TARGET_BUILD_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator    setenv TARGET_NAME HelloPhoneGap1    setenv TARGET_TEMP_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build    setenv TEMP_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build    setenv TEMP_FILES_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build    setenv TEMP_FILE_DIR /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build    setenv TEMP_ROOT /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build    setenv UID 501    setenv UNLOCALIZED_RESOURCES_FOLDER_PATH HelloPhoneGap1.app    setenv UNSTRIPPED_PRODUCT NO    setenv USER patshea56    setenv USER_APPS_DIR /Users/patshea56/Applications    setenv USER_LIBRARY_DIR /Users/patshea56/Library    setenv USE_DYNAMIC_NO_PIC YES    setenv USE_HEADERMAP YES    setenv USE_HEADER_SYMLINKS NO    setenv VALIDATE_PRODUCT NO    setenv VALID_ARCHS i386    setenv VERBOSE_PBXCP NO    setenv VERSIONPLIST_PATH HelloPhoneGap1.app/version.plist    setenv VERSION_INFO_BUILDER patshea56    setenv VERSION_INFO_FILE HelloPhoneGap1_vers.c    setenv VERSION_INFO_STRING "\"@(#)PROGRAM:HelloPhoneGap1  PROJECT:HelloPhoneGap1-\""    setenv WRAPPER_EXTENSION app    setenv WRAPPER_NAME HelloPhoneGap1.app    setenv WRAPPER_SUFFIX .app    setenv XCODE_APP_SUPPORT_DIR /Developer/Library/Xcode    setenv XCODE_PRODUCT_BUILD_VERSION 10M2518    setenv XCODE_VERSION_ACTUAL 0400    setenv XCODE_VERSION_MAJOR 0400    setenv XCODE_VERSION_MINOR 0400    setenv YACC /Developer/usr/bin/yacc    setenv _REAL_SDKROOT iphoneos    /bin/sh -c /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/Script-176B02A813FBF98E0041F86B.sh0#
+
+CProcessInfoPlistFile /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/Info.plist HelloPhoneGap1/HelloPhoneGap1-Info.plist
+s370852410.659962
+e370852410.691236
+r1
+xProcessInfoPlistFile
+x/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/Info.plist
+xHelloPhoneGap1/HelloPhoneGap1-Info.plist
+lSLF07#2@48"Process HelloPhoneGap1/HelloPhoneGap1-Info.plist370852410#370852410#0(0"0(0#0#99"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/HelloPhoneGap1-Info.plist17199631872#575"    cd /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility HelloPhoneGap1/HelloPhoneGap1-Info.plist -genpkginfo /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app/Info.plist0#
+
+CProcessPCH /var/folders/xm/_dlbn1xj4bxd8mrpm0nz4r5m0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HelloPhoneGap1-Prefix-ggedbsmxsjfcihdxjegvdbykmzmp/HelloPhoneGap1-Prefix.pch.pth HelloPhoneGap1/HelloPhoneGap1-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s370852410.691377
+e370852411.032892
+r1
+xProcessPCH
+x/var/folders/xm/_dlbn1xj4bxd8mrpm0nz4r5m0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HelloPhoneGap1-Prefix-ggedbsmxsjfcihdxjegvdbykmzmp/HelloPhoneGap1-Prefix.pch.pth
+xHelloPhoneGap1/HelloPhoneGap1-Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@51"Precompile HelloPhoneGap1/HelloPhoneGap1-Prefix.pch370852410#370852411#0(0"0(0#0#99"/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/HelloPhoneGap1-Prefix.pch4418821776#1715"    cd /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DPHONEGAP_FRAMEWORK=YES -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/HelloPhoneGap1.hmap -F/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator -F/Users/Shared/PhoneGap/Frameworks -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/include -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/DerivedSources/i386 -I/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/HelloPhoneGap1.build/Debug-iphonesimulator/HelloPhoneGap1.build/DerivedSources -c /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/HelloPhoneGap1-Prefix.pch -o /var/folders/xm/_dlbn1xj4bxd8mrpm0nz4r5m0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/HelloPhoneGap1-Prefix-ggedbsmxsjfcihdxjegvdbykmzmp/HelloPhoneGap1-Prefix.pch.pth0#
+
+CTouch /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app
+s370852415.043300
+e370852415.067796
+r1
+xTouch
+x/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app
+lSLF07#2@111"Touch /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app370852415#370852415#0(0"0(0#0#0"4418821776#325"    cd /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/build/Debug-iphonesimulator/HelloPhoneGap1.app0#
+

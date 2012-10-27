@@ -1,0 +1,5 @@
+INDEX VERSION 1.126+/Users/patshea56/Google Drive/Campus Bubble/mobile/bubbleMobile_android/.metadata/.plugins/org.eclipse.jdt.core
+3972775213.index
+3538412158.index
+1082034937.index
+2007994742.index

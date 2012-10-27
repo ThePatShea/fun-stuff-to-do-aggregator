@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Cordova</title>
+<script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
+<script type="text/javascript" charset="utf-8" src="childbrowser.js"></script>
+
+<script type="text/javascript">
+
+	function activateChildBrowser()
+	{
+		setTimeout(function(){window.plugins.childBrowser.openExternal("http://emorybubble.com");},3000);
+		
+	}
+	
+</script>
+
+
+</head>
+<body onload="activateChildBrowser()">
+
+</body>
+
+</html>

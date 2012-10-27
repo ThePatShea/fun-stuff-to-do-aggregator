@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Cordova</title>
+<script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
+<script type="text/javascript" charset="utf-8" src="childbrowser.js"></script>
+
+<script type="text/javascript">
+
+	function activateChildBrowser()
+	{
+		setTimeout(function(){window.plugins.childBrowser.openExternal("http://emorybubble.com");},3000);
+		
+	}
+	
+</script>
+
+<style>
+
+		h3
+		{
+		    text-shadow:0px 0px 0 rgb(195,190,195),0px 1px 0 rgb(148,143,148), 0px 2px 0 rgb(102,97,102),0px 3px 2px rgba(0,0,0,0.15),0px 3px 1px rgba(0,0,0,0.5),0px 0px 2px rgba(0,0,0,.2);
+		    margin:			0 0 10px 0;
+		    color:			#DBDBDB;
+		    font-size:		35px;
+		}
+
+		body
+		{
+			background: black;
+		}
+
+</style>
+
+
+</head>
+<body onload="activateChildBrowser()">
+
+</body>
+
+</html>

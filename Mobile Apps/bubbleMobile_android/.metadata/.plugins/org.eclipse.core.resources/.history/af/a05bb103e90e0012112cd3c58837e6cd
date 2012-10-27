@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Cordova</title>
+<script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
+<script type="text/javascript" charset="utf-8" src="childbrowser.js"></script>
+
+<script type="text/javascript">
+
+	function activateChildBrowser()
+	{
+		setTimeout(function(){window.plugins.childBrowser.openExternal("http://emorybubble.com", true);},3000);
+	}
+	
+</script>
+
+<style>
+
+		h4
+		{
+		    text-shadow: 0px 0px 0 #C3BEC3, 0px 1px 0 #948F94, 0px 2px 0 #666166, 0px 3px 2px rgba(0, 0, 0, 0.15), 0px 3px 1px rgba(0, 0, 0, 0.5), 0px 0px 2px rgba(0, 0, 0, 0.2);
+		    color:			#DBDBDB;
+		    font-size:		21px;
+		    margin:			0;
+		    padding:		0;
+		}
+
+		body
+		{
+			background: url("phase1Bg.gif");
+		}
+
+</style>
+
+
+</head>
+<body onload="activateChildBrowser()">
+	<div style="margin-top: 25px;" onclick="activateChildBrowser()">
+		<img style="width: 180px; height: 107px; position: relative; left: 50%; margin-left: -90px;" src="bubbleLogo.png"/>
+		<h4 style="text-align: center;">Tap here to begin</h4>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+// !$*UTF8*$!
+{
+	173CCCCB13FB144900D5914A /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = F901AA94161AC22200518D1C /* HelloPhoneGap1 */;
+		activeSDKPreference = iphoneos4.3;
+		activeTarget = 173CCCD613FB144A00D5914A /* Emory Bubble */;
+		codeSenseManager = F901AAF9161AC23F00518D1C /* Code sense */;
+		executables = (
+			F901AA94161AC22200518D1C /* HelloPhoneGap1 */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					726,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 373062244;
+			PBXWorkspaceStateSaveDate = 373062244;
+		};
+		perUserProjectItems = {
+			F901AB17161AC3D500518D1C /* PlistBookmark */ = F901AB17161AC3D500518D1C /* PlistBookmark */;
+			F905BF19161AD7B100BA20B1 /* PBXTextBookmark */ = F905BF19161AD7B100BA20B1 /* PBXTextBookmark */;
+			F905BF1A161AD7B100BA20B1 /* PBXTextBookmark */ = F905BF1A161AD7B100BA20B1 /* PBXTextBookmark */;
+		};
+		sourceControlManager = F901AAF8161AC23F00518D1C /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	173CCCD613FB144A00D5914A /* Emory Bubble */ = {
+		activeExec = 0;
+		executables = (
+			F901AA94161AC22200518D1C /* HelloPhoneGap1 */,
+		);
+	};
+	176B028913FBF9570041F86B /* ChildBrowser.js */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {889, 962}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{791, 1153}";
+		};
+	};
+	176B028D13FBF9570041F86B /* ChildBrowserViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1489, 2964}}";
+			sepNavSelRange = "{3074, 0}";
+			sepNavVisRange = "{2627, 948}";
+		};
+	};
+	F901AA94161AC22200518D1C /* HelloPhoneGap1 */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = HelloPhoneGap1;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	F901AAF8161AC23F00518D1C /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	F901AAF9161AC23F00518D1C /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	F901AB17161AC3D500518D1C /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 173CCD1713FB144A00D5914A /* PhoneGap.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			ExternalHosts,
+			0,
+		);
+		name = "/Users/patshea56/Downloads/hutley-HelloPhoneGap1.0-3659c1d/HelloPhoneGap1/PhoneGap.plist";
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	F905BF19161AD7B100BA20B1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 176B028913FBF9570041F86B /* ChildBrowser.js */;
+		name = "ChildBrowser.js: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1153;
+		vrLoc = 791;
+	};
+	F905BF1A161AD7B100BA20B1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 176B028D13FBF9570041F86B /* ChildBrowserViewController.m */;
+		name = "ChildBrowserViewController.m: 117";
+		rLen = 0;
+		rLoc = 3074;
+		rType = 0;
+		vrLen = 948;
+		vrLoc = 2627;
+	};
+}
