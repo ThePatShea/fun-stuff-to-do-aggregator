@@ -136,4 +136,5 @@ db.once('open', function () {
 			// agg_from_users_events();              // Gets events users are invited to
 			// agg_from_pages_events();              // Gets events posted by pages
 
+
 });
