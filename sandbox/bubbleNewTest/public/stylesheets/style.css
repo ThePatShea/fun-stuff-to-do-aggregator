@@ -1,32 +1,166 @@
 /* CSS Reset */
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
 
+/* Import Fonts */
+@font-face 
+{
+    font-family: 'nevisBold';
+    src: url('fonts/nevis/nevis-webfont.eot');
+    src: url('fonts/nevis/nevis-webfont.eot?#iefix') format('embedded-opentype'),
+	 url('fonts/nevis/nevis-webfont.woff') format('woff'),
+	 url('fonts/nevis/nevis-webfont.ttf') format('truetype'),
+	 url('fonts/nevis/nevis-webfont.svg#nevisBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'museoSans100';
+    src: url('fonts/museoSans100/museosans_100-webfont.eot');
+    src: url('fonts/museoSans100/museosans_100-webfont.eot?#iefix') format('embedded-opentype'),
+	 url('fonts/museoSans100/museosans_100-webfont.woff') format('woff'),
+	 url('fonts/museoSans100/museosans_100-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'museoSans300';
+    src: url('fonts/museoSans300/museosans_300-webfont.eot');
+    src: url('fonts/museoSans300/museosans_300-webfont.eot?#iefix') format('embedded-opentype'),
+	 url('fonts/museoSans300/museosans_300-webfont.woff') format('woff'),
+	 url('fonts/museoSans300/museosans_300-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'museoSans500';
+    src: url('fonts/museoSans500/museosans_500-webfont.eot');
+    src: url('fonts/museoSans500/museosans_500-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museoSans500/museosans_500-webfont.woff') format('woff'),
+	 url('fonts/museoSans500/museosans_500-webfont.ttf') format('truetype'),
+	 url('fonts/museoSans500/museosans_500-webfont.svg#MuseoSans500') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 body {
-    background: url('../images/main/bg_main.png');
+    background: url('../images/bg_main.png');
   }
   h1 {
+      text-shadow: 2px 2px 0 black;
       text-transform: uppercase;
+      font-family: 'nevisBold';
       text-align: center;
       font-size: 30px;
+      color: white;
+    }
+  h2 {
+      text-shadow: 2px 2px 0 black;
+      text-transform: uppercase;
+      font-family: 'nevisBold';
+      text-align: center;
+      font-size: 20px;
+      color: white;
+    }
+  a,
+  a:hover,
+  a:visited {
+      text-decoration: none;
+      cursor: pointer;
     }
   .sprite {
-      background: url('../images/main/sprites.png') no-repeat;
+      background: url('../images/sprites.png') no-repeat;
     }
   #site_header {
-      background: url('../images/main/bg_site_header.gif');
+      background: url('../images/bg_site_header.gif');
     }
     #site_header #top_bar {
-        background: url('../images/main/bg_top_bar.gif') repeat-x;
+        background: url('../images/bg_top_bar.gif') repeat-x;
         padding: 40px 0 20px 0;
       }
       #site_header #bubble_logo {
-          background-position: -10px -10px;
+          background-position: 0 0;
           margin: 0 auto;
           height: 106px;
           width: 179px;
         }
     #site_header #bubble_menu {
         margin: 0 auto;
-        width: 600px;
+        width: 900px;
+        height: 144px;
       }
+      #site_header #bubble_menu a {
+          position: relative;
+          overflow: hidden;
+          margin: 0 2px;
+          height: 144px;
+          width: 144px;
+          float: left;
+        }
+        #site_header #bubble_menu a h2 {
+          width: 70px;
+          position: absolute;
+          left: 35px;
+          top: 45px;
+        }
+        #site_header #bubble_menu a .bg_bubble_button {
+          border-radius: 72px;
+          position: absolute;
+          height: 135px;
+          width: 135px;
+          z-index: 1;
+          left: 0;
+          top: 0;
+        }
+        #site_header #bubble_menu a .overlay_bubble_button {
+            background-position: -1510px 0;
+            position: relative;
+            height: 100px;
+            width: 100px;
+            z-index: 2;
+          }
+  #cover {
+      border-top: 1px solid black;
+      position: relative;
+      height: 100px;
+    }
+    .cover_night_life {
+      background-position: 0 -250px;
+    }
+    .cover_campus_events {
+      background-position: 0 -800px;
+    }
+    .cover_student_deals {
+      background-position: 0 -1100px;
+    }
+    .cover_concerts {
+      background-position: 0 -1525px;
+    }
+    .cover_arts_music {
+      background-position: 0 -2050px;
+    }
+    .cover_food {
+      background-position: 0 -2725px;
+    }
+    .cover_greek_life {
+      background-position: 0 -3300px;
+    }
+    .cover_sports {
+      background-position: 0 -3750px;
+    }
+    #cover .overlay_cover {
+        background: url('../images/overlay_cover.png') repeat-x;
+        border-top: 1px solid #302E30;
+        background-position: 0 -79px;
+        position: absolute;
+        height: 100px;
+        width: 100%;
+      }
+      #cover .overlay_cover h1 {
+          padding: 25px 0 0 0;
+        }
