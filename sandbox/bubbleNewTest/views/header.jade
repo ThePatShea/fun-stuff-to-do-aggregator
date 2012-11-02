@@ -1,5 +1,6 @@
-section
-  h2 Select a Bubble
-  button night life
-  button campus events
-  button student deals
+bubbles = ["night life", "campus events", "student deals", "concerts", "arts & music", "get food", "greek life", "sports"]
+
+header#site_header
+  div.sprite#bubble_logo
+  each bubble in bubbles
+    button= bubble
