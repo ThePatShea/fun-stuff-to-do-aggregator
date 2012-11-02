@@ -1,8 +1,3 @@
-var mongoose = require('mongoose'), db = mongoose.createConnection('localhost', 'test');
-db.on('error', console.error.bind(console, 'connection error:'));
-
-db.once('open', function () {
-
 	// Database functions
 		function getUserArray()
 		{
@@ -12,10 +7,10 @@ db.once('open', function () {
 				users[1]   =  new Array();
 		
 				users[0]["facebook_user_id"]  =  "681701524";
-				users[0]["access_token"]      =	 "AAADH49iOK2kBALIei28zWyqqeoZAE52GTSBXmpZC5weYxQT9LlHEDqPNF9vVpDle7XKT68ROcZATCFmrrFAKIBpb044J5aFZA1OvCEtGvAZDZD";
+				users[0]["access_token"]      =	 "AAADH49iOK2kBAMYTZCTZCUkQH9KvdfWOu4I7uRQ1nUWpHFJ36X5UxsY8etbxZBisIbZBhtZAiI42XoTMVIX9PWtS5ETDUstZAe3Fe9rFZCLeQZDZD";
 				
-				users[1]["facebook_user_id"]  =  "638611498";
-				users[1]["access_token"]      =  "AAADH49iOK2kBANtFE6jaZAZAmfTZCNGaS3ghksDYAqAiOVflzYTx54AAeCQIXTaSOQY1GVGQ1kenKCGoJriDyqpPt3PEIPlNvRaAYQmfQZDZD";
+				users[1]["facebook_user_id"]  =  "100004362973816";
+				users[1]["access_token"]      =  "AAADH49iOK2kBAPKp6z5ZCcWtc7OwRg2aL7ypv9YODbQ5MDI2OeZBzJd568hKxxeNDkzsmjrhbZCuCBxEuR0xHJrPNB3TGpLbl3qPvtQPl58uzqWsyLZA";
 			// Temporary code to set some access tokens. Will be replaced with MongoDB.
 		
 			return users;
@@ -41,7 +36,7 @@ db.once('open', function () {
 
 	
 	// Facebook base functions
-		var default_access_token = "AAADH49iOK2kBAAF7v79vAZCAnOLrKJmZAieZB8ZBcJgizqqH4L6Ey3HxckdjNgnGfk0kkvqYBmJELzx8JmZBPYHxmDXdvl0KXsGY7YTSOSwZDZD"; //John Campus Access Token
+		var default_access_token = "AAADH49iOK2kBAPKp6z5ZCcWtc7OwRg2aL7ypv9YODbQ5MDI2OeZBzJd568hKxxeNDkzsmjrhbZCuCBxEuR0xHJrPNB3TGpLbl3qPvtQPl58uzqWsyLZA"; //Rober Woodruff Access Token
 
 		function agg_facebook(query, access_token)
 		{
@@ -89,18 +84,18 @@ db.once('open', function () {
 
 		function agg_from_search_pages()
 		{
-			agg_facebook("search?q=%20&type=place&center=33.755,-84.39&distance=10000&limit=5000");
-			agg_facebook("search?q=Georgia&fields=id,name&type=place&limit=5000");
-			agg_facebook("search?q=Atlanta&fields=id,name&type=place&limit=5000");
-			agg_facebook("search?q=Decatur&fields=id,name&type=place&limit=5000");
-			agg_facebook("search?q=Emory&fields=id,name&type=place&limit=5000");
-			agg_facebook("search?q=GA&fields=id,name&type=place&limit=5000");
+			agg_facebook("search?q=%20&type=place&fields=id&center=33.755,-84.39&distance=10000&limit=5000");
+			agg_facebook("search?q=Georgia&fields=id&type=place&limit=5000");
+			agg_facebook("search?q=Atlanta&fields=id&type=place&limit=5000");
+			agg_facebook("search?q=Decatur&fields=id&type=place&limit=5000");
+			agg_facebook("search?q=Emory&fields=id&type=place&limit=5000");
+			agg_facebook("search?q=GA&fields=id&type=place&limit=5000");
 			
-			agg_facebook("search?q=Georgia&fields=id,name&type=page&limit=5000");
-			agg_facebook("search?q=Atlanta&fields=id,name&type=page&limit=5000");
-			agg_facebook("search?q=Decatur&fields=id,name&type=page&limit=5000");
-			agg_facebook("search?q=Emory&fields=id,name&type=page&limit=5000");
-			agg_facebook("search?q=GA&fields=id,name&type=page&limit=5000");
+			agg_facebook("search?q=Georgia&fields=id&type=page&limit=5000");
+			agg_facebook("search?q=Atlanta&fields=id&type=page&limit=5000");
+			agg_facebook("search?q=Decatur&fields=id&type=page&limit=5000");
+			agg_facebook("search?q=Emory&fields=id&type=page&limit=5000");
+			agg_facebook("search?q=GA&fields=id&type=page&limit=5000");
 		}
 	
 	
@@ -136,5 +131,3 @@ db.once('open', function () {
 			// agg_from_users_events();              // Gets events users are invited to
 			// agg_from_pages_events();              // Gets events posted by pages
 
-
-});
