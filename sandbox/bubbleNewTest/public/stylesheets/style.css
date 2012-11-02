@@ -6,6 +6,11 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
     margin: 0 auto;
     width: 600px;
   }
+  h1 {
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 30px;
+    }
   .sprite {
       background: url('../images/sprites.png') no-repeat;
     }

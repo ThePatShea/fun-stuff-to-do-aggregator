@@ -32,6 +32,9 @@ app.configure('production', function(){
 app.get('/', routes.index);
 app.post('/', routes.index_post_handler);
 
+app.get('/bubbles', routes.bubbles);
+app.get('/bubbles/:id', routes.bubble);
+
 app.listen(3000, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 });
