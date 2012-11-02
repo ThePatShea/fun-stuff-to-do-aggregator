@@ -1,4 +1,6 @@
 header#site_header
-  div.sprite#bubble_logo
-  each bubble in bubbles_list
-    button= bubble['name']
+  section#top_bar
+    div.sprite#bubble_logo
+  section#bubble_menu
+    each bubble in bubbles_list
+      button= bubble['name']
