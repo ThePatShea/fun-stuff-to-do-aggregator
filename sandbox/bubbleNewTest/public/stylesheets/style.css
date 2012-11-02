@@ -81,7 +81,7 @@ body {
     }
     #site_header #top_bar {
         background: url('../images/bg_top_bar.gif') repeat-x;
-        padding: 40px 0 20px 0;
+        padding: 40px 0 10px 0;
       }
       #site_header #bubble_logo {
           background-position: 0 0;
@@ -90,38 +90,42 @@ body {
           width: 179px;
         }
     #site_header #bubble_menu {
+        padding: 0 0 10px 0;
         margin: 0 auto;
-        width: 900px;
-        height: 144px;
+        height: 124px;
+        width: 1024px;
       }
       #site_header #bubble_menu a {
           position: relative;
           overflow: hidden;
           margin: 0 2px;
-          height: 144px;
-          width: 144px;
+          height: 124px;
+          width: 124px;
           float: left;
+        }
+      #site_header #bubble_menu a:hover .overlay_bubble_button {
+          background-position: -1650px 0;
         }
         #site_header #bubble_menu a h2 {
           width: 70px;
           position: absolute;
-          left: 35px;
-          top: 45px;
+          left: 25px;
+          top: 35px;
         }
         #site_header #bubble_menu a .bg_bubble_button {
-          border-radius: 72px;
+          border-radius: 62px;
           position: absolute;
-          height: 135px;
-          width: 135px;
+          height: 114px;
+          width: 114px;
           z-index: 1;
-          left: 0;
-          top: 0;
+          left: 2px;
+          top: 2px;
         }
         #site_header #bubble_menu a .overlay_bubble_button {
             background-position: -1510px 0;
             position: relative;
-            height: 100px;
-            width: 100px;
+            height: 124px;
+            width: 124px;
             z-index: 2;
           }
   #cover {

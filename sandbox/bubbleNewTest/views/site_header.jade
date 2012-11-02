@@ -4,7 +4,7 @@ header#site_header
   section#bubble_menu
     each bubble in bubbles_list
       bgClasses = ['sprite', 'bg_bubble_button', 'cover_'+bubble['slug']]
-      a(href='/bubbles/' + bubble['slug'])
+      a(href='/' + bubble['slug'])
         div.sprite.overlay_bubble_button
           h2= bubble['name']
         div(class = bgClasses)
