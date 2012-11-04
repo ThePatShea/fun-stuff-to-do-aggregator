@@ -2,7 +2,8 @@
   section#post
     h1= post['name']
     div.img_container
-      img(src=post['pic_big'])
+      div.img_container_inner
+        img(src=post['pic_big'])
     div.attributes
       ul
         li
@@ -11,5 +12,5 @@
         li
           p.heading where: 
           p= post['location']
-    span.description= post['description']
+    pre.description= post['description']
 

@@ -31,7 +31,7 @@ app.configure('production', function(){
 
 app.get('/', routes.bubble);
 app.get('/:bubble_slug', routes.bubble);
-app.get('/:bubble_slug/:post_id/:post_slug', routes.post);
+app.get('/:bubble_slug/:post_id/:post_slug', routes.bubble);
 
 
 app.listen(3000, function(){
