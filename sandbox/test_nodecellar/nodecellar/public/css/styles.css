@@ -50,7 +50,7 @@ h5 {
 }
 
 .thumbnail {
-    min-width: 260px;
+    width: 300px;
 }
 
 .thumbnails li {

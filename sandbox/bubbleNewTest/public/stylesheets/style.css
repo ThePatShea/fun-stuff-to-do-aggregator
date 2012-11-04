@@ -51,25 +51,38 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 body {
     background: url('../images/bg_main.png');
   }
+  h1,
+  h2,
+  h3,
+  h4 {
+      text-shadow: 2px 2px 0 black;
+      text-transform: uppercase;
+      font-family: 'nevisBold';
+      text-align: center;
+      color: white;
+
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      cursor: default;
+    }
   h1 {
-      text-shadow: 2px 2px 0 black;
-      text-transform: uppercase;
-      font-family: 'nevisBold';
-      text-align: center;
       font-size: 30px;
-      color: white;
-    }
-  h2 {
-      text-shadow: 2px 2px 0 black;
-      text-transform: uppercase;
-      font-family: 'nevisBold';
-      text-align: center;
-      font-size: 20px;
-      color: white;
-    }
+  }
+  span,
+  p {
+    font-family: museoSans500;
+  }
   a,
   a:hover,
-  a:visited {
+  a:visited,
+  a h1,
+  a h2,
+  a h3,
+  a h4 {
       text-decoration: none;
       cursor: pointer;
     }
@@ -78,24 +91,118 @@ body {
     }
   #site_header {
       background: url('../images/bg_site_header.gif');
+      box-shadow: 0 2px 2px rgba(0,0,0,.5);
+      border-bottom: 1px solid black;
+      position: fixed;
+      padding: 5px 0;
+      width: 100%;
+      z-index: 99;
+      left: 0;
+      top: 0;
     }
-    #site_header #top_bar {
-        background: url('../images/bg_top_bar.gif') repeat-x;
-        padding: 40px 0 10px 0;
+
+
+
+@media (min-width: 569px) {
+  #post {
+      float: right;
+      width: 75%;
+    }
+    #post h1 {
+        text-align: center;
+        margin: 10px;
       }
-      #site_header #bubble_logo {
+    #post span,
+    #post p {
+        text-transform: capitalize;
+        margin: 10px 10px 10px 0;
+        font-size: 14px;
+      }
+    #post p {
+        float: left;
+      }
+    #post ul {
+        float: left;
+      }
+    #post .heading {
+        font-weight: bold;
+        width: 60px;
+      }
+    #post .attributes {
+        float: right;
+        width: 75%;
+      }
+    #post .description {
+
+      }
+    #post .img_container {
+        float: left;
+        width: 25%;
+      }
+      #post img {
+          width: 95%;
+        }
+
+  #post_stream {
+      float: left;
+      width: 25%;
+    }
+    #post_stream li {
+          box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+          border: 2px solid black;
+          position: relative;
+          overflow: hidden;
+          padding: 10px;
+          height: 80px;
+          margin: 5px 15px 5px 5px;
+        }
+        #post_stream li:hover .overlay_post {
+            opacity: .5;
+          }
+      #post_stream li .overlay_post {
+          background: url('../images/overlay_post.png');
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          z-index: 2;
+          left: 0;
+          top: 0;
+        }
+      #post_stream li img {
+          position: absolute;
+          width: 100%;
+          left: 0;
+          top: 0;
+        }
+      #post_stream li h3,
+      #post_stream li h4 {
+          position: relative;
+          z-index: 3;
+        }
+      #post_stream li h3 {
+          margin: 0 0 2px 0;
+          font-size: 20px;
+        }
+      #post_stream li h4 {
+          color: #DE8072;
+        }
+
+  #site_header {
+      height: 124px;
+    }
+    #site_header #bubble_menu {
+        height: 124px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+      #site_header #bubble_menu #bubble_logo {
           background-position: 0 0;
-          margin: 0 auto;
           height: 106px;
           width: 179px;
+          float: left;
+          margin: 5px 5px;
         }
-    #site_header #bubble_menu {
-        padding: 0 0 10px 0;
-        margin: 0 auto;
-        height: 124px;
-        width: 1024px;
-      }
-      #site_header #bubble_menu a {
+      #site_header #bubble_menu .smallBubble {
           position: relative;
           overflow: hidden;
           margin: 0 2px;
@@ -107,8 +214,9 @@ body {
           background-position: -1650px 0;
         }
         #site_header #bubble_menu a h2 {
-          width: 70px;
           position: absolute;
+          font-size: 20px;
+          width: 70px;
           left: 25px;
           top: 35px;
         }
@@ -131,6 +239,100 @@ body {
   #cover {
       border-top: 1px solid black;
       position: relative;
+      height: 100px;
+      margin: 124px 0 0 0;
+    }
+    .cover_night_life {
+      background-position: 0 -250px;
+    }
+    .cover_campus_events {
+      background-position: 0 -800px;
+    }
+    .cover_student_deals {
+      background-position: 0 -1100px;
+    }
+    .cover_concerts {
+      background-position: 0 -1525px;
+    }
+    .cover_arts_music {
+      background-position: 0 -2050px;
+    }
+    .cover_food {
+      background-position: 0 -2725px;
+    }
+    .cover_greek_life {
+      background-position: 0 -3300px;
+    }
+    .cover_sports {
+      background-position: 0 -3750px;
+    }
+    #cover .overlay_cover {
+        background: url('../images/overlay_cover.png') repeat-x;
+        border-top: 1px solid #302E30;
+        background-position: 0 -79px;
+        position: absolute;
+        height: 100px;
+        width: 100%;
+      }
+      #cover .overlay_cover h1 {
+          padding: 25px 0 0 0;
+        }
+}
+
+@media (max-width: 568px) {
+  #site_header {
+      height: 45px;
+    }
+   #site_header #bubble_menu {
+        height: 45px;
+        overflow: hidden;
+      }
+      #site_header #bubble_menu #bubble_logo {
+          background-position: -189px 0;
+          margin: 5px 5px;
+          height: 39px;
+          width: 40px;
+          float: left;
+        }
+      #site_header #bubble_menu .smallBubble {
+          position: relative;
+          overflow: hidden;
+          margin: 0 2px;
+          height: 45px;
+          width: 45px;
+          float: left;
+        }
+      #site_header #bubble_menu a:hover .overlay_bubble_button {
+          background-position: -1650px 0;
+        }
+        #site_header #bubble_menu a h2 {
+          position: absolute;
+          font-size: 12px;
+          width: 45px;
+          left: 0px;
+          top: 10px;
+        }
+        #site_header #bubble_menu a .bg_bubble_button {
+          border: 2px solid grey;
+          border-radius: 23px;
+          position: absolute;
+          height: 39px;
+          width: 39px;
+          z-index: 1;
+          left: 2px;
+          top: 2px;
+        }
+        #site_header #bubble_menu a .overlay_bubble_button {
+            position: relative;
+            background: none;
+            height: 124px;
+            width: 124px;
+            z-index: 2;
+          }
+  #cover {
+      border-top: 1px solid black;
+      position: relative;
+      margin: 45px 0 0 0;
       height: 100px;
     }
     .cover_night_life {
@@ -168,3 +370,4 @@ body {
       #cover .overlay_cover h1 {
           padding: 25px 0 0 0;
         }
+}

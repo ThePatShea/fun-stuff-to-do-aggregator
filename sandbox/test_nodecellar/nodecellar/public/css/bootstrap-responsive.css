@@ -8,6 +8,15 @@
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
 
+.sprite {
+  background: url("../img/sprites.png") no-repeat;
+}
+.navbar .brand {
+  height: 106px;
+  width: 179px;
+}
+
+
 .clearfix {
   *zoom: 1;
 }
@@ -77,6 +86,13 @@
 }
 
 @media (max-width: 767px) {
+.navbar .brand {
+  background-position: -190px 0;
+  height: 39px;
+  width: 40px;
+}
+
+
   .hidden-desktop {
     display: inherit !important;
   }
@@ -930,11 +946,6 @@
   .navbar .container {
     width: auto;
     padding: 0;
-  }
-  .navbar .brand {
-    padding-right: 10px;
-    padding-left: 10px;
-    margin: 0 0 0 -5px;
   }
   .nav-collapse {
     clear: both;
