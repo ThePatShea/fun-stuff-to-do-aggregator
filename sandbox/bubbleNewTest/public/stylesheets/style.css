@@ -290,6 +290,49 @@ body {
 }
 
 @media (max-width: 568px) {
+  #post_stream {
+      float: left;
+      width: 100%;
+    }
+    #post_stream li {
+          box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+          border: 2px solid black;
+          position: relative;
+          overflow: hidden;
+          padding: 10px;
+          height: 80px;
+          margin: 5px 15px 5px 5px;
+        }
+        #post_stream li:hover .overlay_post {
+            opacity: .5;
+          }
+      #post_stream li .overlay_post {
+          background: url('../images/overlay_post.png');
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          z-index: 2;
+          left: 0;
+          top: 0;
+        }
+      #post_stream li img {
+          position: absolute;
+          width: 100%;
+          left: 0;
+          top: 0;
+        }
+      #post_stream li h3,
+      #post_stream li h4 {
+          position: relative;
+          z-index: 3;
+        }
+      #post_stream li h3 {
+          margin: 0 0 2px 0;
+          font-size: 20px;
+        }
+      #post_stream li h4 {
+          color: #DE8072;
+        }
   #site_header {
       height: 45px;
     }
