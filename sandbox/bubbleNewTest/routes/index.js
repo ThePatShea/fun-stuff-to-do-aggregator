@@ -89,13 +89,15 @@ var bubbles = {
 
 // handler for displaying individual bubble
 exports.bubble = function(req, res) {
-    if (bubbles[req.params.id])
-      var selected_bubble = bubbles[req.params.bubble_slug];
+    var input_slug = req.params.bubble_slug;
+
+    if (bubbles[input_slug])
+      var selected_bubble = bubbles[input_slug];
     else
       var selected_bubble = bubbles['night_life'];
     
-    if (bubbles[req.params.bubble_slug].events[req.params.post_id])
-      var selected_post = bubbles[req.params.bubble_slug].events[req.params.post_id];
+    if (selected_bubble.events[req.params.post_id])
+      var selected_post = selected_bubble.events[req.params.post_id];
     else
       var selected_post = "";
 
