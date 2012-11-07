@@ -42,8 +42,7 @@
 
 			$commentsCount = 0;
 			
-		if      ($post["start_time"] < $currentTime         &&  $post["end_time"]   >= $currentTime)         $post["timeframe"]  =  "now";
-                else if ($post["start_time"] < $tonight_start       &&  $post["start_time"] >= $today_start)         $post["timeframe"]  =  "today";
+                if ($post["start_time"] < $tonight_start       &&  $post["start_time"] >= $today_start)         $post["timeframe"]  =  "today";
                 else if ($post["start_time"] < $tomorrow_start      &&  $post["start_time"] >= $tonight_start)       $post["timeframe"]  =  "tonight";
                 else if ($post["start_time"] < $tomorrow_end        &&  $post["start_time"] >= $tomorrow_start)      $post["timeframe"]  =  "tomorrow";
                 else if ($post["start_time"] < $this_weekend_start  &&  $post["start_time"] >= $this_week_start)     $post["timeframe"]  =  "this week";
@@ -261,5 +260,19 @@
 	
 	}
 
-	curateBubbles();
+
+
+
+
+
+
+     //  sync_query("agg_events_from_users"  , "friends");
+     //  sync_query("sync_events_basic_info" , "full"   );
+     //  sync_query("sync_pages_basic_info"  , "full"   );
+     //  sync_query("agg_events_from_pages_and_groups" , "graph");
+
+
+       curateBubbles();
+
+
 ?>
