@@ -456,21 +456,6 @@
 		    				echo "</section>";
 		    			}
 		    			
-		    			if ($post["expires"] != "")
-   	    				{
-		    				echo "<section class='postInfoSection'>";
-		    					echo "<div class='postInfoHeading'>";
-		    						echo "<h5>expires</h5>";
-		    						echo "<div class='headingLine' style='float: right; width: 175px;'></div>";
-		    					echo "</div>";
-		    				
-		    					
-		    					echo "<div class='verticalAlign_wrapper'><div class='verticalAlign_container'>";
-			    					echo "<p class='accountName moreWidth'>"."In ".$post["expires"]."</p>";
-								echo "</div></div>";
-		    				echo "</section>";
-		    			}
-		    			
 		    			if ($post["hours"] != "")
    	    				{
 		    				echo "<section class='postInfoSection' style='height: 30px;'>";

@@ -140,6 +140,14 @@
                         //Calculate expiration
                                 $numDays   =  intval(($dealsInfo[0]["end_time"] - $currentTime)/60/60/24);
                                 $expires   =  "$numDays days";
+			
+			
+			if ($dealsInfo[0]["location"])
+			{
+				$subtitle = $dealsInfo[0]["location"];
+			}
+			else
+			{
                                 $subtitle  =  "$expires left";
 
                                 if ($numDays == 0)
@@ -147,6 +155,7 @@
                                         $expires   =  "less than 1 day";
                                         $subtitle  =  "expires tonight";
                                 }
+			}
 
                         $commentsCount = 0;
 
@@ -165,10 +174,10 @@
                                 mysql_query
                                 ("
                                         INSERT INTO             bubbles_front_new_temp
-                                        (bubbleID_bubble, bubbleID_post, timeframe, score, type, name, post_pic_big, price, value, discount, expires, subtitle, atlanta_joins, venue_accountFacebookID, venue_name, venue_pic_square, comments, start_time)
+                                        (bubbleID_bubble, bubbleID_post, timeframe, score, type, name, post_pic_big, price, value, discount, expires, subtitle, atlanta_joins, venue_accountFacebookID, venue_name, venue_pic_square, comments, start_time, location)
 
                                         VALUES
-                                        ('$bubbleID_bubble', '".$deals[$i]."', 'today', 100000, 'deal', '".$postInfo[0]["name"]."', '".$postInfo[0]["pic_big"]."', '".$dealsInfo[0]["price"]."', '".$dealsInfo[0]["value"]."', '".$dealsInfo[0]["discount"]."', '$expires', '$subtitle', '$atlanta_joins', '".$dealVenueInfo[0]["accountFacebookID"]."', '".$dealVenueInfo[0]["name"]."', '".$dealVenueInfo[0]["pic_square"]."', $commentsCount, $start_time)
+                                        ('$bubbleID_bubble', '".$deals[$i]."', 'today', 100000, 'deal', '".$postInfo[0]["name"]."', '".$postInfo[0]["pic_big"]."', '".$dealsInfo[0]["price"]."', '".$dealsInfo[0]["value"]."', '".$dealsInfo[0]["discount"]."', '$expires', '$subtitle', '$atlanta_joins', '".$dealVenueInfo[0]["accountFacebookID"]."', '".$dealVenueInfo[0]["name"]."', '".$dealVenueInfo[0]["pic_square"]."', $commentsCount, $start_time, '".$dealsInfo[0]["location"]."')
                                 ");
 
                    }
