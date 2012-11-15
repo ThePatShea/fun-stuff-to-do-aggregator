@@ -98,7 +98,11 @@
 	
 	// Aggregate Pages	
 		function agg_from_events_venues_creators() { agg_facebook("fql?q={'page':'SELECT page_id FROM page WHERE page_id IN (SELECT venue.id,creator FROM event WHERE eid IN ("+getEventList()+"))'}"); }
-		function agg_from_pages_likes() { agg_facebook("fql?q={'page':'SELECT page_id FROM page_fan WHERE uid IN ("+getPageList()+")'}"); }
+		function agg_from_pages_likes() {
+			getPageList(function(page_list){
+				agg_facebook("fql?q={'page':'SELECT page_id FROM page_fan WHERE uid IN ("+page_list+")'}"); 
+			});
+		}
 		function agg_from_users_likes() { agg_from_users("'page':'SELECT page_id FROM page_fan"); }
 
 		function agg_from_search_pages()
@@ -222,5 +226,5 @@ db.once('open', function () {
     // Aggregate events
       // agg_from_search_events();             // Gets events from our search queries
       // agg_from_users_events();              // Gets events users are invited to
-       agg_from_pages_events();              // Gets events posted by pages
+      // agg_from_pages_events();              // Gets events posted by pages
 });
