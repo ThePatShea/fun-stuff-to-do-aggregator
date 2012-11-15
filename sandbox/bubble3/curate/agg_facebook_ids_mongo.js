@@ -7,22 +7,41 @@
 				users[1]   =  new Array();
 		
 				users[0]["facebook_user_id"]  =  "681701524"; // Pat Shea
-				users[0]["access_token"]      =	 "AAADH49iOK2kBAFTBb7YtVQ7WgPkFB6I4Qu9F7ShGB1QjgCogeOrsy7MWk2dkXOmRFN45tqVmQ7WepIZBlBDX0D7Muzi6DZBC8pL35HOwZDZD";
+				users[0]["access_token"]      =	 "AAADH49iOK2kBABlNIwZBy9j9DM0DrFgWZAbU4wd9syGCDZBwunZBWIlBUG4r8ScjcHBw5vXybwdjCBGnh1SZCFlheh1dvMqxvZAgrzgj6ngwZDZD";
 				
 				users[1]["facebook_user_id"]  =  "100004362973816"; // Robert Woodruff
-				users[1]["access_token"]      =  "AAADH49iOK2kBAERomn6Q2is22eYGetASz0CJoP5ZC3eZBCqLRSuLIv0Q7w9sOi3KV7WPZC8RTQg0ICeWag8vZAZBIJ0ZAG1MFczltjsqZBihORq3RSZB09rs";
+				users[1]["access_token"]      =  default_access_token;
 			// Temporary code to set some access tokens. Will be replaced with MongoDB.
 		
 			return users;
 		}
 	
-		function getPageList()
+		function getPageList(callback)
 		{
-			// Temporary code to set comma separated list of pages. Will be replaced with MongoDB.
-				var pageList = "218760225176,128298896566,132765608557";
-			// Temporary code to set comma separated list of pages. Will be replaced with MongoDB.
-	
-			return pageList;
+			var agg_facebook_schema = new mongoose.Schema({
+				facebook_id: { type: Number, index: {unique: true}},
+				type: String
+			}, { collection: 'agg_facebook' });
+
+			var agg_facebook = db.model('agg_facebook', agg_facebook_schema);
+			
+			agg_facebook.find({ type: "page" },function (err, agg_facebook) {
+				if (err) { } // TODO handle err
+
+				var page_object = agg_facebook;
+				var page_object_length = page_object.length;
+
+				var page_list = "";
+
+				for (i = 0; i < page_object_length; i++) {
+					if (i != 0)
+						page_list += ",";
+
+					page_list += page_object[i].facebook_id;
+				}
+
+				callback(page_list);
+			});
 		}
 	
 		function getEventList()
@@ -36,7 +55,7 @@
 
 	
 	// Facebook base functions
-		var default_access_token = "AAADH49iOK2kBAERomn6Q2is22eYGetASz0CJoP5ZC3eZBCqLRSuLIv0Q7w9sOi3KV7WPZC8RTQg0ICeWag8vZAZBIJ0ZAG1MFczltjsqZBihORq3RSZB09rs"; //Robert Woodruff Access Token
+		var default_access_token = "AAADH49iOK2kBANbeT1M19f3BWctGfVN87ZCwDMxwpDgPsnur9WYzxnCA2a28mXyGIPvBg0W6GnLZCK3vIgQYO9rt6UbPggpSvkWMGoXIrGL4NnafNg"; //Robert Woodruff Access Token
 
 		function agg_facebook(query, access_token)
 		{
@@ -100,7 +119,12 @@
 	
 	
 	// Aggregate Events
-		function agg_from_pages_events() { agg_facebook("fql?q={'event':'SELECT eid,start_time,end_time FROM event WHERE eid IN (SELECT eid FROM event_member WHERE uid IN ("+getPageList()+"))'}"); }
+		function agg_from_pages_events() {
+			getPageList(function(page_list){
+				agg_facebook("fql?q={'event':'SELECT eid,start_time,end_time FROM event WHERE eid IN (SELECT eid FROM event_member WHERE uid IN ("+page_list+"))'}");
+			}); 
+		}
+
 		function agg_from_users_events() { agg_from_users("'event':'SELECT eid,start_time,end_time FROM event WHERE eid IN (SELECT eid FROM event_member",")"); }
 
 		function agg_from_search_events()
@@ -130,7 +154,8 @@
   
     var agg_facebook = db.model('agg_facebook', agg_facebook_schema);
 
-	// console.log(returnInfo);
+	console.log(returnInfo);
+
 	var returnInfo_length  =  returnInfo.data.length;
 
 	for (i = 0; i < returnInfo_length; i++)
@@ -177,10 +202,6 @@
 	}
 
     
-    agg_facebook.find(function (err, agg_facebook) {
-      if (err) { } // TODO handle err
-      console.log(agg_facebook);
-    });
   }
 
 
@@ -199,7 +220,7 @@ db.once('open', function () {
       // agg_from_pages_likes();               // Gets pages from pages' likes
 
     // Aggregate events
-      agg_from_search_events();             // Gets events from our search queries
+      // agg_from_search_events();             // Gets events from our search queries
       // agg_from_users_events();              // Gets events users are invited to
-      // agg_from_pages_events();              // Gets events posted by pages
+       agg_from_pages_events();              // Gets events posted by pages
 });
