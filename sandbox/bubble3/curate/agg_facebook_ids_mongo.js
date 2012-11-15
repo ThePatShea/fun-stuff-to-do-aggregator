@@ -36,9 +36,9 @@
 
 	
 	// Facebook base functions
-		var default_access_token = "AAADH49iOK2kBAPKp6z5ZCcWtc7OwRg2aL7ypv9YODbQ5MDI2OeZBzJd568hKxxeNDkzsmjrhbZCuCBxEuR0xHJrPNB3TGpLbl3qPvtQPl58uzqWsyLZA"; //Rober Woodruff Access Token
+		var default_access_token = "AAADH49iOK2kBAHGelWBieDaJhLv9x5UDHC3nAZAZAj4m2qiZBDaLHXeY25VJWfyhSeSdfZAkNApgMgif033OPSLO2Rc86pCZALwZCOvsB6ogVsVCxTpUdj"; //Robert Woodruff Access Token
 
-		function agg_facebook(query, access_token)
+		function agg_facebook(query, access_token, callback)
 		{
 			if(typeof(access_token) === 'undefined') access_token = default_access_token;
 
@@ -53,8 +53,8 @@
 				});
 
 				res.on("end", function() {
-					console.log(returnData);
-					console.log('finished');
+					var returnInfo = JSON.parse(returnData);
+					callback(returnInfo);
 				});
 
 			}).on('error', function(e) {
@@ -78,7 +78,7 @@
 	
 	
 	// Aggregate Pages	
-		function agg_from_events_venues_creators() { agg_facebook("fql?q={'page':'SELECT page_id FROM page WHERE page_id IN (SELECT venue.id,creator FROM event WHERE eid IN ("+getEventList()+"))'}"); }
+		function agg_from_events_venues_creators(callback) { agg_facebook("fql?q={'page':'SELECT page_id FROM page WHERE page_id IN (SELECT venue.id,creator FROM event WHERE eid IN ("+getEventList()+"))'}", default_access_token, callback); }
 		function agg_from_pages_likes() { agg_facebook("fql?q={'page':'SELECT page_id FROM page_fan WHERE uid IN ("+getPageList()+")'}"); }
 		function agg_from_users_likes() { agg_from_users("SELECT page_id FROM page_fan"); }
 
@@ -121,7 +121,7 @@
 	
 	// Aggregation Functions
 		// Aggregate pages
-			// agg_from_events_venues_creators();    // Gets pages from events' venues and creators
+			// agg_from_events_venues_creators(function (returnData){console.log(returnData)});    // Gets pages from events' venues and creators
 			// agg_from_search_pages();              // Gets pages from our search queries
 			// agg_from_users_likes();               // Gets pages from users' likes
 			// agg_from_pages_likes();               // Gets pages from pages' likes
@@ -131,3 +131,50 @@
 			// agg_from_users_events();              // Gets events users are invited to
 			// agg_from_pages_events();              // Gets events posted by pages
 
+
+
+  function store_facebook_info(returnInfo) {
+    var agg_page_schema = new mongoose.Schema({
+      page_id: { type: Number, index: {unique: true} }
+    });
+  
+    var agg_page = db.model('agg_page', agg_page_schema);
+
+	var returnInfo_length  =  returnInfo.data.length;
+
+	for (i = 0; i < returnInfo_length; i++)
+	{
+		var resultName =  returnInfo.data[i].name;
+
+		if (resultName == "user" || resultName == "event" || resultName == "page")
+		{
+			var insertInfo         =  returnInfo.data[i].fql_result_set;
+			var insertInfo_length  =  insertInfo.length;
+
+			for (j = 0; j < insertInfo_length; j++) {
+				var insert_agg_page = new agg_page({page_id: insertInfo[j].page_id});
+				insert_agg_page.save();
+			}
+		}
+	}
+
+    console.log("finished inserting");
+
+    
+    agg_page.find(function (err, agg_pages) {
+      if (err) {} // TODO handle err
+      console.log(agg_pages);
+    });
+  }
+
+
+
+
+var mongoose = require('mongoose'), db = mongoose.createConnection('localhost', 'test');
+db.on('error', console.error.bind(console, 'connection error:'));
+
+db.once('open', function () {
+
+  agg_from_events_venues_creators(function(returnInfo){ store_facebook_info(returnInfo) } );
+
+});
