@@ -4,7 +4,7 @@
 
 
 // Sync Facebook attributes scripts
-	function sync_pages() { base_facebook.facebook_query_loop("page","page","SELECT page_id,name,description,categories,pic_square,pic_big,pic_cover,type,mission,products,location,phone,username,about,fan_count,hours,parking FROM page WHERE page_id IN"); }
+	function sync_pages() { base_facebook.facebook_query_loop("page","page","SELECT page_id,name,description,categories,pic_square,pic_big,pic_cover,type,mission,products,location,phone,username,about,fan_count,hours,parking FROM page WHERE page_id IN","","page"); }
 
 
 // Run the sync function

@@ -119,8 +119,6 @@
   exports.store_facebook_info = function(returnInfo, input_schema) {
     if(typeof(input_schema) === 'undefined') input_schema = "agg_facebook";
 
-    input_schema = "page"; // TESTING
-
     get_schema(input_schema, function (mongo_model) {
         console.log(returnInfo);
 
@@ -173,16 +171,3 @@
     });
 
   }
-
-
-	exports.sync_facebook_attributes = function(input_schema, returnInfo) {
-		get_schema(input_schema, function (mongo_model) {
-        		console.log(returnInfo);
-
-
-
-
-
-		});
-	}
-
