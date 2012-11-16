@@ -5,6 +5,11 @@
 					facebook_id: { type: Number, index: {unique: true}},
 					type: String
 				}, { collection: 'agg_facebook' });
+			} else if (schema == "access_tokens") {
+				var mongo_schema = new mongoose.Schema({
+                                        uid: { type: Number, index: {unique: true}},
+                                        access_token: { type: Number, index: {unique: true}}
+                                }, { collection: 'access_tokens' });
 			}
 	
 			var mongo_model = db.model(schema, mongo_schema);
@@ -35,7 +40,7 @@
 				mongo_model.find({ type: id_type },function (err, mongo_model) {
 					if (err) { } // TODO handle err
 
-					var page_object = agg_facebook;
+					var page_object = mongo_model;
 					var page_object_length = page_object.length;
 
 					var page_list = "";
@@ -55,7 +60,7 @@
 	// Facebook base functions
 		var default_access_token = "AAADH49iOK2kBABc5T2CuUwJkLrghXRPHFpqafW3CLZBnYU2FX1pYVKm6OHoXJHpZCZCToz6tta392tRP4o7xpymI2Ov8AQzDhFzw1iZAlOCzTYHN6ZBrr";
 
-		function agg_facebook(query, access_token)
+		function get_from_facebook(query, access_token)
 		{
 			if(typeof(access_token) === 'undefined') access_token = default_access_token;
 
@@ -89,41 +94,41 @@
 			
 			for (i = 0; i < users_length; i++)
 			{
-				agg_facebook("fql?q={"+query+" WHERE uid IN (SELECT uid2 FROM friend WHERE uid1="+users[i]["facebook_user_id"]+") OR uid="+users[i]["facebook_user_id"]+end_parens+"'}",users[i]["access_token"]);
+				get_from_facebook("fql?q={"+query+" WHERE uid IN (SELECT uid2 FROM friend WHERE uid1="+users[i]["facebook_user_id"]+") OR uid="+users[i]["facebook_user_id"]+end_parens+"'}",users[i]["access_token"]);
 			}
 		}
 	
 	
 	// Aggregate Pages	
-		function agg_from_events_venues_creators() { agg_facebook("fql?q={'page':'SELECT page_id FROM page WHERE page_id IN (SELECT venue.id,creator FROM event WHERE eid IN ("+getEventList()+"))'}"); }
+		function agg_from_events_venues_creators() { get_from_facebook("fql?q={'page':'SELECT page_id FROM page WHERE page_id IN (SELECT venue.id,creator FROM event WHERE eid IN ("+getEventList()+"))'}"); }
 		function agg_from_pages_likes() {
 			get_id_list("page", function(page_list){
-				agg_facebook("fql?q={'page':'SELECT page_id FROM page_fan WHERE uid IN ("+page_list+")'}"); 
+				get_from_facebook("fql?q={'page':'SELECT page_id FROM page_fan WHERE uid IN ("+page_list+")'}"); 
 			});
 		}
 		function agg_from_users_likes() { agg_from_users("'page':'SELECT page_id FROM page_fan"); }
 
 		function agg_from_search_pages()
 		{
-			agg_facebook("search?q=%20&type=place&fields=id&center=33.755,-84.39&distance=10000&limit=5000");
-			agg_facebook("search?q=Georgia&fields=id&type=place&limit=5000");
-			agg_facebook("search?q=Atlanta&fields=id&type=place&limit=5000");
-			agg_facebook("search?q=Decatur&fields=id&type=place&limit=5000");
-			agg_facebook("search?q=Emory&fields=id&type=place&limit=5000");
-			agg_facebook("search?q=GA&fields=id&type=place&limit=5000");
+			get_from_facebook("search?q=%20&type=place&fields=id&center=33.755,-84.39&distance=10000&limit=5000");
+			get_from_facebook("search?q=Georgia&fields=id&type=place&limit=5000");
+			get_from_facebook("search?q=Atlanta&fields=id&type=place&limit=5000");
+			get_from_facebook("search?q=Decatur&fields=id&type=place&limit=5000");
+			get_from_facebook("search?q=Emory&fields=id&type=place&limit=5000");
+			get_from_facebook("search?q=GA&fields=id&type=place&limit=5000");
 			
-			agg_facebook("search?q=Georgia&fields=id&type=page&limit=5000");
-			agg_facebook("search?q=Atlanta&fields=id&type=page&limit=5000");
-			agg_facebook("search?q=Decatur&fields=id&type=page&limit=5000");
-			agg_facebook("search?q=Emory&fields=id&type=page&limit=5000");
-			agg_facebook("search?q=GA&fields=id&type=page&limit=5000");
+			get_from_facebook("search?q=Georgia&fields=id&type=page&limit=5000");
+			get_from_facebook("search?q=Atlanta&fields=id&type=page&limit=5000");
+			get_from_facebook("search?q=Decatur&fields=id&type=page&limit=5000");
+			get_from_facebook("search?q=Emory&fields=id&type=page&limit=5000");
+			get_from_facebook("search?q=GA&fields=id&type=page&limit=5000");
 		}
 	
 	
 	// Aggregate Events
 		function agg_from_pages_events() {
 			get_id_list("page", function(page_list){
-				agg_facebook("fql?q={'event':'SELECT eid,start_time,end_time FROM event WHERE eid IN (SELECT eid FROM event_member WHERE uid IN ("+page_list+"))'}");
+				get_from_facebook("fql?q={'event':'SELECT eid,start_time,end_time FROM event WHERE eid IN (SELECT eid FROM event_member WHERE uid IN ("+page_list+"))'}");
 			}); 
 		}
 
@@ -131,17 +136,17 @@
 
 		function agg_from_search_events()
 		{
-			agg_facebook("search?q=Georgia%20&type=event&fields=id,start_time,end_time&center=33.755,-84.39&distance=10000&limit=5000");
-			agg_facebook("search?q=Atlanta%20&type=event&fields=id,start_time,end_time&center=33.755,-84.39&distance=10000&limit=5000");
-			agg_facebook("search?q=Decatur%20&type=event&fields=id,start_time,end_time&center=33.755,-84.39&distance=10000&limit=5000");
-			agg_facebook("search?q=Emory%20&type=event&fields=id,start_time,end_time&center=33.755,-84.39&distance=10000&limit=5000");
-			agg_facebook("search?q=GA%20&type=event&fields=id,start_time,end_time&center=33.755,-84.39&distance=10000&limit=5000");
+			get_from_facebook("search?q=Georgia%20&type=event&fields=id,start_time,end_time&center=33.755,-84.39&distance=10000&limit=5000");
+			get_from_facebook("search?q=Atlanta%20&type=event&fields=id,start_time,end_time&center=33.755,-84.39&distance=10000&limit=5000");
+			get_from_facebook("search?q=Decatur%20&type=event&fields=id,start_time,end_time&center=33.755,-84.39&distance=10000&limit=5000");
+			get_from_facebook("search?q=Emory%20&type=event&fields=id,start_time,end_time&center=33.755,-84.39&distance=10000&limit=5000");
+			get_from_facebook("search?q=GA%20&type=event&fields=id,start_time,end_time&center=33.755,-84.39&distance=10000&limit=5000");
 	
-			agg_facebook("search?q=Georgia&fields=id,start_time,end_time&type=event&limit=5000");
-			agg_facebook("search?q=Atlanta&fields=id,start_time,end_time&type=event&limit=5000");
-			agg_facebook("search?q=Decatur&fields=id,start_time,end_time&type=event&limit=5000");
-			agg_facebook("search?q=Emory&fields=id,start_time,end_time&type=event&limit=5000");
-			agg_facebook("search?q=GA&fields=id,start_time,end_time&type=event&limit=5000");
+			get_from_facebook("search?q=Georgia&fields=id,start_time,end_time&type=event&limit=5000");
+			get_from_facebook("search?q=Atlanta&fields=id,start_time,end_time&type=event&limit=5000");
+			get_from_facebook("search?q=Decatur&fields=id,start_time,end_time&type=event&limit=5000");
+			get_from_facebook("search?q=Emory&fields=id,start_time,end_time&type=event&limit=5000");
+			get_from_facebook("search?q=GA&fields=id,start_time,end_time&type=event&limit=5000");
 		}
 	
 	
@@ -191,7 +196,7 @@
 					var insert_type = "page";
 				}
 
-				var insert_agg_facebook = new agg_facebook({facebook_id: insert_id, type: insert_type});
+				var insert_agg_facebook = new mongo_model({facebook_id: insert_id, type: insert_type});
                                 insert_agg_facebook.save();
 			}
 		}
@@ -212,7 +217,7 @@ db.once('open', function () {
     // Aggregate pages
       // agg_from_events_venues_creators();    // Gets pages from events' venues and creators
       // agg_from_search_pages();              // Gets pages from our search queries
-      agg_from_users_likes();               // Gets pages from users' likes
+      // agg_from_users_likes();               // Gets pages from users' likes
       // agg_from_pages_likes();               // Gets pages from pages' likes
 
     // Aggregate events
