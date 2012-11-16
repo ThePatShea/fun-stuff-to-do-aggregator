@@ -116,8 +116,12 @@
 	}
 
 
-  exports.store_facebook_info = function(returnInfo) {
-    get_schema("agg_facebook", function (mongo_model) {
+  exports.store_facebook_info = function(returnInfo, input_schema) {
+    if(typeof(input_schema) === 'undefined') input_schema = "agg_facebook";
+
+    input_schema = "page"; // TESTING
+
+    get_schema(input_schema, function (mongo_model) {
         console.log(returnInfo);
 
         var returnInfo_length  =  returnInfo.data.length;
@@ -132,21 +136,25 @@
                         var insertInfo_length  =  insertInfo.length;
 			
                         for (j = 0; j < insertInfo_length; j++) {
-                                if (resultName == "user") {
-                                        var insert_id = insertInfo[j].uid;
-                                        var insert_type = "user";
-                                } else if (resultName == "event") {
-                                        var insert_id = insertInfo[j].eid;
-                                        var insert_type = "event";
-                                } else if (resultName == "page") {
-                                        var insert_id = insertInfo[j].page_id;
-                                        var insert_type = "page";
-                                }
+				if (input_schema == "agg_facebook") {
+					if (resultName == "user") {
+						var insert_id = insertInfo[j].uid;
+						var insert_type = "user";
+					} else if (resultName == "event") {
+						var insert_id = insertInfo[j].eid;
+						var insert_type = "event";
+					} else if (resultName == "page") {
+						var insert_id = insertInfo[j].page_id;
+						var insert_type = "page";
+					}
 
-				console.log(insertInfo); // TESTING
-
-                                var insert_agg_facebook = new mongo_model({facebook_id: insert_id, type: insert_type});
-                                insert_agg_facebook.save();
+					var insert_agg_facebook = new mongo_model({facebook_id: insert_id, type: insert_type});
+					insert_agg_facebook.save();
+				} else {
+					// Make this work as an upsert. Find out if the save() function automatically upserts
+					var insert_sync = new mongo_model(insertInfo[j]);
+                                        insert_sync.save();
+				}
                         }
                 } else if (!resultName) {   // Special case for Facebook Graph API search queries
                         var insertInfo = returnInfo.data[i];
