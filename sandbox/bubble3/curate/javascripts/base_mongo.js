@@ -46,7 +46,28 @@
 					valet: Number
 				}
                         }, { collection: 'pages' });
-		}
+		} else if (schema == "event") {
+                        var mongo_schema = new mongoose.Schema({
+                                eid: { type: Number, index: {unique: true}},
+                                name: String,
+                                pic_square: String,
+                                pic_big: String,
+                                description: String,
+				start_time: Number,
+				end_time: Number,
+				location: String,
+				venue: {
+					id: Number
+				},
+				privacy: String,
+				creator: Number,
+				update_time: Number,
+				attending_count: Number,
+                                declined_count: Number,
+                                unsure_count: Number,
+                                not_replied_count: Number
+                        }, { collection: 'events' });
+                }
 
 		var mongo_model = db.model(schema, mongo_schema);
 
@@ -132,7 +153,7 @@
                 {
                         var insertInfo         =  returnInfo.data[i].fql_result_set;
                         var insertInfo_length  =  insertInfo.length;
-			
+
                         for (j = 0; j < insertInfo_length; j++) {
 				if (input_schema == "agg_facebook") {
 					if (resultName == "user") {
