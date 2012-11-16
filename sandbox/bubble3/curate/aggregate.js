@@ -12,8 +12,11 @@
 
 	function agg_from_pages_likes() {
 		base_mongo.get_id_list("page", function(page_list){
-			console.log(page_list);
-			//base_facebook.get_from_facebook("fql?q={'page':'SELECT page_id FROM page_fan WHERE uid IN ("+page_list+")'}"); 
+			var page_list_length = page_list.length;		
+
+			for (i = 0; i < page_list_length; i++) {
+				base_facebook.get_from_facebook("fql?q={'page':'SELECT page_id FROM page_fan WHERE uid IN ("+page_list[i]+")'}");
+			}
 		});
 	}
 	function agg_from_users_likes() { base_facebook.agg_from_users("'page':'SELECT page_id FROM page_fan"); }
