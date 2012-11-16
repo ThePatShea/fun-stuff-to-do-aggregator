@@ -10,15 +10,7 @@
 		});
 	}
 
-	function agg_from_pages_likes() {
-		base_mongo.get_id_list("page", function(page_list){
-			var page_list_length = page_list.length;		
-
-			for (i = 0; i < page_list_length; i++) {
-				base_facebook.get_from_facebook("fql?q={'page':'SELECT page_id FROM page_fan WHERE uid IN ("+page_list[i]+")'}");
-			}
-		});
-	}
+	function agg_from_pages_likes() { base_facebook.facebook_query_loop("page","page","SELECT page_id FROM page_fan WHERE uid IN"); }
 	function agg_from_users_likes() { base_facebook.agg_from_users("'page':'SELECT page_id FROM page_fan"); }
 
 	function agg_from_search_pages()
@@ -39,11 +31,8 @@
 
 
 // Aggregate Events
-	function agg_from_pages_events() {
-		base_mongo.get_id_list("page", function(page_list){
-			base_facebook.get_from_facebook("fql?q={'event':'SELECT eid,start_time,end_time FROM event WHERE eid IN (SELECT eid FROM event_member WHERE uid IN ("+page_list+"))'}");
-		}); 
-	}
+	function agg_from_pages_events() { base_facebook.facebook_query_loop("page","event","SELECT eid,start_time,end_time FROM event WHERE eid IN (SELECT eid FROM event_member WHERE uid IN", ")"); }
+
 
 	function agg_from_users_events() { base_facebook.agg_from_users("'event':'SELECT eid,start_time,end_time FROM event WHERE eid IN (SELECT eid FROM event_member",")"); }
 
@@ -67,16 +56,16 @@
 	function bubble_aggregate() {
 		base_mongo.db_open(function() {
 		    // Aggregate pages
-		    /*   agg_from_events_venues_creators();    // Gets pages from events' venues and creators
-		       agg_from_search_pages();              // Gets pages from our search queries
-		       agg_from_users_likes();               // Gets pages from users' likes
-		    */   agg_from_pages_likes();               // Gets pages from pages' likes
+		      // STILL NEEDS QUERY LOOP agg_from_events_venues_creators();    // Gets pages from events' venues and creators
+		      // agg_from_search_pages();              // Gets pages from our search queries
+		      // agg_from_users_likes();               // Gets pages from users' likes
+		      // agg_from_pages_likes();               // Gets pages from pages' likes
 
 		    // Aggregate events
-		    /*   agg_from_search_events();             // Gets events from our search queries
-		       agg_from_users_events();              // Gets events users are invited to
+		      // agg_from_search_events();             // Gets events from our search queries
+		      // agg_from_users_events();              // Gets events users are invited to
 		       agg_from_pages_events();              // Gets events posted by pages
-		    */
+		    
 		});
 	}
 

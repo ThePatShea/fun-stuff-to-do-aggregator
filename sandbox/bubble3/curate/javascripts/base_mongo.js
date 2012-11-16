@@ -60,7 +60,7 @@
 	}
 
 	exports.get_id_list = function(id_type, callback)
-	{
+	{ // This function uses the confusing variable names "page_list" and "page_object". These variables can also represent events. Change the variable names to id_list and id_object to avoid confusion. I will need to change references to these variables in other scripts too.
 		get_schema("agg_facebook", function (mongo_model) {
 			mongo_model.find({ type: id_type },function (err, mongo_model) {
 				if (err) { } // TODO handle err
@@ -81,9 +81,8 @@
 					if (i%1000 != 0)
 						page_list[a] += ",";
 
-					page_list[a] += page_object[i].facebook_id;
+					page_list[a] += "\\'"+page_object[i].facebook_id+"\\'";
 				}
-
 				callback(page_list);
 			});
 		});

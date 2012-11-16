@@ -41,3 +41,15 @@
 			}
 		});
 	}
+
+	exports.facebook_query_loop = function(type_input, type_output, query, end_parens) {
+		if(typeof(end_parens) === 'undefined') end_parens = "";
+
+                 base_mongo.get_id_list(type_input, function(page_list){
+                        var page_list_length = page_list.length;
+                        for (i = 0; i < page_list_length; i++) {
+				console.log("fql?q={'"+type_output+"':'"+query+" ("+page_list[i]+end_parens+")'}");
+				get_from_facebook("fql?q={'"+type_output+"':'"+query+" ("+page_list[i]+end_parens+")'}");
+                        }
+                });
+        }
