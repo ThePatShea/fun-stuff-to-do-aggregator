@@ -30,7 +30,7 @@
 	}
 
 
-	exports.agg_from_users = function(query, end_parens)
+	exports.agg_from_users = function(query, end_parens, input_schema)
 	{
 		if(typeof(end_parens) === 'undefined') end_parens = "";
 
@@ -38,7 +38,7 @@
 			var users_length  =  users.length;
 
 			for (i = 0; i < users_length; i++) {
-				get_from_facebook("fql?q={"+query+" WHERE uid IN (SELECT uid2 FROM friend WHERE uid1="+users[i]["facebook_user_id"]+") OR uid="+users[i]["facebook_user_id"]+end_parens+"'}",users[i]["access_token"]);
+				get_from_facebook("fql?q={"+query+" WHERE uid IN (SELECT uid2 FROM friend WHERE uid1="+users[i]["facebook_user_id"]+") OR uid="+users[i]["facebook_user_id"]+end_parens+"'}",users[i]["access_token"], input_schema);
 			}
 		});
 	}

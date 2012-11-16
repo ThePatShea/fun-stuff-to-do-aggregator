@@ -67,6 +67,24 @@
                                 unsure_count: Number,
                                 not_replied_count: Number
                         }, { collection: 'events' });
+                } else if (schema == "user") {
+                        var mongo_schema = new mongoose.Schema({
+                                uid: { type: Number, index: {unique: true}},
+                                name: String,
+				pic_cover: {
+					cover_id: Number,
+					source: String,
+					offset: Number
+				},
+                                pic_square: String,
+                                pic_big: String,
+				username: String,
+				first_name: String,
+				middle_name: String,
+				last_name: String,
+				sex: String,
+				email: String
+                        }, { collection: 'users' });
                 }
 
 		var mongo_model = db.model(schema, mongo_schema);
