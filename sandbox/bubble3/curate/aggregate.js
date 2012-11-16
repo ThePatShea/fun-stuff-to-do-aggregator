@@ -41,7 +41,10 @@
 		}); 
 	}
 
-	function agg_from_users_events() { base_facebook.agg_from_users("'event':'SELECT eid,start_time,end_time FROM event WHERE eid IN (SELECT eid FROM event_member",")"); }
+	function agg_from_users_events(callback) {
+		base_facebook.agg_from_users("'event':'SELECT eid,start_time,end_time FROM event WHERE eid IN (SELECT eid FROM event_member",")"); 
+		callback();
+	}
 
 	function agg_from_search_events()
 	{
@@ -71,7 +74,7 @@
 
 		    // Aggregate events
 		      // agg_from_search_events();             // Gets events from our search queries
-		       agg_from_users_events();              // Gets events users are invited to
+		      agg_from_users_events(function(){agg_from_events_venues_creators()});              // Gets events users are invited to
 		      // agg_from_pages_events();              // Gets events posted by pages
 		});
 	}

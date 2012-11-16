@@ -48,6 +48,17 @@
 		});
 	}
 
+	exports.get_default_access_token = function(callback) {
+		get_schema("access_tokens", function (mongo_model) {
+                        mongo_model.findOne({ },"access_token",function (err, mongo_model) {
+				if (err) { } // TODO handle err
+
+				var default_access_token = mongo_model.access_token;
+				callback(default_access_token);
+			 });
+                });
+	}
+
 	exports.get_id_list = function(id_type, callback)
 	{
 		get_schema("agg_facebook", function (mongo_model) {
@@ -86,7 +97,7 @@
                 {
                         var insertInfo         =  returnInfo.data[i].fql_result_set;
                         var insertInfo_length  =  insertInfo.length;
-
+			
                         for (j = 0; j < insertInfo_length; j++) {
                                 if (resultName == "user") {
                                         var insert_id = insertInfo[j].uid;
@@ -98,26 +109,21 @@
                                         var insert_id = insertInfo[j].page_id;
                                         var insert_type = "page";
                                 }
-
                                 var insert_agg_facebook = new mongo_model({facebook_id: insert_id, type: insert_type});
                                 insert_agg_facebook.save();
                         }
                 } else if (!resultName) {   // Special case for Facebook Graph API search queries
-                        var insertInfo         =  returnInfo.data;
-                        var insertInfo_length  =  insertInfo.length;
+                        var insertInfo = returnInfo.data[i];
+			var insert_id = insertInfo.id;
 
-                        for (j = 0; j < insertInfo_length; j++) {
-                                var insert_id = insertInfo[j].id;
+			if (insertInfo["start_time"]) {   // If it's an event
+				var insert_type = "event";
+			} else {   // If it's a page
+				var insert_type = "page";
+			}
 
-                                if (insertInfo[j]["start_time"]) {   // If it's an event
-                                        var insert_type = "event";
-                                } else {   // If it's a page
-                                        var insert_type = "page";
-                                }
-
-                                var insert_agg_facebook = new mongo_model({facebook_id: insert_id, type: insert_type});
-                                insert_agg_facebook.save();
-                        }
+			var insert_agg_facebook = new mongo_model({facebook_id: insert_id, type: insert_type});
+			insert_agg_facebook.save();
                 }
         }
     });
