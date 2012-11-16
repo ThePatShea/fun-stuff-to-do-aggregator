@@ -68,13 +68,20 @@
 				var page_object = mongo_model;
 				var page_object_length = page_object.length;
 
-				var page_list = "";
+				var page_list = new Array();
+				page_list[0] = "";
+				var a = 0;
 
 				for (i = 0; i < page_object_length; i++) {
-					if (i != 0)
-						page_list += ",";
+					if (i != 0  &&  i%1000 == 0) {
+						a++;
+						page_list[a] = "";
+					}
 
-					page_list += page_object[i].facebook_id;
+					if (i%1000 != 0)
+						page_list[a] += ",";
+
+					page_list[a] += page_object[i].facebook_id;
 				}
 
 				callback(page_list);
