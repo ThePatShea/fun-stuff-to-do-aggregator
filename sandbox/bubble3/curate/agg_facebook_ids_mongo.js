@@ -8,7 +8,7 @@
 			} else if (schema == "access_tokens") {
 				var mongo_schema = new mongoose.Schema({
                                         uid: { type: Number, index: {unique: true}},
-                                        access_token: { type: Number, index: {unique: true}}
+                                        access_token: { type: String, index: {unique: true}}
                                 }, { collection: 'access_tokens' });
 			}
 	
@@ -17,21 +17,26 @@
 			callback(mongo_model);
 		}
 
-		function getUserArray()
+		function get_user_array(callback)
 		{
-			// Temporary code to set some access tokens. Will be replaced with MongoDB.
-				var users  =  new Array();
-				users[0]   =  new Array();		
-				users[1]   =  new Array();
-		
-				users[0]["facebook_user_id"]  =  "681701524"; // Pat Shea
-				users[0]["access_token"]      =	 "AAADH49iOK2kBAJnUgPPo4L7JRWQOTQDk5xIGvkHVva9tZBZBGZBrkfKdhdZBGexNRNElYZAg1hLX4QA2DZBQ6XZCwiIVLa5xv916unUIDUwMgZDZD";
-				
-				users[1]["facebook_user_id"]  =  "100004362973816"; // Robert Woodruff
-				users[1]["access_token"]      =  default_access_token;
-			// Temporary code to set some access tokens. Will be replaced with MongoDB.
-		
-			return users;
+			get_schema("access_tokens", function (mongo_model) {
+				mongo_model.find({ },function (err, mongo_model) {
+					if (err) { } // TODO handle err
+					
+					var user_object = mongo_model;
+					var user_object_length = user_object.length;
+
+					var users = new Array();
+
+					for (i = 0; i < user_object_length; i++) {
+						users[i] = new Array();
+						users[i]["facebook_user_id"] = user_object[i].uid;
+						users[i]["access_token"] = user_object[i].access_token;
+					}
+	
+					callback(users);
+				});
+			});
 		}
 	
 		function get_id_list(id_type, callback)
@@ -89,13 +94,14 @@
 		{
 			if(typeof(end_parens) === 'undefined') end_parens = "";
 			
-			var users         =  getUserArray();
-			var users_length  =  users.length;
-			
-			for (i = 0; i < users_length; i++)
-			{
-				get_from_facebook("fql?q={"+query+" WHERE uid IN (SELECT uid2 FROM friend WHERE uid1="+users[i]["facebook_user_id"]+") OR uid="+users[i]["facebook_user_id"]+end_parens+"'}",users[i]["access_token"]);
-			}
+			get_user_array(function(users) {
+				var users_length  =  users.length;
+				
+				for (i = 0; i < users_length; i++)
+				{
+					get_from_facebook("fql?q={"+query+" WHERE uid IN (SELECT uid2 FROM friend WHERE uid1="+users[i]["facebook_user_id"]+") OR uid="+users[i]["facebook_user_id"]+end_parens+"'}",users[i]["access_token"]);
+				}
+			});
 		}
 	
 	
@@ -217,7 +223,7 @@ db.once('open', function () {
     // Aggregate pages
       // agg_from_events_venues_creators();    // Gets pages from events' venues and creators
       // agg_from_search_pages();              // Gets pages from our search queries
-      // agg_from_users_likes();               // Gets pages from users' likes
+       agg_from_users_likes();               // Gets pages from users' likes
       // agg_from_pages_likes();               // Gets pages from pages' likes
 
     // Aggregate events
