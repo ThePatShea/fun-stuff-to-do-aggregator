@@ -19,6 +19,33 @@
 				uid: { type: Number, index: {unique: true}},
 				access_token: { type: String, index: {unique: true}}
 			}, { collection: 'access_tokens' });
+		} else if (schema == "page") {
+			var mongo_schema = new mongoose.Schema({
+                                page_id: { type: Number, index: {unique: true}},
+                                name: String,
+				description: String,
+				categories: [],
+				pic_square: String,
+				pic_big: String,
+				pic_cover: String,
+				type: String,
+				mission: String,
+				products: String,
+				location: {
+					street: String,
+					zip: String
+				},
+				phone: String,
+				username: String,
+				about: String,
+				fan_count: Number,
+				hours: [],
+				parking: {
+					street: Number,
+					lot: Number,
+					valet: Number
+				}
+                        }, { collection: 'pages' });
 		}
 
 		var mongo_model = db.model(schema, mongo_schema);
@@ -115,6 +142,9 @@
                                         var insert_id = insertInfo[j].page_id;
                                         var insert_type = "page";
                                 }
+
+				console.log(insertInfo); // TESTING
+
                                 var insert_agg_facebook = new mongo_model({facebook_id: insert_id, type: insert_type});
                                 insert_agg_facebook.save();
                         }
@@ -135,4 +165,16 @@
     });
 
   }
+
+
+	exports.sync_facebook_attributes = function(input_schema, returnInfo) {
+		get_schema(input_schema, function (mongo_model) {
+        		console.log(returnInfo);
+
+
+
+
+
+		});
+	}
 
