@@ -155,6 +155,19 @@
 	}
 
 
+	exports.find_mongo_info = function(input_schema, callback) {
+		get_schema(input_schema, function (mongo_model) {
+			var current_time = Math.round((new Date()).getTime() / 1000);
+			var yesterday = current_time - 86400;
+
+			mongo_model.find({description: /Emory/, privacy: "OPEN"}, "eid name pic_big start_time end_time location venue.id creator").where("end_time").gt(current_time).where("start_time").gt(yesterday).exec(function (err, mongo_model) {
+				
+				callback(mongo_model);
+			});
+		});
+	}
+
+
   exports.store_facebook_info = function(returnInfo, input_schema) {
     if(typeof(input_schema) === 'undefined') input_schema = "agg_facebook";
 
