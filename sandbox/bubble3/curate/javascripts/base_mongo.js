@@ -89,7 +89,13 @@
 				sex: String,
 				email: String
                         }, { collection: 'users' });
-                }
+                } else if (schema == "bubble") {
+			var mongo_schema = new mongoose.Schema({
+				slug: { type: String, index: {unique: true}},
+				name: String,
+				events: []
+			}, { collection: 'bubbles' });
+		}
 
 		var mongo_model = db.model(schema, mongo_schema);
 
@@ -175,8 +181,12 @@
 					var yesterday = current_time - 86400;
 
 					mongo_model.find({$or : [{creator : {$in : page_array}}, {"venue.id" : {$in : page_array}}], privacy : "OPEN"}, "eid name pic_big start_time end_time location venue.id creator").where("end_time").gt(current_time).where("start_time").gt(yesterday).exec(function (err, mongo_model) {
-						
-						console.log(mongo_model);
+						var event_array = mongo_model;
+						console.log(event_array);
+						get_schema("bubble", function (mongo_model) {
+							var insert_bubble = new mongo_model({slug : "night_life" , name : "night life" , events: event_array});
+                        				insert_bubble.save();
+						});
 					});
 				});
                         });
