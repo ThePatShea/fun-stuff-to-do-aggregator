@@ -33,7 +33,11 @@
 				products: String,
 				location: {
 					street: String,
-					zip: String
+					zip: String,
+					city: String,
+					state: String,
+					latitude: Number,
+					longitude: Number
 				},
 				phone: String,
 				username: String,
@@ -156,15 +160,30 @@
 
 
 	exports.find_mongo_info = function(input_schema, callback) {
-		get_schema(input_schema, function (mongo_model) {
-			var current_time = Math.round((new Date()).getTime() / 1000);
-			var yesterday = current_time - 86400;
+		get_schema("page", function (mongo_model) {
+			mongo_model.find({$or : [{"type": /night/i} , {"categories.name": /night/i}] , "location.state" : "GA"}, "page_id").exec(function (err, mongo_model) {
+				var page_object = mongo_model;
+				var page_object_length = page_object.length;
+				var page_array = new Array();
 
-			mongo_model.find({description: /Emory/, privacy: "OPEN"}, "eid name pic_big start_time end_time location venue.id creator").where("end_time").gt(current_time).where("start_time").gt(yesterday).exec(function (err, mongo_model) {
-				
-				callback(mongo_model);
-			});
+				for (i = 0; i < page_object_length; i++) {
+					page_array[i] = page_object[i].page_id;
+				}
+
+				//TODO Make it check if the venue.id OR the creator is IN the list of page_ids for night life, etc.
+				get_schema("event", function (mongo_model) {
+					var current_time = Math.round((new Date()).getTime() / 1000);
+					var yesterday = current_time - 86400;
+
+					mongo_model.find({creator : {$in : page_array}, privacy : "OPEN"}, "eid name pic_big start_time end_time location venue.id creator").where("end_time").gt(current_time).where("start_time").gt(yesterday).exec(function (err, mongo_model) {
+						
+						console.log(mongo_model);
+					});
+				});
+                        });
 		});
+
+
 	}
 
 
