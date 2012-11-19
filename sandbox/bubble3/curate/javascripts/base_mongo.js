@@ -165,9 +165,9 @@
 	}
 
 
-	exports.find_mongo_info = function(input_schema, callback) {
+	exports.sort_bubble = function(bubble_name, page_parameters) {
 		get_schema("page", function (mongo_model) {
-			mongo_model.find({$or : [{"type": /night/i} , {"categories.name": /night/i}] , "location.state" : "GA"}, "page_id").exec(function (err, mongo_model) {
+			mongo_model.find(page_parameters, "page_id").exec(function (err, mongo_model) {
 				var page_object = mongo_model;
 				var page_object_length = page_object.length;
 				var page_array = new Array();
@@ -183,8 +183,12 @@
 					mongo_model.find({$or : [{creator : {$in : page_array}}, {"venue.id" : {$in : page_array}}], privacy : "OPEN"}, "eid name pic_big start_time end_time location venue.id creator").where("end_time").gt(current_time).where("start_time").gt(yesterday).exec(function (err, mongo_model) {
 						var event_array = mongo_model;
 						console.log(event_array);
+
+						var bubble_regex = new RegExp(" ","g");
+                                                var bubble_slug = bubble_name.replace(bubble_regex,"_");
+
 						get_schema("bubble", function (mongo_model) {
-							var insert_bubble = new mongo_model({slug : "night_life" , name : "night life" , events: event_array});
+							var insert_bubble = new mongo_model({slug : bubble_slug , name : bubble_name , events: event_array});
                         				insert_bubble.save();
 						});
 					});
