@@ -44,7 +44,7 @@
 
 
 // Concatenate the aggregate functions
-	function bubble_aggregate() {
+	exports.bubble_aggregate = function() {
 		base_mongo.db_open(function() {
 			// Aggregate pages
 				agg_from_events_venues_creators();    // Gets pages from events' venues and creators
@@ -57,7 +57,3 @@
 				agg_from_pages_events();              // Gets events posted by pages
 		});
 	}
-
-
-// Run the aggregate function
-	bubble_aggregate();

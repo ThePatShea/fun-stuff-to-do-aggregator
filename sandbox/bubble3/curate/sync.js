@@ -10,12 +10,8 @@
 
 
 // Concatenate the sync functions
-	function bubble_sync() {
+	exports.bubble_sync = function() {
 		sync_events();
 		sync_pages();
 		sync_users();
 	}
-
-
-// Run the sync function
-	bubble_sync();
