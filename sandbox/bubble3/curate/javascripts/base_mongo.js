@@ -165,7 +165,7 @@
 	}
 
 
-	exports.sort_bubbles = function(bubble_name, page_parameters) {
+	exports.sort_bubbles = function(bubble_name, page_parameters, event_parameters) {
 		get_schema("page", function (mongo_model) {
 			mongo_model.find(page_parameters, "page_id").exec(function (err, mongo_model) {
 				var page_object = mongo_model;
@@ -180,11 +180,11 @@
 					var current_time = Math.round((new Date()).getTime() / 1000);
 					var yesterday = current_time - 86400;
 
-					mongo_model.find({$or : [{creator : {$in : page_array}}, {"venue.id" : {$in : page_array}}], privacy : "OPEN"}, "eid name pic_big start_time end_time location venue.id creator").where("end_time").gt(current_time).where("start_time").gt(yesterday).exec(function (err, mongo_model) {
+					mongo_model.find({$or : [{creator : {$in : page_array}}, {"venue.id" : {$in : page_array}}, event_parameters], privacy : "OPEN"}, "eid name pic_big start_time end_time location venue.id creator").where("end_time").gt(current_time).where("start_time").gt(yesterday).exec(function (err, mongo_model) {
 						var event_array = mongo_model;
-
+						
 						var bubble_regex = new RegExp(" ","g");
-                                                var bubble_slug = bubble_name.replace(bubble_regex,"_");
+						var bubble_slug = bubble_name.replace(bubble_regex,"_");
 
 						get_schema("bubble", function (mongo_model) {
 							var insert_bubble = new mongo_model({slug : bubble_slug , name : bubble_name , events: event_array});
