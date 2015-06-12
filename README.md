@@ -7,16 +7,6 @@ Students used the product to find fun things to do at their university and in th
 
 ---
 
-
-
-
-
-
-
-
-
-
-
 #### Disclaimers
 1. I made most of my commits on this repo using another Github account called "campus-bubble". This was the account I used back when I was still working with my old company. If you'd like to verify this, please contact Campus Bubble's Chief of Product, Giovanni Hobbins: giovanni@campusbubble.com
 
@@ -25,6 +15,16 @@ Students used the product to find fun things to do at their university and in th
   - [Advanced Internal University Social Network](https://github.com/ThePatShea/advanced-internal-university-social-network)
 
 ---
+
+
+
+
+
+
+
+
+
+
 
 #### Technologies Utilized
 - PHP/SQL back end
