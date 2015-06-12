@@ -1,4 +1,4 @@
-# Aggregator for Fun Stuff to do
+# "Fun stuff to do" Aggregator
 
 #### Product Description
 This web app aggregates all the venues, deals, and events near your university and sorts them into 8 categories: cheap food, nightlife, arts, athletics, etc.
