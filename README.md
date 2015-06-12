@@ -1,4 +1,4 @@
-# "Fun stuff to do" Aggregator for University Students
+# "Fun stuff to do" Aggregator
 
 
 
