@@ -16,24 +16,17 @@ Students used the product to find fun things to do at their university and in th
 
 ---
 
-
-
-
-
-
-
-
-
-
-
 #### Technologies Utilized
 - PHP/SQL back end
-- Some Javascript and a few front-end libraries
-- Facebook API for aggregating photos/events and for users to log in to the site to post new content
-- YouTube API for aggregating videos
-- Custom-built PHP web scrapers to aggregate news articles and events from non-Facebook sources
+- An AJAX single page app system that I built myself
+- Several front-end Javascript libraries
+- Yipit API for aggregating deals
+- Facebook API for aggregating events and venues
+- An algorithm I developed with my team to sort the aggregated content into 8 categories
+- Fully responsive UI from desktop to mobile
+- PhoneGap for iOS/Android apps
 
 ---
 
 #### Resources/Timeline
-I built this product single-handedly in 6 months.
+I hired 3 summer interns and led the team to build the product in 3 months.
