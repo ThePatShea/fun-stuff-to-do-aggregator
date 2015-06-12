@@ -4,6 +4,7 @@
 This web app aggregates all the venues, deals, and events near your university and sorts them into 8 categories: cheap food, nightlife, arts, athletics, etc.
 
 Students used the product to find fun things to do at their university and in the surrounding area.
+
 ---
 
 
