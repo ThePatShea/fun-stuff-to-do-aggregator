@@ -1,4 +1,4 @@
-# "Fun Stuff to do" Aggregator
+# Aggregator for Fun Stuff to do
 
 
 
