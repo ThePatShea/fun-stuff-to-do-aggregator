@@ -1,23 +1,20 @@
 # Aggregator for Fun Stuff to do
 
-
-
-
-
-
-
-
-
-
-
-# Media Aggregator for University Clubs
-
 #### Product Description
-This web app crawls the Internet to automatically aggregate all of the photos/videos/events/news articles relevant to clubs at your university, then sorts them into separate pages for each club.
+This web app aggregates all the venues, deals, and events near your university and sorts them into 8 categories: cheap food, nightlife, arts, athletics, etc.
 
-Students used the product to discover new clubs, manage their clubs’ online presence, and stay up-to-date with what was happening at their university.
-
+Students used the product to find fun things to do at their university and in the surrounding area.
 ---
+
+
+
+
+
+
+
+
+
+
 
 #### Disclaimers
 1. I made most of my commits on this repo using another Github account called "campus-bubble". This was the account I used back when I was still working with my old company. If you'd like to verify this, please contact Campus Bubble's Chief of Product, Giovanni Hobbins: giovanni@campusbubble.com
