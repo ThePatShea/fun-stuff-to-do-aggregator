@@ -8,7 +8,7 @@ Students used the product to find fun things to do at their university and in th
 ---
 
 #### See the Web App
-This web app is no longer online, but you can still view an [image](https://dmdf3fr77elxm.cloudfront.net/portfolio_assets/62957/pictures/1435029055/original.png) of it. This is a mockup, but a screenshot would look identical, because I'm awesome at front end.
+This web app is no longer online, but you can still view an [image](https://d2p9ez1wat05y7.cloudfront.net/portfolio_assets/62957/pictures/1435029055/original.png) of it. This is a mockup, but a screenshot would look identical, because I'm awesome at front end.
 
 ---
 
